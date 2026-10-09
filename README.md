@@ -112,17 +112,6 @@ If you want to override values **without editing the main file**, place your ove
 
 To revert, remove the theme from **Custom CSS**, restore your backup if needed, save, and refresh.
 
-## 📁 Suggested repository structure
-
-```text
-PHOENICX-CINEMA/
-├── README.md
-├── PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css
-├── PHOENICX_CINEMA_THIRD_PARTY_NOTICES.txt
-└── screenshots/
-    ├── home.png       # optional
-    └── details.png    # optional
-```
 
 ## 🙌 Credits & third-party notices
 
