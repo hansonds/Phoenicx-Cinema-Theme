@@ -37,8 +37,6 @@ It is available as **one combined CSS file**. You don't need to import separate 
 
 ![PHOENICX CINEMA movie details](Screenshots/details.png)
 
-> [!TIP]
-> If your uploaded screenshots have different names or are in a different folder, update the image paths above to match them exactly (including capitalization).
 
 ## 🌟 Features
 
