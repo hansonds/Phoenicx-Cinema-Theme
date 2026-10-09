@@ -12,121 +12,160 @@
 ![Version](https://img.shields.io/badge/Version-2.0-8e85fa?style=for-the-badge)
 ![Theme](https://img.shields.io/badge/Theme-Dark-151925?style=for-the-badge)
 
+**Your library. Your screen. Your cinema.**
+
 </div>
 
 ---
 
 ## ✨ Overview
 
-**PHOENICX CINEMA** gives the Jellyfin web interface a refined, cinema-inspired look. It brings together rounded media cards, a dark palette, soft shadows, a glass-like navigation bar, and styling for a home-screen Media Bar slideshow.
+**PHOENICX CINEMA** gives the Jellyfin web interface a refined, cinema-inspired look, with rounded media cards, a dark color palette, soft shadows, frosted-glass surfaces, and styling for a home-screen Media Bar slideshow.
 
-The theme is distributed as **one combined CSS file**, so you do **not** need to import other theme stylesheets from a CDN.
+It is available as **one combined CSS file**. You don't need to import separate upstream theme stylesheets.
 
 > [!NOTE]
-> The CSS styles the Media Bar, but it does **not** install or replace the Media Bar plugin. You need a compatible plugin if you want the slideshow itself.
+> Media Bar styling is included, but the CSS does **not** install the Media Bar plugin or create a slideshow by itself. You'll need a compatible Media Bar plugin, installed and configured separately, to use that feature.
 
 ## 🖼️ Preview
 
-*Add your own screenshots to the `screenshots/` folder to show how the theme looks on your Jellyfin server.*
+### Home Screen
 
-<!-- Uncomment after adding screenshots:
 ![PHOENICX CINEMA home screen](screenshots/home.png)
-![Movie details](screenshots/details.png)
--->
+
+### Movie Details
+
+![PHOENICX CINEMA movie details](screenshots/details.png)
+
+> [!TIP]
+> If your uploaded screenshots have different names or are in a different folder, update the image paths above to match them exactly (including capitalization).
 
 ## 🌟 Features
 
 | Feature | What it changes |
 | --- | --- |
-| 🎞️ Cinematic home screen | Gradient overlays and slideshow presentation styles |
-| 🪟 Frosted-glass UI | Header, menus, dialogs, and floating panels |
-| 🍿 Movie & series cards | Rounded artwork, shadows, and desktop hover emphasis |
-| 💜 Signature accent | Lavender highlights, buttons, outlines, and progress bars |
-| 🔤 Readable typography | Nunito-based custom styling with theme typography fallbacks |
+| 🎞️ Cinematic home screen | Gradient overlays and Media Bar slideshow styling |
+| 🪟 Frosted-glass interface | Header, menus, dialogs, and floating panels |
+| 🍿 Movie and series cards | Rounded artwork, shadows, and desktop hover effects |
+| 💜 Lavender accents | Highlights, buttons, focus outlines, and progress bars |
+| 🔤 Refined typography | Nunito-based styling with font fallbacks |
 | ▶️ Playback actions | Rounded buttons and prominent play controls |
-| 📱 Responsive styling | Adjustments for smaller screens and portrait layouts |
-| ♿ Accessibility touches | Visible focus states and reduced-motion support |
-| 📦 All-in-one CSS | No external **theme stylesheet** imports required |
+| 📱 Responsive design | Adjustments for smaller screens and portrait layouts |
+| ♿ Accessibility details | Visible focus states and reduced-motion support |
+| 📦 All-in-one CSS | No separate upstream theme CSS imports required |
 
 ## 🚀 Installation
 
-### Option A — Paste into Jellyfin (recommended)
+Choose **one** of the following methods. Back up any existing Custom CSS first.
 
-1. ```css
-@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
-```
-2. Open Jellyfin in your browser with an administrator account.
-3. Go to **Dashboard → General → Custom CSS** (the location may vary by Jellyfin version).
-4. **Back up your existing Custom CSS**, then replace it with the complete contents of the downloaded file.
-5. Save your changes.
-6. Hard-refresh the web interface with **Ctrl + Shift + R** (or clear its cached site assets).
+### Option A — Install via jsDelivr CDN (easy updates)
+
+1. Open Jellyfin in your browser and sign in as an administrator.
+2. Go to **Dashboard → General → Custom CSS** (the setting's location may vary by Jellyfin version).
+3. Paste this into the Custom CSS field:
+
+   ```css
+   @import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
+   ```
+
+4. **Save** your changes.
+5. Refresh your browser with **Ctrl + Shift + R**, or clear the site's cache if necessary.
+
+The CDN loads the CSS from this repository's `main` branch. Updates may take time to appear because of CDN caching.
+
+### Option B — Install manually (no theme CDN dependency)
+
+1. Open [`PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css`](PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css).
+2. Click **Raw** and copy the entire CSS file.
+3. In Jellyfin, open **Dashboard → General → Custom CSS**.
+4. Replace your previous theme CSS with the copied code.
+5. **Save** and refresh the browser.
+
+This method avoids fetching the theme stylesheet from a CDN, but any external font assets referenced by the CSS may still require internet access.
 
 > [!IMPORTANT]
-> Do not paste a second theme on top of this stylesheet. Competing styles can create layout issues or override your settings.
+> Avoid stacking other complete Jellyfin themes on top of PHOENICX CINEMA. Their selectors may conflict and cause visual or layout problems.
 
-### Option B — Host your own CSS
+## 🎛️ Customization
 
-You can host the CSS file yourself and import it from Jellyfin's Custom CSS field:
-
-```css
-@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
-```
-
-
-## 🎛️ Customize the look
-
-The combined stylesheet includes a **PHOENICX CINEMA** design-variable section. You can change the core colors and rounding to suit your taste:
+PHOENICX CINEMA defines variables for its main colors and visual style:
 
 ```css
 :root {
-  --px-background: #090b12;
-  --px-surface: #151925;
-  --px-accent: #a69cff;
-  --px-accent-light: #cbc4ff;
-  --px-text: #f7f7fc;
-  --px-card-radius: 15px;
-  --px-panel-radius: 20px;
+    --px-background: #090b12;
+    --px-surface: #151925;
+    --px-accent: #a69cff;
+    --px-accent-light: #cbc4ff;
+    --px-text: #f7f7fc;
+    --px-card-radius: 15px;
+    --px-panel-radius: 20px;
 }
 ```
 
-If you want to override values **without editing the main file**, place your overrides *after* the main stylesheet, in the same Custom CSS field.
+**Using the CDN?** Add overrides **after** the import in Jellyfin's Custom CSS field:
 
-## 🧩 Compatibility & requirements
+```css
+@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
 
-- **Jellyfin Web:** intended for the modern Jellyfin web interface, with Jellyfin 12 layout adaptations included.
-- **Media Bar:** styling is included; slideshow operation requires a compatible Media Bar plugin and configuration.
-- **Browsers:** modern Chromium-based browsers are a sensible starting point. Other browsers and TV clients may behave differently.
-- **Native apps:** Custom CSS only affects clients that render and accept the Jellyfin web CSS; it cannot be assumed to restyle every native app.
-- **Network:** the theme CSS is self-contained with respect to other *themes*, but it references Google Fonts / font assets, which may require internet connectivity unless self-hosted.
+:root {
+    --px-accent: #a69cff;
+    --px-accent-light: #cbc4ff;
+}
+```
 
-**Compatibility is not guaranteed across all Jellyfin releases, plugins, or devices.** Test after upgrades.
+> [!NOTE]
+> Some inherited theme elements use their own design tokens. Changing a `--px-*` value may not affect every component.
+
+## 🧩 Compatibility and requirements
+
+- **Jellyfin Web:** designed for Jellyfin's modern web interface, with Jellyfin 12 layout adaptations included.
+- **Media Bar:** slideshow styling requires a compatible Media Bar plugin and configuration.
+- **Browsers:** modern Chromium-based browsers are a good starting point; other browser behavior may vary.
+- **Native apps:** only apps that render and accept Jellyfin Web custom CSS will show these changes. Do not expect every native TV or mobile client to be themed.
+- **Fonts:** the stylesheet includes references to Google Fonts/font assets. Some fonts may fall back when offline.
+
+**Compatibility is not guaranteed** across every Jellyfin version, plugin release, browser, or device. Check the interface after updates.
 
 ## 🛠️ Troubleshooting
 
-| Issue | What to try |
+| Issue | Suggested fix |
 | --- | --- |
-| Old design is still visible | Hard-refresh the browser and clear cached assets |
-| Cards or menus look broken | Remove any older Custom CSS or competing theme overrides |
-| Slideshow doesn't appear | Check that your Media Bar plugin is installed, compatible, and configured |
-| Fonts look different | Check connectivity to Google Fonts; fallback fonts may be used |
-| Mobile / TV layout is awkward | Test in Jellyfin Web first; client support varies |
+| Previous styling still appears | Hard-refresh the browser; clear cached site assets if necessary |
+| Cards or menus look incorrect | Remove conflicting CSS or other themes and test again |
+| Slideshow is missing | Check Media Bar plugin installation, compatibility, and configuration |
+| Text uses a different font | Confirm font asset connectivity; browser fallback fonts may be active |
+| CDN styles don't update | Allow for jsDelivr caching or use the manual installation method |
+| Mobile/TV layout looks different | Test in Jellyfin Web; client CSS support varies |
 
-To revert, remove the theme from **Custom CSS**, restore your backup if needed, save, and refresh.
+To revert, remove the import or pasted stylesheet from **Custom CSS**, restore your backup if applicable, save, and refresh.
 
+## 📁 Repository files
 
-## 🙌 Credits & third-party notices
+```text
+Phoenicx-Cinema-Theme/
+├── README.md
+├── PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css
+├── PHOENICX_CINEMA_THIRD_PARTY_NOTICES.txt
+└── screenshots/
+    ├── home.png
+    └── details.png
+```
 
-PHOENICX CINEMA's standalone stylesheet incorporates and customizes existing Jellyfin theme work, including:
+## 🙌 Credits and third-party notices
+
+PHOENICX CINEMA combines customizations with third-party Jellyfin theme code, including:
 
 - **ElegantFin** by **lscambo13**
 - **Media Bar Plugin Support** add-on by **lscambo13**
 - **ElegantFin for Jellyfin 12 Modern** by **mihaif7** ([upstream repository](https://github.com/mihaif7/elegantfin-jf12))
 
-See **[`PHOENICX_CINEMA_THIRD_PARTY_NOTICES.txt`](PHOENICX_CINEMA_THIRD_PARTY_NOTICES.txt)** for additional attribution. The original authors retain their rights; all applicable upstream license requirements continue to apply. Before publishing the combined CSS, make sure the complete relevant licenses and notices are included as required.
+See [`PHOENICX_CINEMA_THIRD_PARTY_NOTICES.txt`](PHOENICX_CINEMA_THIRD_PARTY_NOTICES.txt) for attribution and license information. Original authors retain their rights. Follow all applicable upstream license requirements when redistributing the combined stylesheet.
 
-## 💜 PHOENICX CINEMA
+---
 
 <div align="center">
+
+### 💜 PHOENICX CINEMA
 
 **Your library. Your screen. Your cinema.**
 
