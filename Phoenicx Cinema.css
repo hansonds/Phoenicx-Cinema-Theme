@@ -1,0 +1,1996 @@
+/* ==========================================================
+   PHOENICX CINEMA — SIGNATURE EDITION v2.0
+   Standalone Jellyfin CSS — PHOENICX CINEMA
+   Third-party notices provided separately.
+   ========================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
+
+
+/* ===== PHOENICX CINEMA — CORE ===== */
+@font-face{font-family:Material Symbols Rounded Minimal;font-style:normal;font-weight:100 700;src:url(https://fonts.gstatic.com/l/font?kit=sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzarESMdAUY9qjb3u1M7e05tMSFFiwiIx7ihGnzWmz-lkbjBJUko54uQNlqhKP2qww7THOuDASqI-hkRJowUB4AMXqmksLbVSypWpZCoCuR4ppEVE-Vm2EBGaEWVT1QQVqin1CJL8x-Ze-xGUuG3wq4dfIUCyyVOwlP0NhUaux0cITqh7BYw&skey=70ddea8fe54d532e&v=v362) format("woff2")}@font-face{font-family:Material Symbols Rounded;font-style:normal;font-weight:100 700;src:url(https://fonts.gstatic.com/s/materialsymbolsrounded/v362/sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190Fjzag.woff2) format("woff2")}:root{--pxFooterText:"PHOENICX CINEMA";font-family:Inter,sans-serif;font-optical-sizing:auto;font-style:normal;font-weight:425;-webkit-tap-highlight-color:transparent!important;--fill:1;--wght:400;--grad:0;--opsz:30;color:var(--textColor);color-scheme:dark;--largerRadius:1.25em;--largeRadius:1em;--smallRadius:0.5em;--smallerRadius:0.375em;--borderWidth:0.06em;--borderWidthDouble:0.12em;--defaultBorder:var(--borderWidth) solid var(--borderColor);--defaultLighterBorder:var(--borderWidth) solid var(--lighterBorderColor);--sidePadding:3.3%;--itemColumnGap:1em;--minEpisodeCardWidth:26em;--appBarHeight:5em;--blurSmallest:blur(2px);--blurDefault:blur(5px);--blurLarge:blur(10px);--blurLargest:blur(20px);--darkerGradientPoint:#111827;--darkerGradientPointAlpha:rgba(17,24,39,.85);--lighterGradientPoint:#1d2635;--lighterGradientPointAlpha:rgba(29,38,53,.85);--gradientPointAlpha:rgba(29,38,53,.3);--headerColor:rgba(30,40,54,.8);--drawerColor:rgba(30,40,54,.9);--borderColor:#47505c;--darkerBorderColor:#31373f;--lighterBorderColor:hsla(0,0%,100%,.2);--selectorBackgroundColor:#384252;--selectorBackgroundColorAlpha:rgba(56,66,82,.5);--textColor:#d1d5db;--dimTextColor:#9ca3af;--fullContrastColor:#fff;--zeroContrastColor:#000;--svgIconFilter:none;--clearLogoFilter:none;--accentColor:#5d55e7;--accentHoverColor:#756fe2;--semiTransparentAccentColor:hsla(0,0%,100%,.125);--btnPlayColor:var(--textColor);--btnPlayBorderColor:var(--borderColor);--btnMiniPlayColor:#299a5d;--btnMiniPlayBorderColor:#32a769;--btnDeleteColor:#a91d1d;--btnDeleteBorderColor:#d95454;--btnSubmitColor:#3d36b2;--btnSubmitBorderColor:#756fe2;--checkboxCheckedBgColor:#4f46e5;--highlightOutlineColor:#2563eb;--hoverBackgroundColor:var(--textColor);--hoverTabBackgroundColor:hsla(0,0%,100%,.9);--hoverTextColor:#fff;--activeBackgroundColor:var(--semiTransparentAccentColor);--activeTextColor:#fff;--cardHoverBorderColor:#fff;--cardResumeProgressColor:var(--textColor);--multiSelectOverlayColor:rgba(0,0,0,.8);--dividerColor:hsla(0,0%,100%,.05);--textareaBackgroundColor:var(--selectorBackgroundColor);--tableBodyColor:#1f2937;--osdSeekBarPlayedColor:var(--textColor);--osdSeekBarBufferedColorAlpha:hsla(0,0%,50%,.5);--osdSeekBarThumbColor:#fff;--backgroundGradient:linear-gradient(0deg,var(--darkerGradientPoint) 35%,var(--lighterGradientPoint));--cardBackgroundGradient:linear-gradient(0deg,var(--darkerGradientPoint),25%,var(--lighterGradientPoint));--backgroundAlphaOverlay:linear-gradient(180deg,var(--darkerGradientPointAlpha) 80%,transparent);--headerColorGradient:linear-gradient(180deg,rgba(30,40,54,.95) 30%,55%,transparent 90%);--headerColorGradientAlt:linear-gradient(180deg,#1e2836,70%,transparent);--headerBlurMask:linear-gradient(180deg,#fff 50%,85%,transparent);--cardFooterGradient:linear-gradient(0deg,hsla(0,0%,5%,.95),40%,transparent);--topOSDGradient:linear-gradient(180deg,rgba(0,0,0,.8),45%,transparent);--bottomOSDGradient:linear-gradient(0deg,rgba(0,0,0,.8),45%,transparent);--hoverGradientV:linear-gradient(0deg,transparent,hsla(0,0%,100%,.35) 45%,hsla(0,0%,100%,.35) 55%,transparent);--hoverGradientH:linear-gradient(90deg,transparent,hsla(0,0%,100%,.35) 45%,hsla(0,0%,100%,.35) 55%,transparent);--itemBackdropMask:linear-gradient(180deg,rgba(0,0,0,.8),75%,transparent);--shadow:0.1em 0.1em 0.15em rgba(0,0,0,.3);--cardShadow:0 1px 6px 0px rgba(0,0,0,.3);--iconShadow:0px 0px 2px rgba(0,0,0,.8),1px 1px 0px rgba(0,0,0,.5);--headerBackground:var(--headerColorGradient);--loginPageBgUrl:url();--loginPageText:"Sign in to continue";--overlayPlayButtonPosition:2.8em;--iconPack:"Material Symbols Rounded";--extraCardButtonsVisibility:none;--menuButtonVisibility:block;--itemOriginalTitleVisibility:block;--libraryLabelVisibility:none;--clearLogoVisibility:block;--itemTitleVisibility:none;--artistClearLogoVisibility:block;--artistTitleVisibility:none;--artistPageBackground:unset;--miniOverlayButtonVisibility:block;--endsAtVisibility:block;--criticsRatingVisibility:none;--cardHoverEffect:"";--backdropTrimFromTop:10%;--resumeCardScale:1}:root[data-theme=light]{color-scheme:light;--fill:0;--darkerGradientPoint:#f2f2f2;--darkerGradientPointAlpha:hsla(0,0%,95%,.85);--lighterGradientPoint:#eee;--lighterGradientPointAlpha:hsla(0,0%,100%,.85);--headerColor:hsla(0,0%,93.3%,.8);--drawerColor:hsla(0,0%,93.3%,.9);--borderColor:#b1b1b1;--darkerBorderColor:#cacaca;--lighterBorderColor:rgba(0,0,0,.2);--selectorBackgroundColor:#fff;--selectorBackgroundColorAlpha:hsla(0,0%,89.4%,.5);--textColor:#212121;--dimTextColor:#595959;--fullContrastColor:#000;--zeroContrastColor:#fff;--svgIconFilter:invert(1);--clearLogoFilter:invert(1) brightness(0.5) hue-rotate(180deg);--accentColor:#4e3de6;--accentHoverColor:#5a4ff8;--btnPlayColor:var(--accentColor);--btnPlayBorderColor:var(--btnSubmitBorderColor);--btnMiniPlayColor:#2c965c;--btnMiniPlayBorderColor:#34a868;--btnDeleteColor:#b9312d;--btnDeleteBorderColor:#eb6060;--btnSubmitColor:#4947cd;--btnSubmitBorderColor:#756fe2;--checkboxCheckedBgColor:#5855f6;--highlightOutlineColor:#3374ff;--hoverBackgroundColor:var(--accentHoverColor);--hoverTabBackgroundColor:var(--accentHoverColor);--hoverTextColor:#fff;--activeBackgroundColor:var(--accentHoverColor);--activeTextColor:#fff;--cardHoverBorderColor:var(--accentHoverColor);--cardResumeProgressColor:#fff;--multiSelectOverlayColor:hsla(0,0%,81.6%,.8);--dividerColor:rgba(0,0,0,.05);--textareaBackgroundColor:#fff;--tableBodyColor:#fff;--osdSeekBarPlayedColor:var(--accentHoverColor);--osdSeekBarThumbColor:var(--accentColor);--backgroundGradient:var(--lighterGradientPoint);--headerColorGradient:linear-gradient(180deg,hsla(0,0%,100%,.95) 30%,55%,transparent 90%);--headerColorGradientAlt:linear-gradient(180deg,hsla(0,0%,100%,.95),70%,transparent);--cardFooterGradient:linear-gradient(0deg,hsla(0,0%,8%,.8),40%,transparent);--shadow:0.1em 0.1em 0.15em transparent;--cardShadow:0 1px 6px 0px #d9d9d9}:root.layout-mobile{--headerColorGradient:var(--headerColorGradientAlt);--blurLargest:blur(12px);--headerBlurMask:linear-gradient(180deg,#fff 60%,90%,transparent);--itemColumnGap:0.4em}body{--primaryItemPageNegativeSpace:14vh;--secondaryItemPageNegativeSpace:60vh;--clearLogoBottomSpace:11em}select{text-overflow:ellipsis}.layout-desktop>body:has(>audio[src]){--primaryItemPageNegativeSpace:calc(14vh + 5em);--secondaryItemPageNegativeSpace:calc(60vh + 5em)}.layout-mobile>body{--secondaryItemPageNegativeSpace:45vh}.material-icons{display:inline-block;font-family:var(--iconPack),Material Icons!important;font-style:normal;font-weight:400;letter-spacing:normal;line-height:1;text-transform:none;white-space:nowrap;word-wrap:normal;direction:ltr;font-feature-settings:"liga";text-rendering:geometricPrecision;vertical-align:middle;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-variation-settings:"FILL" var(--fill),"wght" var(--wght),"GRAD" var(--grad),"opsz" var(--opsz);transition:font-variation-settings .25s}.material-icons.info_outline:before{content:"\e88e"}.detailButton-icon{--fill:0}.cardImageIcon,.cardOverlayButtonIcon,.indicatorIcon,.ratingbutton-icon-withrating,.starIcon{--fill:1}.dashboardFooter{font-family:Noto Sans,serif;transition:transform 50ms}#myPreferencesMenuPage>div:after,.dashboardFooter:after{color:var(--borderColor);content:var(--pxFooterText);display:inline-grid;font-size:.8em;font-weight:600;justify-content:center;width:100%;width:-webkit-fill-available}::selection{background:var(--accentHoverColor)}.cardImageIcon{color:var(--borderColor)}.cardPadder .cardImageIcon{color:var(--selectorBackgroundColorAlpha)}.card:focus .cardBox.visualCardBox,.card:focus .cardBox:not(.visualCardBox) .cardScalable{border-color:var(--fullContrastColor)!important}.mdl-radio.show-focus .mdl-radio__button:focus+.mdl-radio__circles .mdl-radio__inner-circle,.mdl-radio.show-focus .mdl-radio__button:focus+.mdl-radio__circles .mdl-radio__outer-circle,.mdl-radio__focus-circle{background:var(--accentColor);color:var(--accentColor)}.emby-button{gap:1ch}.emby-button.show-focus:focus,.emby-tabs .emby-button.show-focus:focus,.paper-icon-button-light.show-focus:focus{background-color:var(--highlightOutlineColor)!important;color:var(--fullContrastColor)!important}.emby-tabs .emby-button.show-focus:focus{outline:none!important}[dir=ltr] .itemsContainer>.card>.cardBox{margin-left:auto;margin-right:auto}.cardBox-bottompadded{margin-bottom:.5em!important}@media (max-width:50em){.cardBox-bottompadded{margin-bottom:.25em!important}}.padded-right-withalphapicker>.vertical-wrap,.vertical-wrap.padded-right-withalphapicker,.vertical-wrap:not(.centered){justify-content:flex-start!important}#channelsTab>.vertical-wrap,#episodesTab>.vertical-wrap,#genresTab>.vertical-wrap,#recordingsTab>.vertical-wrap,#studiosTab>.vertical-wrap{justify-content:center!important}.countIndicator,.fullSyncIndicator,.mediaSourceIndicator{background:#1f50bd;border:var(--defaultLighterBorder);color:#fff}.layout-mobile .indicator{font-size:70%}.cardScalable{border:var(--darkerBorderColor) solid var(--borderWidthDouble)!important;border-radius:var(--largeRadius);box-shadow:var(--cardShadow);overflow:hidden!important;transition:transform 125ms}@supports (aspect-ratio:1/1){#castCollapsible .cardScalable,#guestCastContent .cardScalable{aspect-ratio:1/1;border-radius:50%}}#castCollapsible .cardContent.cardImageContainer,#guestCastContent .cardContent.cardImageContainer{background-position-y:33%}.layout-mobile .cardScalable,.paperList,.visualCardBox{border:var(--defaultBorder)!important}.paperList,.visualCardBox{background-color:var(--headerColor)!important;border-radius:var(--largeRadius)!important;box-shadow:unset!important;overflow:hidden}.layout-desktop .visualCardBox{border-width:var(--borderWidthDouble)!important}.visualCardBox .cardScalable{border-color:var(--darkerBorderColor)!important;border-radius:0!important;border-width:0 0 var(--borderWidth) 0!important}.cardImageContainer{transition:transform .375s}.card.squareCard[data-type=TvChannel] .cardImageContainer.cardContent{background-color:hsla(0,0%,100%,.2)}.cardImageContainer>.cardDefaultText{color:transparent;font-size:2em;padding-top:1.5em;white-space:pre}.cardImageContainer>.cardDefaultText:before{color:var(--borderColor);content:"?\A"}.card-hoverable:hover .cardScalable,.card-hoverable:hover .visualCardBox{border-color:var(--cardHoverBorderColor)!important}.card-hoverable:hover .visualCardBox .cardScalable{border-color:var(--darkerBorderColor)!important}.card-hoverable:hover .cardImageContainer{transform:scale(1.025)}.card-hoverable .itemSelectionPanel{transition:transform .125s}.card-hoverable:hover .cardScalable,.card-hoverable:hover .itemSelectionPanel{transform:scale(1.02)}.card-hoverable .cardScalable:active{transform:scale(1);transition:transform 75ms}.cardScalable:has(.cardOverlayButton-hover:hover)>.cardImageContainer{transform:scale(1)}.cardOverlayContainer{background:hsla(0,0%,100%,.05);transition:.5s}.cardOverlayContainer:after{background:var(--hoverGradientV);bottom:0;content:var(--cardHoverEffect);left:0;position:absolute;right:0;top:0;transform:translateY(-100%) translateX(0);transition:.65s}.card-hoverable:hover .cardOverlayContainer:after{transform:translateY(100%) translateX(0)}.backdropCard.card-hoverable .cardOverlayContainer:after,.overflowBackdropCard.card-hoverable .cardOverlayContainer:after{background:var(--hoverGradientH);transform:translateY(0) translateX(-100%)}.backdropCard.card-hoverable:hover .cardOverlayContainer:after,.overflowBackdropCard.card-hoverable:hover .cardOverlayContainer:after{transform:translateY(0) translateX(100%)}.cardBox:not(.visualCardBox) .cardPadder{background-color:var(--lighterGradientPoint);box-shadow:none}.cardOverlayContainer>.cardOverlayFab-primary{bottom:calc(var(--overlayPlayButtonPosition) - 1.5em);left:calc(var(--overlayPlayButtonPosition) - 1.5em);margin-left:unset;margin-top:unset;top:unset}.cardOverlayContainer>.cardOverlayFab-primary,.layout-mobile .cardOverlayButton-br:not([data-action=menu])>.cardOverlayButtonIcon,.listItemImageButton{background-color:var(--btnMiniPlayColor)!important;border:var(--defaultLighterBorder);border-color:var(--btnMiniPlayBorderColor);color:#fff!important;font-size:75%;z-index:2}.cardOverlayContainer>.cardOverlayFab-primary:hover,.listItemImageButton:hover{color:#fff}.layout-desktop .cardOverlayButton-br,[dir=ltr] .layout-desktop .cardOverlayButton-br{bottom:1.2em;font-size:.8em;right:.7em;z-index:1}.layout-desktop .cardOverlayButton-br>button{color:#fff;display:var(--extraCardButtonsVisibility);text-shadow:var(--iconShadow)}.cardOverlayButton-br .cardOverlayButton-hover[data-action=menu],.layout-desktop .listItemButton[data-action=menu]{display:var(--menuButtonVisibility)}.layout-mobile .cardOverlayButton{font-size:60%;padding:1em}.layout-mobile .cardOverlayButton-br,[dir=ltr] .layout-mobile .cardOverlayButton-br{display:var(--miniOverlayButtonVisibility)}.layout-mobile .backdropCard .cardOverlayButton-br:not([data-action=menu]),.layout-mobile .portraitCard .cardOverlayButton-br:not([data-action=menu]){display:none}.layout-mobile .cardOverlayButton-br[data-action=menu]>.cardOverlayButtonIcon{background-color:transparent!important;border:none;color:#fff;text-shadow:var(--iconShadow)}.cardOverlayContainer:has(>button:hover){backdrop-filter:var(--blurDefault)}.listViewUserDataButtons{font-size:small}.layout-mobile .listViewUserDataButtons{flex-direction:column;font-size:x-small}@supports (display:revert){.layout-desktop .vertical-list:has(.listItem-largeImage){display:grid;gap:var(--itemColumnGap);grid-template-columns:repeat(auto-fill,minmax(min(var(--minEpisodeCardWidth),100%),1fr))}.layout-desktop .listItem-largeImage{display:grid;margin-bottom:0!important}.layout-desktop .listItem-largeImage>.listItem-content{align-items:start;display:grid;grid-template-columns:1fr 1fr 2em;height:100%;order:1}.layout-desktop .listItem-largeImage>.listItem-bottomoverview{order:2}.layout-desktop .listItem-largeImage .listItemImage-large{aspect-ratio:16/9;box-sizing:border-box;grid-column:1/-1;height:max-content;min-height:15em;order:1;width:100%}.layout-desktop .listItem-largeImage .listItemBody{grid-column:1/3;order:2;padding:1em .125em}.layout-desktop .listItem-largeImage .listViewUserDataButtons{align-self:center;flex-direction:column;font-size:small;grid-column:3;order:2}}.portraitCard{min-width:5em}.bannerCard{--cardCount:2}@media (min-width:300em){.portraitCard,.squareCard{--cardCount:16}.overflowPortraitCard,.overflowSquareCard{--cardCount:15}.squareCard:has(.cardFooter){--cardCount:12}.backdropCard{--cardCount:12}.overflowBackdropCard{--cardCount:11}}@media (max-width:300em){.portraitCard,.squareCard{--cardCount:15}.overflowPortraitCard,.overflowSquareCard{--cardCount:14}.squareCard:has(.cardFooter){--cardCount:11}.backdropCard{--cardCount:11}.overflowBackdropCard{--cardCount:10}}@media (max-width:270em){.portraitCard,.squareCard{--cardCount:14}.overflowPortraitCard,.overflowSquareCard{--cardCount:13}.squareCard:has(.cardFooter){--cardCount:10}.backdropCard{--cardCount:10}.overflowBackdropCard{--cardCount:9}}@media (max-width:240em){.portraitCard,.squareCard{--cardCount:13}.overflowPortraitCard,.overflowSquareCard{--cardCount:12}.squareCard:has(.cardFooter){--cardCount:10}.backdropCard{--cardCount:10}.overflowBackdropCard{--cardCount:9}}@media (max-width:220em){.portraitCard,.squareCard{--cardCount:12}.overflowPortraitCard,.overflowSquareCard{--cardCount:11}.squareCard:has(.cardFooter){--cardCount:9}.backdropCard,.overflowBackdropCard{--cardCount:7}}@media (max-width:200em){.portraitCard,.squareCard{--cardCount:11}.overflowPortraitCard,.overflowSquareCard{--cardCount:10}.squareCard:has(.cardFooter){--cardCount:9}}@media (max-width:170em){.portraitCard,.squareCard{--cardCount:10}.overflowPortraitCard,.overflowSquareCard{--cardCount:9}.squareCard:has(.cardFooter){--cardCount:9}.backdropCard,.overflowBackdropCard{--cardCount:6}}@media (max-width:140em){.portraitCard,.squareCard{--cardCount:9}.overflowPortraitCard,.overflowSquareCard{--cardCount:8}.squareCard:has(.cardFooter){--cardCount:7}.backdropCard,.overflowBackdropCard{--cardCount:5}}@media (max-width:120em){.portraitCard,.squareCard{--cardCount:8}.overflowPortraitCard,.overflowSquareCard{--cardCount:7}.squareCard:has(.cardFooter){--cardCount:6}.backdropCard,.layout-tv .overflowPortraitCard,.layout-tv .overflowSquareCard,.layout-tv .portraitCard,.layout-tv .squareCard,.overflowBackdropCard{--cardCount:5}.layout-tv .backdropCard,.layout-tv .overflowBackdropCard{--cardCount:3}}@media (max-width:100em){.overflowPortraitCard,.overflowSquareCard,.portraitCard,.squareCard{--cardCount:7}.squareCard:has(.cardFooter){--cardCount:6}.backdropCard,.overflowBackdropCard{--cardCount:4}}@media (max-width:80em){.overflowPortraitCard,.overflowSquareCard,.portraitCard,.squareCard{--cardCount:6}.squareCard:has(.cardFooter){--cardCount:5}.backdropCard,.overflowBackdropCard{--cardCount:4}}@media (max-width:62em){.overflowPortraitCard,.overflowSquareCard,.portraitCard,.squareCard{--cardCount:5}.squareCard:has(.cardFooter){--cardCount:4}.backdropCard,.overflowBackdropCard{--cardCount:4}}@media (max-width:48.125em){.overflowPortraitCard,.overflowSquareCard,.portraitCard,.squareCard{--cardCount:4}.squareCard:has(.cardFooter){--cardCount:3}.backdropCard,.overflowBackdropCard{--cardCount:3}}@media (max-width:30em){.layout-mobile .overflowPortraitCard,.layout-mobile .overflowSquareCard,.layout-mobile .portraitCard,.layout-mobile .squareCard,.overflowPortraitCard,.overflowSquareCard,.portraitCard,.squareCard{--cardCount:3}.squareCard:has(.cardFooter){--cardCount:2}.backdropCard,.overflowBackdropCard{--cardCount:2}}.cardBox{margin-top:0}.card{--padding:0.375em;--effectiveWidth:calc(100vw - var(--padding)*2 - var(--sidePadding)*2);--cardWidth:calc(var(--effectiveWidth)/var(--cardCount) - var(--itemColumnGap));box-sizing:content-box;padding:var(--padding);transition:width .5s;width:var(--cardWidth)!important}@supports (aspect-ratio:1/1){.card{box-sizing:border-box}}.layout-mobile .card{--padding:1px;scroll-snap-align:center;scroll-snap-stop:always}@media (orientation:landscape) and (max-height:40em){.layout-mobile .card{--effectiveWidth:calc(65vw - var(--sidePadding)*2)}}#homeTab .overflowBackdropCard[data-positionticks],#resumableItems>.card,.nextUpItems>.card{width:calc(var(--cardWidth)*var(--resumeCardScale))!important}.card .cardTextCentered{text-shadow:var(--shadow)}.detailPageWrapperContainer{margin-top:unset;padding-top:unset}.layout-desktop .detailPageWrapperContainer{background:linear-gradient(180deg,transparent,17vh,var(--darkerGradientPointAlpha) 50vh);min-height:46vh}.layout-tv .detailPageWrapperContainer{background:linear-gradient(0deg,var(--darkerGradientPointAlpha) 70%,85%,transparent);min-height:46vh;padding-left:30vw}.detailPagePrimaryContainer{align-content:space-between;align-items:stretch;align-items:center;flex-direction:column;justify-content:end;text-align:left}.layout-mobile .detailPagePrimaryContainer.detailRibbon,.layout-mobile .detailPagePrimaryContainer>.detailRibbon{padding:0 var(--sidePadding)}.layout-desktop .detailPagePrimaryContainer{background:transparent}.layout-desktop .detailPageSecondaryContainer{background-color:transparent}.detailPagePrimaryContainer>.detailPagePrimaryContent,[dir=ltr] .detailPagePrimaryContainer.detailRibbon,[dir=ltr] .detailPagePrimaryContainer>.detailRibbon{padding-left:var(--sidePadding)}.layout-mobile .detailPagePrimaryContent{padding-left:var(--sidePadding)!important;padding-right:var(--sidePadding)!important}.layout-desktop [dir=ltr] .detailRibbon,.layout-tv [dir=ltr] .detailRibbon{flex-direction:column}.detailPagePrimaryContainer>.detailPagePrimaryContent{padding-top:0}.detailPageSecondaryContainer{padding-top:0!important}.skinHeader-withBackground:not(.semiTransparent) .headerHomeButton{display:none}.layout-mobile:has(#itemDetailPage:not(.hide)) .headerHomeButton{display:block}.pageTitle{height:1.5em}.headerLeft .pageTitle{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}.paper-icon-button-light{transition:none}.paper-icon-button-light>.material-icons{font-size:1.25em}#itemDetailPage .emby-scroller,#itemDetailPage .emby-scroller-container,#itemDetailPage .scrollX{margin:0 calc(var(--sidePadding)*-1);padding-left:var(--sidePadding)}.layout-desktop .emby-scroller,.layout-desktop .emby-scroller-container,.layout-desktop .scrollX{--itemColumnGap:0.5em}.emby-scroller,.scrollX{padding-left:var(--sidePadding);scroll-padding-inline:var(--sidePadding);scroll-snap-type:x proximity}.sectionTabs .scrollX{padding-left:0}.itemsContainer:not(.editorsChoiceItemsContainer,.vertical-list){column-gap:var(--itemColumnGap);row-gap:1em}.layout-mobile .itemsContainer:not(.editorsChoiceItemsContainer,.vertical-wrap,.vertical-list):after{color:transparent;content:"13"}.sectionTitle{font-size:1.5rem!important}.layout-mobile .sectionTitle{font-size:1.35rem!important}.emby-scrollbuttons,[dir=ltr] .emby-scrollbuttons{padding-top:0}.emby-scrollbuttons-button.paper-icon-button-light>.material-icons{font-size:1.5em;place-content:center}.detailRibbon{background-color:transparent}.mediaInfoItem{border-radius:var(--smallRadius);font-weight:500;padding-bottom:0;padding-top:0}.itemMiscInfo-primary{column-gap:.5em}.mediaInfoOfficialRating{background:transparent!important;border:var(--defaultBorder);color:var(--textColor);font-family:Noto Sans,sans-serif;font-size:.75em;font-weight:600;line-height:1.5em;transform:translateY(-.15em)}.starIcon{--tmdb:linear-gradient(90deg,#90cea1,#01b4e4);--imdb:linear-gradient(90deg,#f2db83,#dba506);--colors:var(--tmdb);background:var(--colors);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-left:-.125em;transform:translateY(-.02em)}[dir=ltr] .mediaInfoCriticRating{background-size:30%;padding-left:1.5em}[dir=ltr] .mediaInfoCriticRating:after{content:"%"}@media (max-width:31.25em){.itemMiscInfo .endsAt{display:var(--endsAtVisibility)}.mediaInfoCriticRating{display:var(--criticsRatingVisibility)}}.detailRibbon:has(.portraitCard .folder){align-content:flex-end;min-height:32vh}.layout-desktop .detailRibbon:has(.person){align-content:flex-end;min-height:15vh}.layout-desktop .detailRibbon{height:100%;margin-top:unset;min-height:25vh}@keyframes animMoveDown{0%{opacity:0;transform:translateY(-2em)}to{opacity:1;transform:translateY(0)}}@keyframes animMoveDownSecondaryPage{0%{opacity:0;transform:translateY(-2em)}to{opacity:.3;transform:translateY(0)}}@keyframes animMoveUp{0%{opacity:0;transform:translateY(-90%)}to{opacity:1;transform:translateY(-100%)}}body:not(.hide-scroll)>.videoPlayerContainer{height:80vh;-webkit-mask:var(--headerBlurMask);mask:var(--headerBlurMask);position:relative!important}.layout-mobile body:not(.hide-scroll)>.videoPlayerContainer{height:40vh;z-index:1}.layout-desktop>body:not(.hide-scroll)>.videoPlayerContainer~#reactRoot>.backgroundContainer.withBackdrop{opacity:.25}.itemBackdrop{display:block!important}.layout-desktop .itemBackdrop{height:calc(73vh - var(--primaryItemPageNegativeSpace))}.layout-mobile .itemBackdrop{animation:animMoveDown .5s ease-out forwards;height:45vh;margin-top:0!important;-webkit-mask:var(--itemBackdropMask);mask:var(--itemBackdropMask);position:sticky;top:-30%}.layout-tv .itemBackdrop{height:33vh}#itemDetailPage:has(.detailImageContainer .backdropCard) .itemBackdrop,#itemDetailPage:has(.detailImageContainer .book) .itemBackdrop,#itemDetailPage:has(.detailImageContainer .live_tv) .itemBackdrop,#itemDetailPage:has(.detailImageContainer .person) .itemBackdrop,#itemDetailPage:has(.detailImageContainer .queue) .itemBackdrop,#itemDetailPage:has(.detailImageContainer .squareCard) .itemBackdrop,#itemDetailPage:has(.musicParentName) .itemBackdrop,#itemDetailPage:has(.subtitle) .itemBackdrop{height:calc(73vh - var(--secondaryItemPageNegativeSpace))}#itemDetailPage:has(.detailImageContainer .cardPadder-square>.person) .itemBackdrop{height:calc(96vh - var(--secondaryItemPageNegativeSpace))}.detailLogo{background-position:bottom;display:var(--clearLogoVisibility);filter:var(--clearLogoFilter);height:25vh;left:0;margin:auto 30%;top:calc(100vh - var(--clearLogoBottomSpace) - var(--primaryItemPageNegativeSpace));transform:translateY(-100%);width:40%}.layout-mobile .detailLogo{animation:animMoveUp 1s ease-out forwards;display:var(--clearLogoVisibility);left:1em;margin:auto 0;max-height:17vh;position:absolute;top:45vh;width:calc(100vw - 2em);z-index:1}.layout-tv .detailLogo{display:var(--clearLogoVisibility);height:20vh;left:30vw;margin:auto 5vw;top:39vh;width:60vw}#itemDetailPage:has(.subtitle) .detailLogo{top:calc(100vh - 6em - var(--secondaryItemPageNegativeSpace))}.layout-desktop #itemDetailPage:has(.detailImageContainer .person) .detailLogo{top:calc(100vh - var(--secondaryItemPageNegativeSpace))}.layout-mobile #itemDetailPage:has(.subtitle) .detailLogo{top:calc(100vh - 11em - var(--secondaryItemPageNegativeSpace))}.layout-desktop .detailImageContainer .card{float:none;left:0!important;margin:auto auto 0;place-self:center;position:relative!important;right:0;top:0;width:22vh!important}.detailImageContainer .card.backdropCard{max-width:50vw;width:40vh!important}.detailImageContainer .card{display:none}.layout-tv .detailImageContainer .card{align-content:center;bottom:0;display:block!important;left:var(--sidePadding);margin:auto;position:fixed!important;top:0;transform:none;width:25vw!important}.layout-mobile .detailImageContainer .card{filter:drop-shadow(0 0 .25rem rgba(0,0,0,.25))}.layout-mobile .infoWrapper,.layout-mobile [dir=ltr] .infoWrapper{padding-left:0}.infoWrapper{align-content:end;color:var(--textColor);display:grid;place-items:center;text-align:center}.layout-mobile .detailImageContainer{align-items:flex-end;display:flex;justify-content:center;padding-left:0!important}.layout-mobile .detailImageContainer:has(.card:not(.portraitCard)){height:0}.layout-mobile .detailImageContainer .card{margin-top:-150%;max-width:60vw;position:inherit!important}.layout-mobile .detailPageWrapperContainer{margin-top:.5em;padding-top:0}#itemDetailPage:has(.detailImageContainer .album) .detailLogo,#itemDetailPage:has(.detailImageContainer .backdropCard) .detailLogo{display:none;z-index:2}#itemDetailPage:has(.detailImageContainer .person) .detailLogo{display:var(--artistClearLogoVisibility);z-index:2}.detailLogo:not(.hide)~.detailPageWrapperContainer .nameContainer h1{display:var(--itemTitleVisibility);z-index:2}.detailImageContainer:has(.squareCard .person)~.nameContainer h1{display:var(--artistTitleVisibility)}.detailLogo.hide~.detailPageWrapperContainer .nameContainer h1{display:block!important}.detailImageContainer:has(.album)~.nameContainer h1,.detailImageContainer:has(.backdropCard)~.nameContainer h1{display:block!important}.detailImageContainer .card.backdropCard:has(.cardImageIcon.album){max-width:20vh}.detailImageContainer .card.backdropCard:has(.cardImageIcon.album) .cardScalable{aspect-ratio:1/1}#childrenContent:has(.listItem[data-type=Audio]),.programGuideSection{background-color:var(--lighterGradientPointAlpha);border:var(--defaultBorder);border-radius:var(--largeRadius);padding:.5em}.detailImageContainer>.backdropCard,.detailImageContainer>.card:has(.album),.detailImageContainer>.card:has(.book),.detailImageContainer>.card:has(.live_tv),.detailImageContainer>.card:has(.person),.detailImageContainer>.card:has(.queue),.detailImageContainer>.squareCard{display:block}.detailImageContainer .squareCard:has(.person){display:none}#itemDetailPage:has(.musicParentName),#itemDetailPage:has(.subtitle){background:var(--backgroundAlphaOverlay)}#itemDetailPage:has(.detailImageContainer .cardPadder-square>.person){background:var(--artistPageBackground,var(--backgroundAlphaOverlay))}.layout-mobile #itemDetailPage:has(.detailImageContainer .backdropCard) .itemBackdrop,.layout-mobile #itemDetailPage:has(.musicParentName) .itemBackdrop,.layout-mobile #itemDetailPage:has(.subtitle) .itemBackdrop{animation:animMoveDownSecondaryPage .5s ease-out forwards}.layout-mobile .cardImageIcon{font-size:3.5em}.homeLibraryButton{margin:0!important;min-width:15%;width:min(45%,12rem)}@media (max-width:50em){.homeLibraryButton{width:47.6%!important}}@media (orientation:portrait) and (max-width:40em){[data-type=Movie] .listItemImage,[data-type=Series] .listItemImage{display:unset}.dashboardActionsContainer{font-size:min(3.6vw,98%)}}@media (orientation:portrait){.layout-mobile .skinHeader.noHomeButtonHeader .headerSyncButton{display:none}.layout-mobile .btnPlay.detailButton:not(.play-button){flex:0 0 100%;margin-right:0!important}}h2{font-size:1.25em}h1,h2{font-weight:600}.tagline{color:var(--textColor);font-size:1.3em;font-style:italic;font-weight:400;margin:0}.backdropContainer,.backgroundContainer:not(.backgroundContainer-transparent),.backgroundContainer:not(.withBackdrop),.nowPlayingContextMenu,.nowPlayingPlaylist,html{background-color:var(--darkerGradientPoint);background:var(--backgroundGradient)}.backdropImage{background-position-y:clamp(0%,calc(var(--backdropTrimFromTop)*5),100%)}.backdropImage:after,.backdropImage:before{background:inherit;bottom:0;content:"";left:0;position:absolute;right:0;top:0}.backdropImage:after{height:80vh;-webkit-mask:linear-gradient(180deg,#000 75%,transparent);mask:linear-gradient(180deg,#000 75%,transparent);z-index:0}.layout-desktop .backdropImage:after{transition:opacity .25s}.backdropImage:before{filter:var(--blurLargest);transform:scale(1.1)}.backgroundContainer.withBackdrop{background:linear-gradient(0deg,var(--darkerGradientPoint),45%,rgba(17,24,39,.25));opacity:.9}.layout-tv .backgroundContainer.withBackdrop{background:linear-gradient(0deg,var(--darkerGradientPoint),45%,rgba(17,24,39,.95))}.layout-mobile .withSectionTabs .backgroundContainer.withBackdrop{opacity:.9}.layout-mobile .backgroundContainer.withBackdrop{background:var(--darkerGradientPoint);opacity:1}.withSectionTabs .backgroundContainer.withBackdrop{background:var(--darkerGradientPoint)}.layout-desktop .withSectionTabs .backdropImage:after{opacity:0}.layout-mobile .withSectionTabs .backdropImage:after{display:none}@keyframes animScaleUp{0%{opacity:0;transform:translateY(-2.5%)}to{opacity:1;transform:translateY(0)}}.backdropImageFadeIn{animation:animScaleUp .5s ease-out forwards;transform-origin:bottom center}.appfooter{backdrop-filter:var(--blurLargest)!important;background-color:var(--headerColor)!important;color:var(--textColor)}.lyricPage{padding:0 var(--sidePadding)}.lyricsLine{align-self:center;color:var(--textColor);font-size:2em;font-weight:600;text-align:center;transition:transform .125s}.futureLyric,.pastLyric{font-weight:400;text-align:center;transform:scale(.85)}.pastLyric{opacity:.45}.buttonActive{color:var(--accentColor)!important}#divRunningTasks progress{width:calc(100% - 7em)}.listItemImage .itemProgressBar{margin:8%;position:absolute}.layout-mobile .listItemImage .itemProgressBar{justify-self:center;margin-bottom:5%;position:absolute}.itemProgressBar:not(.backgroundProgress):not(.playbackProgress):not(.transcodingProgress){backdrop-filter:var(--blurLarge);background-color:var(--osdSeekBarBufferedColorAlpha)!important;border-radius:var(--largeRadius);height:.35em;overflow:hidden}.layout-mobile .itemProgressBar:not(.backgroundProgress,.playbackProgress,.transcodingProgress){width:calc(100% - 2em)}.layout-mobile .backdropCard .itemProgressBar:not(.backgroundProgress,.playbackProgress,.transcodingProgress),.layout-mobile .portraitCard .itemProgressBar:not(.backgroundProgress,.playbackProgress,.transcodingProgress){width:100%;width:-webkit-fill-available}.itemProgressBarForeground{background-color:var(--cardResumeProgressColor);border-radius:0 var(--largeRadius) var(--largeRadius) 0;opacity:.75}.backgroundProgress,.backgroundProgress>div{background-color:var(--darkerGradientPoint)}.playbackProgress>div{background-color:var(--accentColor)}::-moz-progress-bar{background:var(--accentColor)!important}::-webkit-progress-value{background:var(--accentColor)!important}::-webkit-progress-bar,progress{background:var(--darkerGradientPoint)!important;border:var(--defaultBorder)!important;border-radius:var(--smallRadius);overflow:hidden}progress+span{color:var(--accentColor)!important}.mdl-spinner__circle{border-color:var(--textColor);border-style:inset;border-width:.25em}.sliderContainer{--thumb:0.4em}.mdl-slider-container{height:1em}.mdl-slider{height:unset}.mdl-slider-background-flex-container{padding:0 calc(var(--thumb)/2)}.sliderBubbleTrack{margin:0 calc(var(--thumb)/2)}.sliderBubbleText{font-size:1.5em}.mdl-slider-background-flex{background:var(--osdSeekBarBufferedColorAlpha);border-radius:var(--thumb);height:var(--thumb);margin-top:calc(var(--thumb)/-2);transition:.2s linear}.sliderContainer:active .mdl-slider-background-flex{--h:calc(var(--thumb)*1.5);border-radius:var(--h);height:var(--h);margin-top:calc(var(--h)/-2)}.mdl-slider-background-lower{background-color:var(--osdSeekBarPlayedColor)}.mdl-slider-background-upper{background-color:var(--osdSeekBarBufferedColorAlpha)}.mdl-slider::-webkit-slider-thumb{background:var(--osdSeekBarThumbColor);border-radius:var(--thumb);height:var(--thumb)!important;transition:.2s linear;width:var(--thumb)!important}.layout-mobile .mdl-slider::-webkit-slider-thumb,.mdl-slider.show-focus:focus::-webkit-slider-thumb,.mdl-slider:hover::-webkit-slider-thumb{border-radius:var(--thumb);height:calc(var(--thumb)*5)!important;transform:scale(.5);width:calc(var(--thumb)*1.25)!important}.mdl-slider::-moz-range-thumb{background:var(--osdSeekBarThumbColor);border-radius:var(--thumb);height:var(--thumb)!important;transition:.2s linear;width:var(--thumb)!important}.mdl-slider.show-focus:focus::-moz-range-thumb,.mdl-slider:hover::-moz-range-thumb{border-radius:var(--thumb);height:calc(var(--thumb)*5)!important;transform:scale(.5);width:calc(var(--thumb)*1.25)!important}.sliderMarkerContainer{margin:0 .1em}.sliderMarker.watched{background-color:var(--osdSeekBarPlayedColor)}.sliderMarker{border-radius:2px;height:4px}.iconOsdProgressInner{background:var(--osdSeekBarPlayedColor)}.selectLabel{max-height:2em}.inputLabelUnfocused,.selectLabel{color:var(--textColor)}.inputLabelFocused{color:var(--fullContrastColor)}.button-link{color:var(--dimTextColor)}.button-link:hover{color:unset!important;text-decoration:none}.button-link:active{color:var(--fullContrastColor)!important;text-decoration:none}.drawer-open,.mainDrawer{backdrop-filter:var(--blurLarge);background-color:var(--drawerColor);border-right:var(--defaultBorder)}.mainDrawer-scrollContainer{padding-bottom:5vh}.mainDrawer-scrollContainer>div:first-child{margin-bottom:1em}.btnHeaderSave.button-flat{border-radius:var(--smallRadius);color:var(--accentColor)!important;gap:.3em}.button-flat:hover{color:unset}.button-flat:active{background-color:hsla(0,0%,100%,.2);color:unset}.playstatebutton-icon-played{color:#22c55e}.videoOsdBottom.videoOsdBottom-maincontrols .btnPause{font-size:2em}.osdControls{display:flex;flex-direction:column-reverse}.itemExternalLinks{color:transparent}.itemExternalLinks>.button-link{background-color:var(--selectorBackgroundColor);border-radius:var(--smallerRadius);color:var(--textColor);margin-bottom:.5em;padding:.125em .5em}.layout-mobile .itemExternalLinks>.button-link:hover:not(:active){color:var(--textColor)!important}.itemExternalLinks>a:active,.layout-desktop .itemExternalLinks>a:hover{background-color:var(--accentColor)!important;color:#fff!important}.itemExternalLinks>a[href*="themoviedb.org"]:active,.layout-desktop .itemExternalLinks>a[href*="themoviedb.org"]:hover{background-color:#1ab7d8!important;color:#000!important}.itemExternalLinks>a[href*="imdb.com"]:active,.layout-desktop .itemExternalLinks>a[href*="imdb.com"]:hover{background-color:#e2b616!important;color:#000!important}.itemExternalLinks>a[href*="thetvdb.com"]:active,.layout-desktop .itemExternalLinks>a[href*="thetvdb.com"]:hover{background-color:#6cd591!important;color:#000!important}.itemExternalLinks>a[href*="trakt.tv"]:active,.layout-desktop .itemExternalLinks>a[href*="trakt.tv"]:hover{background-color:#ab3aad!important;color:#fff!important}.itemExternalLinks>a[href*="theaudiodb.com"]:active,.layout-desktop .itemExternalLinks>a[href*="theaudiodb.com"]:hover{background-color:#6399cc!important;color:#0f161c!important}.itemExternalLinks>a[href*="musicbrainz.org"]:active,.layout-desktop .itemExternalLinks>a[href*="musicbrainz.org"]:hover{background-color:#ba478f!important;color:#fff!important}.itemExternalLinks>a[href*="letterboxd.com"]:active,.layout-desktop .itemExternalLinks>a[href*="letterboxd.com"]:hover{background-color:#14181c!important;color:#fff!important}.itemExternalLinks>a[title*=Radarr]:active,.layout-desktop .itemExternalLinks>a[title*=Radarr]:hover{background-color:#ffc230!important;color:#000!important}.itemExternalLinks>a[title*=Sonarr]:active,.layout-desktop .itemExternalLinks>a[title*=Sonarr]:hover{background-color:#07bae9!important;color:#000!important}.itemExternalLinks>a[title*=Bazarr]:active,.layout-desktop .itemExternalLinks>a[title*=Bazarr]:hover{background-color:var(--textColor)!important;color:#000!important}.itemTags,.itemTags>a{display:none;font-size:unset!important;font-weight:200}.detail-clamp-text{color:var(--dimTextColor);margin-bottom:0;margin-top:0;text-align:start}.detail-clamp-text p{margin-bottom:.25em;margin-top:.25em}.layout-desktop .detail-clamp-text{-webkit-line-clamp:2}.layout-mobile .detail-clamp-text{-webkit-line-clamp:4}.layout-tv .detail-clamp-text{-webkit-line-clamp:10;transition:none}.overview-expand.emby-button{color:transparent;margin-bottom:1.4em;margin-top:1.4em;padding:0}.overview-expand.emby-button:after{align-content:center;background:var(--selectorBackgroundColor);border-radius:50%;color:var(--textColor);content:"keyboard_arrow_down";font-family:var(--iconPack),Material Icons;font-feature-settings:"liga";height:1.5em;line-height:1.6ch;transition:transform .5s;width:1.5em}.overview.detail-clamp-text~.overview-controls .overview-expand:after{transform:rotate(0deg)}.overview:not(.detail-clamp-text)~.overview-controls .overview-expand:after{transform:rotate(180deg)}.overview-controls{height:0}.detailSectionContent:has(.itemExternalLinks.hide) .overview-controls{height:1em}#seriesAirTime{margin-top:.5em}.itemMiscInfo{align-items:flex-end!important;justify-content:center}.chapterCardImageContainer,.innerCardFooter{box-sizing:border-box;width:100%}.chapterThumbTextContainer,.innerCardFooter{align-content:end;background:var(--cardFooterGradient);display:grid;height:100%;padding:0 2em 2em;text-shadow:var(--iconShadow)}.chapterCardImageContainer{background-size:135%}.chapterCardImageContainer+.innerCardFooter{height:auto;padding:0 1em 1em}.layout-mobile .innerCardFooter{padding:5em 1em 1.25em}.layout-mobile .chapterCardImageContainer+.innerCardFooter{padding:0 .5em .5em}.centerMessage{width:unset}.noItemsMessage{width:90%}.dialog{backdrop-filter:var(--blurDefault);background-color:var(--drawerColor);min-width:11em}[dir=ltr] .emby-collapsible-button{padding-left:1em}.dialog:not(.dialog-fullscreen){border:var(--defaultBorder);border-radius:var(--largeRadius)!important}@media (max-height:45em),(max-width:80em){.dialog.dialog-fixedSize,.dialog.dialog-fullscreen-lowres{border:unset;border-radius:unset!important}}.dialogBackdropOpened{opacity:.66}.imageEditor-dropZone,.lyricsEditor-dropZone,.subtitleEditor-dropZone{border-radius:var(--largeRadius)}.formDialogHeaderTitle{margin-inline-end:0!important;margin-inline-start:0!important;padding:0 .5em!important;text-align:center}.formDialogFooter:not(.formDialogFooter-clear.formDialogFooter-flex)>.formDialogFooterItem{-webkit-flex-basis:6em;flex-basis:6em}.collapseContent{backdrop-filter:unset!important;background-color:unset!important}.selectionCommandsPanel{backdrop-filter:var(--blurLarge);background:var(--lighterGradientPoint);border-bottom:var(--defaultBorder);height:3.5em;padding-top:max(env(safe-area-inset-top),var(--safe-area-inset-top))}.selectionCommandsPanel>h1{font-size:large}.itemSelectionPanel{background-color:transparent;border:unset}.emby-checkbox:checked+span+.checkboxOutline{background:transparent;border-color:var(--fullContrastColor);border-radius:var(--smallerRadius)!important;border-style:solid;border-width:var(--borderWidthDouble);outline:none}.emby-checkbox:checked+span+.multiSelectCheckboxOutline{box-shadow:inset 0 7em 10em 20px var(--multiSelectOverlayColor)}@supports (display:revert){.emby-checkbox:checked+span+.checkboxOutline{outline:solid var(--borderWidth) #fff}}.checkboxOutline{border-radius:var(--smallerRadius);height:1.3em;top:unset;width:1.3em}.itemSelectionPanel .material-icons.check:before{color:var(--fullContrastColor);font-size:4em;padding:.25em}.cardText-first+.itemSelectionPanel>.checkboxContainer{height:calc(100% - 1.75em)}.overflowBackdropCard .cardText-first+.itemSelectionPanel>.checkboxContainer{height:100%}.checkboxContainer .emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline{border-radius:var(--largeRadius)!important}#castCollapsible .checkboxContainer .emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline,#guestCastContent .checkboxContainer .emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline{border-radius:50%!important}.cardPadder{text-align:center}#castCollapsible .cardPadder .cardImageIcon,#guestCastContent .cardPadder .cardImageIcon{display:none}.cardText-secondary+.itemSelectionPanel>.checkboxContainer,.cardText.cardTextCentered:not(.cardText-secondary,.cardText-first)+.itemSelectionPanel>.checkboxContainer{height:calc(100% - 3em)}.cardText-secondary,.fieldDescription,.guide-programNameCaret,.listItem .secondary,.nowPlayingBarSecondaryText,.programSecondaryTitle,.secondaryText{color:var(--dimTextColor)}.cardFooter+.itemSelectionPanel>.checkboxContainer,.cardScalable+.itemSelectionPanel>.checkboxContainer{height:100%}.checkboxOutline.multiSelectCheckboxOutline{border-radius:var(--largeRadius);border-width:0;height:100%;width:100%}.checkboxOutline:not(.multiSelectCheckboxOutline) .checkboxIcon{font-size:.9em;font-weight:900}.checkboxOutline:not(.multiSelectCheckboxOutline){background-color:#fff;border:var(--borderWidth) solid gray;transition:all .125s}.emby-checkbox:checked+span+.checkboxOutline:not(.multiSelectCheckboxOutline){background:var(--checkboxCheckedBgColor);border:var(--defaultLighterBorder)}.emby-checkbox:focus+span+.checkboxOutline,.emby-checkbox:focus:not(:checked)+span+.checkboxOutline{border-color:var(--highlightOutlineColor)!important;outline:none}@supports (display:revert){.emby-checkbox:focus+span+.checkboxOutline{border-color:#fff!important;outline:var(--borderWidth) solid var(--highlightOutlineColor)}}.cardIndicators{-webkit-align-items:center;align-items:center;top:.5em}[dir=ltr] .cardIndicators{right:.5em}.layout-mobile .cardIndicators{right:.5em;top:.45em}.indicator{border:var(--borderWidth) solid hsla(0,0%,48.6%,.5);border-radius:100em}.playedIndicator{background:#22c55e}.playedIndicator,.videoIndicator{border:var(--defaultLighterBorder)}.videoIndicator{background:#292929;font-size:.75em;padding:.5em;transform:scale(.85)}.videoIndicator:has(.folder),.videoIndicator:has(.photo_album){background:peru}.videoIndicator:has(.photo){background:#4682b4}.videoIndicator:has(.videocam){background:#cd5c5c}.cardScalable,.defaultCardBackground{background:var(--cardBackgroundGradient)}div[data-type=Book] .play_arrow:before{content:"book";font-size:85%}div[data-type=Photo] .play_arrow:before{content:"photo"}div[data-type=PhotoAlbum] .play_arrow:before{content:"animated_images"}.button-alt,.dashboardActionsContainer>.emby-button,.emby-button.block,.manageRecordingButton,.raised,.raised:focus{background:var(--lighterGradientPoint);border:var(--defaultBorder);border-radius:var(--smallRadius);color:var(--fullContrastColor);transition:all .125s}.editItemMetadataForm>.metadataFormFields div:has(.formDialogFooterItem){display:flex;justify-content:center}.btnBrowse>.folder{margin-inline-end:.5em}.fab{background:var(--lighterGradientPoint);border:var(--defaultBorder);color:var(--fullContrastColor)}.fab:focus{background:var(--lighterGradientPoint)!important;filter:brightness(1.2)}.emby-button:active,.fab:active,.raised:active{filter:brightness(1.05)!important;transform:scale(.98)}.detailButton{border:var(--defaultLighterBorder);padding:.5em!important}.cardScalable .material-icons.check:before{transform:scale(1.25)}.detailButton:not(.btnPlay){backdrop-filter:none;background:transparent;border-color:transparent;border-radius:50%;color:var(--textColor);margin:.5em!important;padding:.6em!important}.layout-desktop .detailButton:not(.btnPlay):hover{background:var(--hoverBackgroundColor);color:var(--zeroContrastColor)}.detailButton:active{background:var(--activeBackgroundColor);color:#fff}.btnPlay.detailButton{background-color:var(--btnPlayColor);border-color:var(--btnPlayBorderColor);border-radius:3em;color:var(--zeroContrastColor);flex-direction:row;height:3em;margin-right:.5em!important;min-width:10em}.mainDetailButtons>.btnPlay:after{content:attr(title);padding-right:1ch}.btnPlay>.detailButton-content:after{padding:0 1ch;place-content:center}.btnPlay>.detailButton-content{align-content:unset;align-items:unset;display:flex;flex-direction:unset;justify-content:flex-start}.mainDetailButtons:has(.detailButton[data-type=Book]) .btnPlay[title=Play]:after{content:"Read"}.mainDetailButtons:has(.detailButton[data-type=Book]) .btnPlay .material-icons.play_arrow:before{content:"book";padding-inline-end:1ch}.mainDetailButtons{justify-content:center;margin:0}.layout-mobile [dir=ltr] .mainDetailButtons{flex-wrap:wrap;padding:0 1.25em}@media (min-width:100em){.mainDetailButtons{font-size:unset;margin:0}}.localnav>.emby-button{background:var(--lighterGradientPoint)!important;color:var(--fullContrastColor);padding:.8em}div[data-role=controlgroup] a.ui-btn-active{background:var(--selectorBackgroundColor)!important;color:var(--fullContrastColor)!important}.guide-date-tab-button.emby-tab-button-active,.guide-date-tab-button:focus{color:var(--fullContrastColor)}#btnDeleteImage,#btnShutdown,.btnRevoke,.button-delete{background:var(--btnDeleteColor)!important;border:solid var(--btnDeleteBorderColor) var(--borderWidth);color:#fff!important}.MuiButton-colorPrimary,.button-submit,.upNextContainer .btnStartNow{background:var(--btnSubmitColor)!important;border:solid var(--btnSubmitBorderColor) var(--borderWidth)!important;color:#fff!important}.userPreferencesPage .button-submit{bottom:calc(1em + max(env(safe-area-inset-bottom), var(--safe-area-inset-bottom, 1px)));box-shadow:0 .75em 2em 2em var(--darkerGradientPoint);position:sticky!important;z-index:2!important}.collapseContent,.formDialogFooter:not(.formDialogFooter-clear),.formDialogHeader:not(.formDialogHeader-clear){backdrop-filter:var(--blurDefault);background-color:var(--headerColor);color:var(--textColor)}.paperList{padding:.4em}.serverInfo{padding:1em}.serverInfo>:nth-child(1n){-webkit-flex:1 0 30%;flex:1 0 30%}.serverInfo>:nth-child(2n){-webkit-flex:1 0 50%;flex:1 0 50%;text-align:end}.listItemIcon:not(.listItemIcon-transparent){background-color:var(--lighterGradientPoint)!important;color:var(--textColor)}.listItemIcon.notification_important{background-color:var(--btnDeleteColor)!important;border:solid var(--btnDeleteBorderColor) var(--borderWidth)}.listItemIcon.live_tv:not(.listItemIcon-transparent),.listItemIcon.notifications:not(.listItemIcon-transparent),.listItemIcon.person:not(.listItemIcon-transparent),.listItemIcon.schedule:not(.listItemIcon-transparent){background-color:var(--darkerGradientPoint)!important;border:var(--defaultBorder)}.readOnlyContent{flex-direction:column!important}.MuiAppBar-root{backdrop-filter:var(--blurDefault);background:var(--headerColor);border-bottom:var(--defaultBorder)}.MuiDrawer-paper{backdrop-filter:var(--blurLarge);background:var(--drawerColor);border-right:var(--defaultBorder);padding:.25em}.listItemImage{border:var(--defaultBorder);border-radius:var(--smallRadius);margin-right:.75em!important}[dir=ltr] .listItem:not(.actionSheetMenuItem,.childrenItemsContainer .listItem,.activityLogListWidget .listItem){padding:.375em!important}[dir=ltr] .listItem:not(.actionSheetMenuItem,.childrenItemsContainer .listItem,.activityLogListWidget .listItem):not(:last-child){margin-bottom:.5em}[dir=ltr] .listItem:not(.actionSheetMenuItem)[data-type=Episode]{margin-bottom:.5em;padding:.375em}.layout-mobile #playlist .listItem[data-type=Audio],.layout-mobile #songsTab .listItem[data-type=Audio]{margin:auto 1em}.listItem[data-type=Audio]:has(.playlistIndexIndicatorImage) .listItemBodyText{color:var(--fullContrastColor);font-weight:600}.listItem[data-type=Audio]:has(.playlistIndexIndicatorImage):not(:hover){background-color:hsla(0,0%,100%,.07)}.listItem-largeImage .listItemBodyText:not(.secondary){color:var(--textColor);font-size:1.17em;font-weight:600}.listItemBodyText.secondary{color:var(--dimTextColor)}.listItemBody>.listItemBodyText:not(.secondary){display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;color:inherit;overflow:hidden}.listItem-overview{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}.listItem-bottomoverview,[dir=ltr] .listItem:not(.actionSheetMenuItem)[data-type=Episode] .listItem-overview p{margin-bottom:0;margin-top:.75em}.listItem,.navMenuOption{border-radius:.7em}.listItem:hover,.navMenuOption:hover{background:unset;border-radius:.7em}.listItem:focus{background:var(--highlightOutlineColor)}.listItem:active,.navMenuOption:active{background:var(--activeBackgroundColor);color:#fff}.listItem-border{border-color:transparent!important}.listItem-border.emby-button.show-focus:focus{border-radius:var(--smallRadius)}.MuiList-root>a,.MuiListItem-root>a,.MuiListItem-root>div{border:var(--borderWidth) solid transparent;border-radius:.7em}.Mui-selected{background-color:var(--accentColor)!important;color:#fff}.actionsheetDivider{background:var(--dividerColor);height:2px}.actionsheet-xlargeFont{line-height:normal}.actionSheetContent{padding:.4em!important}.actionSheetContent>h1{font-size:unset}[dir=ltr] .actionsheetMenuItemIcon{margin:0 .2em 0 .45em!important}.actionSheetMenuItem:has(.listItemIcon.check){background-color:var(--accentColor)}.actionSheetMenuItem:has(.listItemIcon.check) .listItemBodyText{color:var(--activeTextColor)}.actionSheetMenuItem:has(.listItemIcon.check) .listItemIcon.check{display:none}.actionSheetMenuItem:has(.listItemIcon.check[style*=hidden]){background-color:transparent}.actionSheetMenuItem:has(.listItemIcon.check[style*=hidden]) .listItemBodyText{background-color:transparent;color:var(--fullContrastColor)}.actionSheetMenuItem:has(.listItemIcon.check[style*=hidden]):active{background-color:var(--semiTransparentAccentColor)}.navMenuOption{border-radius:var(--smallRadius)!important;margin:0 1em!important}[dir=ltr] .navMenuOption{margin-bottom:unset;padding:.75em 1em!important}#myPreferencesMenuPage .listItemIcon{margin-left:.5em;margin-right:.25em}.navMenuOption-selected{background-color:var(--accentColor)!important}#itemDetailPage .detailSection{column-gap:3em;display:grid;grid-template-columns:1.3fr .7fr 1fr 1fr;margin-bottom:1.5em;max-width:unset!important;row-gap:1em}.tmdb-review-swipe-container{max-width:93vw}.detailPageContent{gap:1em}.trackSelections{background-color:var(--lighterGradientPointAlpha);border:var(--defaultBorder);border-radius:var(--smallRadius);grid-column:3/5;margin-top:1em;max-width:unset!important;order:3;padding:1em}.layout-mobile .trackSelections{margin-top:0}.layout-tv .trackSelections{order:2}.recordingFields{order:4}.recordingButton{gap:1ch}.detailsGroupItem,.trackSelections .selectContainer{align-items:baseline;max-width:unset!important}.selectArrowContainer{opacity:.5;top:0}.trackSelectionFieldContainer>.selectArrowContainer{top:.5em}.trackSelectionFieldContainer>label{background-repeat:no-repeat;color:transparent;max-width:2.75em;transform:scale(.9)}.selectVideoContainer.trackSelectionFieldContainer>label{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23d1d5db' viewBox='0 0 24 24'%3E%3Cg stroke-width='1.5'%3E%3Cpath d='M2 12c0-4.7 0-7 1.5-8.5C4.9 2 7.3 2 12 2s7 0 8.5 1.5C22 4.9 22 7.3 22 12s0 7-1.5 8.5C19.1 22 16.7 22 12 22s-7 0-8.5-1.5C2 19.1 2 16.7 2 12Z'/%3E%3Cpath stroke-linecap='round' d='M17 2.5v19M7 2.5v19M2.5 7H7m14.5 0H17M2.5 17H7m14.5 0H17M2 12h20'/%3E%3C/g%3E%3C/svg%3E");filter:var(--svgIconFilter)}.selectAudioContainer.trackSelectionFieldContainer>label{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23d1d5db' viewBox='0 0 24 24'%3E%3Cg stroke-width='1.5'%3E%3Cpath d='M9 19a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9 19V8m12 9V6'/%3E%3Cpath stroke-linecap='round' d='m15.7 3.8-4 1.3c-1.3.4-2 .6-2.3 1.2C9 6.8 9 7.5 9 8.9V12l12-4v-.5c0-2.5 0-3.7-.8-4.3-.9-.6-2-.2-4.5.6Z'/%3E%3C/g%3E%3C/svg%3E");filter:var(--svgIconFilter)}.selectSubtitlesContainer.trackSelectionFieldContainer>label{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23d1d5db' viewBox='0 0 24 24'%3E%3Cg stroke-width='1.5'%3E%3Cpath d='M2 12c0-3.8 0-5.7 1.2-6.8C4.3 4 6.2 4 10 4h4c3.8 0 5.7 0 6.8 1.2C22 6.3 22 8.2 22 12s0 5.7-1.2 6.8C19.7 20 17.8 20 14 20h-4c-3.8 0-5.7 0-6.8-1.2C2 17.7 2 15.8 2 12Z'/%3E%3Cpath stroke-linecap='round' d='M10 16H6m8-3h4m-4 3h-1.5m-3-3h2m6.5 3h-1.5M6 13h1'/%3E%3C/g%3E%3C/svg%3E");filter:var(--svgIconFilter)}.selectSourceContainer.trackSelectionFieldContainer>label{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23d1d5db' d='m15.4 4.05-.5.56zm3.95 3.57-.5.55zm2.3 2.53-.68.3zM3.17 20.83l.53-.53zm17.66 0-.53-.53zm-6.83.42h-4v1.5h4zM2.75 14v-4h-1.5v4zm18.5-.44V14h1.5v-.44zm-6.36-8.95 3.96 3.56 1-1.11L15.9 3.5l-1 1.11Zm7.86 8.95c0-1.69.02-2.75-.41-3.71l-1.37.6c.26.6.28 1.3.28 3.11zm-3.9-5.39c1.35 1.22 1.85 1.7 2.12 2.29l1.37-.61c-.43-.96-1.23-1.66-2.49-2.8zm-8.82-5.42c1.58 0 2.18.01 2.71.22l.54-1.4c-.85-.33-1.78-.32-3.25-.32zm5.86.75c-1.08-.98-1.76-1.6-2.61-1.93l-.54 1.4c.53.2.98.59 2.15 1.64zM10 21.25c-1.9 0-3.26 0-4.29-.14-1-.13-1.58-.39-2-.81l-1.07 1.06c.75.75 1.7 1.08 2.87 1.24 1.15.15 2.63.15 4.49.15zM1.25 14c0 1.86 0 3.34.15 4.49a4.7 4.7 0 0 0 1.24 2.87L3.7 20.3c-.42-.43-.67-1-.81-2.01A36 36 0 0 1 2.75 14zM14 22.75c1.86 0 3.34 0 4.49-.15a4.7 4.7 0 0 0 2.87-1.24L20.3 20.3c-.43.42-1 .68-2.01.81-1.03.14-2.38.14-4.29.14zM21.25 14c0 1.9 0 3.26-.14 4.29-.13 1-.39 1.58-.81 2l1.06 1.07a4.7 4.7 0 0 0 1.24-2.87c.15-1.15.15-2.63.15-4.49zm-18.5-4c0-1.9 0-3.26.14-4.29.14-1 .39-1.58.81-2L2.64 2.63A4.7 4.7 0 0 0 1.4 5.51c-.15 1.15-.15 2.63-.15 4.49zm7.28-8.75c-1.87 0-3.36 0-4.51.15a4.72 4.72 0 0 0-2.88 1.24L3.7 3.7c.42-.42 1-.67 2.02-.81 1.03-.14 2.4-.14 4.31-.14z'/%3E%3Cpath stroke='%23d1d5db' stroke-width='1.5' d='M13 2.5V5c0 2.36 0 3.54.73 4.27S15.64 10 18 10h4'/%3E%3C/svg%3E");filter:var(--svgIconFilter)}.detailSectionContent a:not(.overview-expand){text-align:start}.layout-desktop .detailSectionContent{align-content:end;display:grid;min-height:16vh}.detailSectionContent:has(.tagline.hide+.overview.hide){min-height:unset}.itemDetailsGroup{background-color:var(--lighterGradientPointAlpha);border:none;border-radius:var(--smallRadius);box-shadow:inset 0 0 0 .06em var(--borderColor)!important;grid-column:1/3;margin-top:1em;order:2;outline:none;overflow:hidden}.layout-mobile .itemDetailsGroup{margin-top:0}.detailsGroupItem{align-items:baseline;justify-content:space-between;margin:0!important;padding:.5em .9em}.detailsGroupItem:not(:last-child),.itemDetailsGroup>div:not(:last-child){border-bottom:var(--defaultBorder)}.itemDetailsGroup>div:empty{border-bottom:none}.detailsGroupItem>.label{flex-basis:6em;font-weight:600}.detailsGroupItem>.focuscontainer-x a{font-weight:400;text-align:end}.detailsGroupItem>.focuscontainer-x{color:var(--dimTextColor);text-align:end}.detailsGroupItem>.label{color:var(--textColor)}.layout-tv .itemDetailsGroup{order:2}.detailSection>.nextUpSection{grid-column:1;order:5}.detailSection>#listChildrenCollapsible{grid-column:2/-1;order:6}.detailSectionContent{grid-column:1/-1;order:1}.nextUpSection.hide~#listChildrenCollapsible,.trackSelections.hide~.recordingFields.hide~.itemDetailsGroup,.collectionItems,.layout-mobile .detailSection>#listChildrenCollapsible,.layout-mobile .detailSectionContent,.layout-mobile .itemDetailsGroup,.layout-mobile .nextUpSection,.layout-mobile .trackSelections,.layout-tv .detailSection>#listChildrenCollapsible,.layout-tv .detailSectionContent,.layout-tv .itemDetailsGroup,.layout-tv .nextUpSection,.layout-tv .trackSelections,.programGuideSection,.series-episodes-section,.series-episodes-section~#listChildrenCollapsible{grid-column:1/-1}.series-episodes-section{order:4}.collectionItems{order:2}.programGuideSection:not(.hide){margin-top:2em;order:-1}.layout-desktop .programGuide{padding-right:var(--sidePadding)}.collectionItems .sectionTitleContainer.padded-left{padding-left:.375em}.collectionItemsContainer.padded-left{padding-left:0}.sliderBubble{border:var(--defaultBorder);border-radius:var(--largeRadius);overflow:hidden;z-index:3}.alphaPickerButton{color:var(--dimTextColor);font-family:monospace;margin:.15em}.alphaPickerButton-selected{background-color:var(--btnPlayColor);color:var(--zeroContrastColor)!important}.alphaPicker-vertical{height:70%}.layout-mobile .alphaPicker-vertical{right:0!important}.alphaPicker{justify-content:center}.alphaPickerButton-tv{transition:transform .2s}.alphaPickerButton-tv:focus{background-color:var(--highlightOutlineColor);transform:scale(1.75)}.padded-right{padding-right:var(--sidePadding)!important}.content-primary,[dir=ltr] .detailPageContent{padding-left:var(--sidePadding)!important;padding-right:var(--sidePadding)!important}[dir=ltr] .detailPageContent>.detailPagePrimaryContent{padding-left:0!important;padding-right:0!important}#itemDetailPage .verticalSection .itemsContainer.padded-right{padding-right:0!important}.vertical-list>.listGroupHeader{padding-left:.5ch}.listPaging>span{padding:0 .5em}.layout-mobile #myPreferencesMenuPage{padding-top:var(--appBarHeight)!important}.headerUserButton{border:var(--defaultBorder);height:2em;margin-inline-end:1em;width:2em}.MuiAvatar-circular{border:var(--defaultBorder);height:1.5em;width:1.5em}.dashboardDocument .content-primary{padding-top:4.25rem}.editorNode{align-items:center;display:flex}.metadataSidebarIcon{color:#6c7bab}.jstree-default .jstree-wholerow-clicked{background:var(--selectorBackgroundColor)!important}.verticalSection:not(:empty){margin-bottom:1em;margin-top:.5em}.sectionTitleTextButton{padding:0 .5em}.sectionTitleTextButton:hover{background:transparent!important}.sectionTitleTextButton:active{color:var(--fullContrastColor)!important}.sectionTitleContainer-cards{padding-bottom:.2em;padding-top:0}.sectionTitleTextButton>*{margin:0!important;max-width:88vw;overflow:hidden;padding:.3em 0!important;text-align:left;text-overflow:ellipsis;white-space:nowrap}.dashboardSection .sectionTitleTextButton>.material-icons,.dashboardSection .sectionTitleTextButton>.material-icons.material-icons,.sectionTitleTextButton>.material-icons{font-size:unset}.sectionTitleTextButton>.chevron_right{--fill:0;--opsz:48;font-size:1.5rem}.sectionTitleTextButton>.chevron_right:before{content:"arrow_circle_right"}.toast{border-radius:var(--smallRadius)}.upNextContainer{border-radius:var(--largeRadius);color:var(--textColor)}[dir=ltr] .upNextContainer{box-sizing:border-box;margin:2em;max-width:80vw}.upNextDialog-title{white-space:pre-wrap;width:unset}.upNextDialog-buttons{flex-wrap:wrap;width:unset}.upNextContainer .upNextDialog-countdownText{color:var(--fullContrastColor)}.skip-button-container{bottom:9rem}.skip-button{background-color:var(--textColor);border-radius:3em;box-shadow:var(--shadow);color:var(--zeroContrastColor);margin-right:var(--sidePadding)}.layout-tv .skip-button{margin-left:var(--sidePadding);margin-right:auto}.skip-button:hover{background-color:var(--fullContrastColor)}.skip-button:active{background-color:hsla(0,0%,96%,.7);box-shadow:none}.toast,.upNextContainer{backdrop-filter:var(--blurDefault);background:var(--headerColor)!important;border:var(--defaultBorder)!important;color:var(--textColor)}.activeSession{width:98%!important}@media (hover:hover) and (pointer:fine){.paper-icon-button-light:hover:not(:disabled){background-color:var(--hoverBackgroundColor);color:var(--zeroContrastColor);text-shadow:none!important}.emby-input:hover:not(:focus),.emby-select-withcolor:hover:not(.emby-select[disabled],:focus),.emby-textarea:hover:not(:focus){border-color:var(--dimTextColor)!important}.checkboxContainer:hover .checkboxOutline:not(.multiSelectCheckboxOutline){border-color:var(--checkboxCheckedBgColor);border-width:var(--borderWidthDouble)}.button-flat:hover{background-color:hsla(0,0%,100%,.2);color:var(--fullContrastColor)}.btnPlay.detailButton:hover{background-color:var(--btnPlayColor);color:var(--zeroContrastColor);filter:brightness(1.1)}.alphaPickerButton:hover{color:var(--fullContrastColor)}.listItem-largeImage:hover{backdrop-filter:var(--blurLargest)}.listItem:not(.actionSheetMenuItem:has(.check)):hover{background:var(--activeBackgroundColor)!important;color:var(--hoverTextColor)!important}.listItem:hover .listItemBodyText,.listItem:hover .secondary{color:var(--hoverTextColor)!important}.navMenuOption:not(.navMenuOption-selected):hover{background:var(--activeBackgroundColor)!important;color:var(--hoverTextColor)!important}.actionSheetMenuItem:has(.listItemIcon.check[style*=hidden]):hover{background:var(--activeBackgroundColor)!important;color:var(--hoverTextColor)!important}.inputContainer .emby-input-iconbutton:hover,.searchfields-icon:hover{color:hsla(0,0%,100%,.8)}#scenesContent .cardScalable:hover{border-color:var(--dimTextColor)!important}.sectionTitleTextButton:hover{background:transparent!important;color:var(--fullContrastColor)!important}.button-link:hover{color:var(--textColor)!important;text-decoration:none}.sectionTabs .emby-tab-button:hover{background-color:var(--hoverTabBackgroundColor);color:var(--zeroContrastColor)}}.paper-icon-button-light:active:not(:disabled){background-color:var(--hoverBackgroundColor);color:var(--zeroContrastColor);text-shadow:none!important}.layout-mobile .cardOverlayButton-br:active>.cardOverlayButtonIcon{color:var(--zeroContrastColor);text-shadow:none}.emby-textarea{font-family:consolas,monaco,monospace}.customCssContainer textarea{max-height:40vh;overflow-y:auto!important}.emby-input,.emby-select,.emby-select-withcolor,.emby-textarea{background-color:var(--selectorBackgroundColor);border:var(--defaultLighterBorder);border-radius:var(--smallRadius);padding:.5em!important}.inputLabelFocused,.selectLabelFocused,.textareaLabelFocused{color:var(--fullContrastColor)}.emby-input:focus,.emby-select-withcolor:focus,.emby-textarea:focus{border-color:var(--highlightOutlineColor)!important;outline:none!important}@supports (display:revert){.emby-input:focus,.emby-select-withcolor:focus,.emby-textarea:focus{background-color:var(--textareaBackgroundColor);border-color:var(--highlightOutlineColor)!important;outline:thin solid var(--highlightOutlineColor)!important}}.emby-select-withcolor>option{background-color:var(--selectorBackgroundColor);color:inherit}.inputContainer .emby-input-iconbutton{background-color:transparent!important;color:hsla(0,0%,100%,.5);margin-left:-2.5em}.searchfields-txtSearch{border-radius:4em;padding:.75em 1.5em!important}.searchfields-icon{border-radius:var(--largeRadius);color:hsla(0,0%,100%,.5);margin-bottom:0;margin-left:-1.75em;padding:.25em}.inputContainer .emby-input-iconbutton:active,.searchfields-icon:active{color:hsla(0,0%,100%,.8)}.searchFields>.searchFieldsInner{flex-direction:row-reverse}.nameContainer>h1,.nameContainer>h3{overflow:hidden;word-break:break-word}.nameContainer>h1.itemName,.nameContainer>h1.parentName{color:var(--fullContrastColor);font-size:4em;padding-bottom:.5ch;white-space:pre-wrap}.nameContainer>h1.itemName,.nameContainer>h1.itemName a,.nameContainer>h1.parentName,.nameContainer>h1.parentName a{font-weight:200}.nameContainer>h1.itemName a,.nameContainer>h1.itemName bdi,.nameContainer>h1.parentName a,.nameContainer>h1.parentName bdi{display:-webkit-box!important;-webkit-line-clamp:3;overflow:hidden;-webkit-box-orient:vertical}.layout-mobile .nameContainer>h1.itemName,.layout-mobile .nameContainer>h1.parentName,.layout-mobile .nameContainer>h1.parentNameLast{font-size:2em;word-wrap:break-word;padding-bottom:0}.subtitle{font-size:2em;padding-bottom:1em}.layout-mobile .subtitle{font-size:1.5em;padding-bottom:.5em}.itemName.originalTitle{color:var(--dimTextColor);display:var(--itemOriginalTitleVisibility);padding-bottom:.25em;padding-top:.25em}.channelPrograms,.programCell{background-color:transparent!important;border-color:transparent;border-radius:var(--smallRadius);height:4.42em}.guideProgramName{background-color:hsla(0,0%,100%,.05);border-radius:var(--smallerRadius);height:calc(100% - .7em);margin:.35em 0 .35em .7em}.guide-programNameCaret{display:none}.programCell-active .guideProgramName{background-color:var(--semiTransparentAccentColor)}.guideVerticalScroller{padding:0}.layout-mobile .guideChannelImage{background-position:50%;right:0;width:calc(100% - var(--sidePadding))}.guide-channelHeaderCell{background-color:var(--semiTransparentAccentColor);border-radius:var(--smallRadius);height:3.72em;margin:.35em .7em .7em;width:auto}.guideChannelNumber{font-size:1em}#guideTab{padding-top:3em!important}.guide-channelHeaderCell:focus{background-color:var(--highlightOutlineColor)!important}.programCell:focus{background-color:transparent!important}.programCell:focus>.guideProgramName{background-color:var(--highlightOutlineColor)}.emby-select-iconbutton{background-color:var(--selectorBackgroundColor);border:var(--defaultLighterBorder);margin-inline-start:1em}.emby-select-iconbutton,.subtitleappearance-preview{border-radius:var(--smallRadius)}.infoBanner{background-color:var(--headerColor)!important;border:var(--defaultBorder)!important;border-radius:var(--largeRadius)!important;display:flex;place-content:center}fieldset{border:var(--defaultBorder);border-radius:var(--smallRadius)}table:not(.MuiTable-root.MuiTable-stickyHeader){background:var(--tableBodyColor);border-color:var(--borderColor)!important;border:var(--defaultBorder);border-collapse:separate;border-radius:var(--smallRadius);border-spacing:1px;overflow:hidden}.detailTableHeaderCell{vertical-align:middle}#serverActivityPage .MuiPaper-elevation2{border:var(--defaultBorder)!important;box-shadow:unset!important}#serverActivityPage .MuiPaper-elevation2,#serverActivityPage .MuiPaper-elevation2>.MuiBox-root,#serverActivityPage .MuiTableRow-root.MuiTableRow-head{background-color:var(--tableBodyColor)}#serverActivityPage .MuiTableBody-root .MuiTableRow-root:nth-child(odd),.detailTableBodyRow-shaded:nth-child(odd){background:var(--darkerGradientPointAlpha)!important}#serverActivityPage .MuiTableBody-root .MuiTableRow-root:nth-child(2n),.detailTableBodyRow-shaded:nth-child(2n){background:var(--lighterGradientPointAlpha)!important}.MuiList-root.MuiMenu-list{background-color:var(--drawerColor);padding:.375em}ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child{gap:.5rem}.iconOsd,.playerStats{backdrop-filter:var(--blurDefault);background-color:rgba(69,69,69,.69);border-radius:var(--largeRadius)}.playerStats-stats{flex-wrap:wrap;max-height:50vh;overflow-x:auto;padding:1em!important}#scenesContent .cardScalable:active{border-color:var(--dimTextColor)!important}.progressring-spiner{border-color:var(--accentColor)}.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.semiTransparent.noHeaderRight{display:none}#loginPage{align-items:center;background:linear-gradient(to bottom,var(--darkerGradientPointAlpha),var(--lighterGradientPoint)),var(--loginPageBgUrl);background-position:50%;background-repeat:no-repeat;background-size:cover;box-sizing:border-box;display:flex;justify-content:center;min-height:100vh;overflow-y:auto;padding:1em}#loginPage .padded-left.padded-right.padded-bottom-page{backdrop-filter:var(--blurDefault);background:rgba(30,40,54,.7);border-radius:var(--largerRadius);box-sizing:border-box;padding:2em 2em 1em!important;transform:translateY(3em);width:28em}.manualLoginForm .sectionTitle,.visualLoginForm>h1{display:none}#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)){width:40em}#divUsers .squareCard{width:30%!important}.layout-mobile #divUsers .squareCard{width:45%!important}.manualLoginForm:before,.visualLoginForm:before{color:var(--fullContrastColor);content:var(--loginPageText);display:block;font-size:1.875em;font-weight:800;margin-bottom:-1em;position:relative;text-align:center;top:-3.5em}.manualLoginForm,.visualLoginForm{position:relative}#quickConnectPreferencesPage .padded-left.padded-right.padded-bottom-page{align-items:center;display:flex;flex-direction:column;justify-content:center}#txtLoginDisclaimer{resize:none}.endTimeText,.positionTime,.runtime,.startTimeText{box-sizing:border-box;font-variant-numeric:tabular-nums;width:4.5em}.startTimeText{margin:0!important}.endTimeText{justify-content:right;margin:0 0 0 .75em!important;padding-inline-end:.8em}.endTimeText,.startTimeText{padding-top:.25em}.positionTime,.startTimeText{justify-content:left;text-align:start}.endTimeText,.runtime{justify-content:right;text-align:end}.filterIndicator{background:var(--accentColor)}.overflowBackdropCard[data-type=CollectionFolder] .cardPadder-overflowBackdrop,.overflowBackdropCard[data-type=UserView] .cardPadder-overflowBackdrop{padding-bottom:50%}.overflowBackdropCard[data-type=CollectionFolder] .cardText-first,.overflowBackdropCard[data-type=UserView] .cardText-first{display:var(--libraryLabelVisibility)}.nowPlayingButtonsContainer{margin-top:1em}.nowPlayingPageImageContainerNoAlbum{border:var(--defaultBorder);border-radius:var(--smallRadius);overflow:hidden}.nowPlayingPageImageContainerNoAlbum .defaultCardBackground{background:repeating-radial-gradient(#000,transparent 10em)}.nowPlayingPageImageContainerNoAlbum .cardImageContainer .cardImageIcon{color:var(--borderColor)}.layout-mobile .playlistSection .playlist{backdrop-filter:var(--blurLargest);background:var(--headerColor);bottom:4.3em;padding:4.3em 0;top:0;z-index:0}.layout-mobile .playlistSectionButton{backdrop-filter:var(--blurSmallest);background:var(--drawerColor);border-top:var(--defaultBorder);color:var(--textColor);z-index:1}.layout-mobile .playlistSectionButton.playlistSectionButtonTransparent{background:transparent;border-top:var(--defaultBorder);border-color:transparent;color:var(--textColor)}.layout-desktop .nowPlayingInfoContainer{backdrop-filter:var(--blurLargest);background-color:var(--headerColor);border:var(--defaultLighterBorder);border-radius:var(--largerRadius);box-shadow:var(--shadow);box-sizing:border-box;margin-bottom:2em;padding:1em;position:-webkit-sticky;position:sticky;top:5em;z-index:2}.layout-desktop .nowPlayingInfoControls{margin:0 2em}.nowPlayingPageImage{aspect-ratio:1/1;border-radius:var(--smallRadius);box-shadow:var(--shadow);object-fit:cover}.nowPlayingBar .playPauseButton{font-size:2em}.nowPlayingInfoContainer .btnPlayPause{font-size:3em}.nowPlayingBar .nowPlayingImage{background-size:cover;border-radius:var(--smallerRadius);height:3.5em;margin:.25em;width:3.5em}.nowPlayingBarPositionContainer{top:-.7em}@media (orientation:portrait) and (max-width:43em){.nowPlayingPageImageContainerNoAlbum .cardImageContainer .cardImageIcon{font-size:8em!important}.nowPlayingInfoContainer{height:calc(95% - 4.2em)}}.nowPlayingSongName.nowPlayingEpisode{color:var(--textColor);font-size:1.25em;margin-bottom:1em}.nowPlayingAlbum.nowPlayingSeason{color:var(--dimTextColor);margin-bottom:.5em}.nowPlayingArtist.nowPlayingSerie{margin-bottom:.5em}.playlistIndexIndicatorImage{background-blend-mode:difference;background-color:var(--textColor);background-size:contain!important}.playlistIndexIndicatorImage.defaultCardBackground .audiotrack{display:none}#dialogToc{background-color:rgba(0,0,0,.5);max-height:unset;max-width:unset}#dialogToc .toc li{font-family:Math,serif;font-size:unset;font-weight:600;list-style-type:circle;margin-bottom:.5em}.MuiTabs-indicator{display:none}.MuiTabs-root>.MuiTabs-scroller{align-content:center}.MuiTabs-flexContainer>.MuiButtonBase-root{border-radius:var(--largeRadius);min-height:40px;min-width:72px}.MuiTabs-flexContainer>.MuiButtonBase-root.Mui-selected{background-color:transparent!important;color:var(--fullContrastColor)}.MuiToggleButtonGroup-grouped.Mui-selected{color:var(--fullContrastColor)}.MuiButtonBase-root.MuiIconButton-root:hover{background-color:transparent;color:var(--fullContrastColor)}#viewPanel .ui-panel-inner{margin-top:4em}.videoOsdBottom.videoOsdBottom-maincontrols{background:var(--bottomOSDGradient)}.skinHeader-withBackground.osdHeader{background:var(--topOSDGradient)}.headroom{transition:transform .5s}.skinHeader-blurred:not(.osdHeader):not(.semiTransparent){backdrop-filter:var(--appBarBlurStrength,none);background-color:transparent;background:var(--appBarColor,var(--headerBackground));border:var(--appBarBorder,none);border-width:0 0 var(--borderWidth) 0}.skinHeader-blurred:not(.osdHeader):not(.semiTransparent):after{backdrop-filter:var(--blurLargest);bottom:0;content:var(--appBarSeamlessBlur,"");left:0;-webkit-mask:var(--headerBlurMask);mask:var(--headerBlurMask);position:absolute;right:0;top:0;z-index:-1}.layout-mobile .skinHeader-blurred:not(.osdHeader),.layout-mobile .withSectionTabs .headerTop{padding:0}.sectionTabs{display:inline-grid;height:var(--appBarHeight);padding-bottom:var(--appBarTabsPadding,1.5em)}.layout-mobile .sectionTabs{align-content:center}.skinHeader-withBackground.semiTransparent{--headerBackground:none;backdrop-filter:none;background-color:transparent;border:none}.skinHeader.headroom:not(.osdHeader,.noHomeButtonHeader):has(.pageTitle:empty),.skinHeader.headroom:not(.osdHeader,.noHomeButtonHeader):has(.pageTitle:empty):after{--headerBackground:none;backdrop-filter:none;background-color:transparent;border:none}.skinHeader-withBackground.semiTransparent .headerButton:not(:hover),.skinHeader.headroom:not(.osdHeader,.noHomeButtonHeader):has(.pageTitle:empty) .headerButton:not(:hover){color:#fff;text-shadow:var(--iconShadow)}.headerTop{-webkit-align-items:center;align-items:center;height:var(--appBarHeight);padding:0}.osdHeader .headerTop{max-height:var(--appBarHeight)}.layout-desktop .headerTop{padding:0 1em}.layout-tv .headerTop{padding:0 .5em}.headroom--unpinned{-webkit-transform:translateY(calc(var(--appBarHeight)*-1 - var(--borderWidth)));transform:translateY(calc(var(--appBarHeight)*-1 - var(--borderWidth)))}.noHomeButtonHeader .emby-tab-button[data-index="1"]:before{content:"favorite"}.noHomeButtonHeader .emby-tab-button[data-index="0"]:before{content:"home"}.noHomeButtonHeader .emby-tab-button:before{--fill:0;font-family:var(--iconPack),Material Icons;font-feature-settings:"liga";font-size:1.2em;font-variation-settings:"FILL" var(--fill),"wght" var(--wght),"GRAD" var(--grad),"opsz" var(--opsz);transition:font-variation-settings .25s}.layout-tv .sectionTabs .emby-tabs.smoothScrollX{overflow:visible!important}.sectionTabs .emby-tab-button{background-color:var(--darkerGradientPointAlpha);border-radius:var(--largeRadius);color:var(--textColor);display:inline-flex;font-weight:400;height:2.5em;margin:.25em .5em;padding:0 1.25em}.sectionTabs .emby-tab-button-active{background-color:var(--btnPlayColor);color:var(--zeroContrastColor);margin:.25em .5em}.libraryPage:not(.noSecondaryNavPage){padding-top:calc(var(--appBarHeight)*2 + .5em)!important}@media (min-width:75em){.sectionTabs{-webkit-align-items:center;align-items:center;-webkit-align-self:center;align-self:center;-webkit-justify-content:center;justify-content:center;margin-top:calc(var(--appBarHeight)*-1);position:relative;width:auto}.libraryPage:not(.noSecondaryNavPage){padding-top:calc(var(--appBarHeight) + .5em)!important}.headroom--unpinned{-webkit-transform:translateY(0);transform:translateY(0)}}@media (min-width:100em){.layout-tv .libraryPage:not(.noSecondaryNavPage){padding-top:calc(var(--appBarHeight) + .5em)!important}}@media (max-width:100em){.sectionTabs{font-size:100%}.layout-tv .sectionTabs{margin-top:unset}.layout-tv .libraryPage:not(.noSecondaryNavPage){padding-top:calc(var(--appBarHeight)*2 + .5em)!important}}@media (max-width:75em){.layout-mobile .sectionTabs .emby-tab-button:first-child{margin-left:var(--sidePadding)}.layout-mobile .sectionTabs .emby-tab-button:last-child{margin-right:var(--sidePadding)}}.layout-tv .headerLeft{margin:0 .6em;overflow:unset}.skinHeader{color:var(--textColor);padding-top:max(env(safe-area-inset-top),var(--safe-area-inset-top))!important}.nowPlayingPage{background:linear-gradient(var(--darkerGradientPointAlpha),transparent)}.remoteControlContent{background:linear-gradient(transparent,var(--darkerGradientPointAlpha) 20em);padding:0 var(--sidePadding)!important}.emby-select-focusscale:focus,.layout-tv .show-animation:focus,.layout-tv .show-focus:focus{transform:none!important}.layout-tv .backdropImage,.layout-tv .focuscontainer{animation-duration:0s!important;backdrop-filter:none}.card.show-animation .cardBox{transition:transform .05s ease-out}#slides-container{top:calc(var(--appBarHeight)*-.5)}.backdrop-overlay{background:linear-gradient(var(--lighterGradientPoint),var(--gradientPointAlpha),60%,var(--darkerGradientPointAlpha))}.plot{color:var(--textColor);text-shadow:1px 1px var(--lighterGradientPointAlpha)}.button-container{align-items:center}.favorite-button{background:none;color:var(--textColor)}.detail-button:hover,.favorite-button:hover{background:var(--dimTextColor);color:var(--zeroContrastColor)}
+
+/* ===== PHOENICX CINEMA — MEDIA BAR ===== */
+
+.detail-button:before,.favorite-button.favorited:before,.favorite-button:before,.play-button:before{font-weight:400}.play-button{font-family:Inter;font-size:1em;font-weight:500;order:1}.detail-button,.favorite-button{order:2}.backdrop-container,.backdrop-overlay,.backdrop:not(.tmla-mask){background-color:transparent;mask-image:linear-gradient(180deg,rgba(0,0,0,.85),70%,transparent);-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.85),70%,transparent)}.backdrop:not(.tmla-mask){transform-origin:center left}.rating-value{flex-wrap:wrap;justify-content:center}.age-rating{color:unset;font-family:Archivo Narrow,sans-serif;font-size:.8em}#slides-container{height:62%;left:var(--sidePadding);overflow:visible;position:absolute;top:calc(var(--appBarHeight)*2 + 1.25em);user-select:none;width:calc(100vw - var(--sidePadding)*2)}.slide{border:var(--defaultBorder);border-radius:var(--largerRadius);overflow:hidden;transition:border 0s}.logo-container{top:10vh}.backdrop-container,.backdrop-overlay,.backdrop:not(.tmla-mask){mask-image:none;-webkit-mask-image:none}.backdrop-overlay{background:linear-gradient(0deg,rgba(0,0,0,.85),40%,transparent)}.pause-button,.volume-toggle{top:1em!important}.separator-icon{color:var(--dimTextColor);font-size:5px}.dot{background-color:var(--textColor)!important;border-radius:.25em;height:.375em;opacity:.5;transition:width .5s;width:.375em}.dot.active{transform:none;width:2em}@media only screen and (orientation:landscape){.button-container,.dots-container,.genre,.info-container,.plot-container{top:unset}.button-container{bottom:3em}.dots-container{bottom:4.5em}.plot-container{bottom:7em;height:4em}.genre{bottom:12em}.info-container{bottom:14em}.logo-container{align-items:flex-end;max-width:35vw;top:3%}.gradient-overlay{background:linear-gradient(37deg,rgba(0,0,0,.2) 32%,rgb(29 29 29/7%) 47%,rgba(29,29,29,0));mask:none;-webkit-mask:none}}@media only screen and (max-width:767px) and (orientation:portrait){.button-container{bottom:3em}.genre,.tomato-rating{display:none}.dots-container{bottom:6em}.info-container{bottom:5em}.logo-container{top:calc(100% - 15em)}.backdrop:not(.tmla-mask){transform-origin:center}.left-arrow,.right-arrow{display:none!important}.play-button{order:2}}@media (min-width:75em){#slides-container{top:calc(var(--appBarHeight) + 1.25em)}.layout-tv #slides-container{top:calc(var(--appBarHeight)*2 + 1.25em)}}@media (min-width:100em){.layout-tv #slides-container{top:calc(var(--appBarHeight) + 1.25em)}}@media only screen and (max-height:767px) and (orientation:landscape){#slides-container{height:57%}.logo-container{top:3%}}
+
+
+/* ===== PHOENICX CINEMA — MODERN LAYOUT ===== */
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 1. Knobs
+ * The sheet's own variables: the sizes, timings and toggles every section
+ * below reads.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    --ef12-appBarHeight: 4rem;
+    --ef12-appBarHeightDesktop: 4.5rem;
+    --ef12-libraryToolbarHeight: 3.75rem;
+    --ef12-libraryToolbarGap: 0.75rem;
+    --ef12-appBarFade: 2.5rem;
+    --ef12-navRadius: 1rem;
+    --ef12-surfaceRadius: 1rem;
+    --ef12-menuGap: 0.5rem;
+    --ef12-surfaceBlur: var(--blurDefault);
+    --ef12-navPillBackground: var(--darkerGradientPointAlpha);
+    --ef12-osdToolbarHeight: 5rem;
+    --ef12-detailsBackdropPin: -30%;
+    --ef12-navPaddingInline: 1.1rem;
+    --ef12-navGap: 0.6rem;
+    --ef12-brandLogoSize: calc(var(--ef12-appBarIconSize) * 1.5);
+    --ef12-brandNameSize: 1.375rem;
+    --ef12-brandGap: 2.6rem;
+    --ef12-brandRuleColor: var(--borderColor);
+    --ef12-episodePreviewIcon: "video_library";
+    --ef12-appBarIconSize: 1.25rem;
+    --ef12-iconButtonGap: 0.58rem;
+    --ef12-linkMarkHeight: 1.4cap;
+    --ef12-elsewhereLabel: none;
+    --ef12-detailsSectionGap: 15px;
+    --ef12-detailsSectionGapDesktop: 23px;
+    --ef12-ratingsGridOpen: 0.24s;
+    --ef12-itemBarEnter: 0.35s;
+    --ef12-userMenuFontSize: 1.15rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 2. Token bridge: PHOENICX → Jellyfin 12 palette
+ * PHOENICX palette, re-declared where MUI's generated jf-* variables
+ * would otherwise outrank it.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+:root,
+:root[data-theme] {
+    --jf-palette-background-default: var(--darkerGradientPoint);
+    --jf-palette-background-defaultChannel: 17 24 39;
+    --jf-palette-background-paper: var(--selectorBackgroundColor);
+    --jf-palette-background-paperChannel: 56 66 82;
+    --jf-palette-AppBar-defaultBg: var(--headerColor);
+    --jf-palette-AppBar-transparentBg: transparent;
+    --jf-palette-text-primary: var(--textColor);
+    --jf-palette-text-primaryChannel: 209 213 219;
+    --jf-palette-text-secondary: var(--dimTextColor);
+    --jf-palette-text-secondaryChannel: 156 163 175;
+    --jf-palette-text-disabled: rgba(209, 213, 219, 0.5);
+    --jf-palette-common-white: var(--fullContrastColor);
+    --jf-palette-common-whiteChannel: 255 255 255;
+    --jf-palette-primary-main: var(--accentColor);
+    --jf-palette-primary-mainChannel: 93 85 231;
+    --jf-palette-primary-light: var(--accentHoverColor);
+    --jf-palette-primary-dark: var(--btnSubmitColor);
+    --jf-palette-primary-contrastText: #fff;
+    --jf-palette-secondary-main: var(--accentColor);
+    --jf-palette-secondary-mainChannel: 93 85 231;
+    --jf-palette-secondary-contrastText: #fff;
+    --jf-palette-error-main: var(--btnDeleteColor);
+    --jf-palette-error-mainChannel: 169 29 29;
+    --jf-palette-error-light: var(--btnDeleteBorderColor);
+    --jf-palette-error-contrastText: #fff;
+    --jf-palette-Alert-infoFilledBg: var(--btnSubmitColor);
+    --jf-palette-Alert-infoFilledColor: #fff;
+    --jf-palette-divider: var(--dividerColor);
+    --jf-palette-dividerChannel: 255 255 255;
+    --jf-palette-action-hover: var(--semiTransparentAccentColor);
+    --jf-palette-action-selected: var(--activeBackgroundColor);
+    --jf-palette-action-focus: var(--semiTransparentAccentColor);
+    --jf-palette-action-active: var(--textColor);
+    --jf-palette-FilledInput-bg: var(--textareaBackgroundColor);
+    --jf-palette-FilledInput-borderColor: var(--borderColor);
+    --jf-palette-Button-inheritContainedBg: var(--selectorBackgroundColor);
+    --jf-palette-Button-inheritContainedHoverBg: var(--borderColor);
+    --jf-palette-SnackbarContent-bg: var(--drawerColor);
+    --jf-palette-SnackbarContent-color: var(--textColor);
+}
+
+:root[data-theme="light"] {
+    --jf-palette-background-defaultChannel: 242 242 242;
+    --jf-palette-background-paperChannel: 255 255 255;
+    --jf-palette-text-primaryChannel: 33 33 33;
+    --jf-palette-text-secondaryChannel: 89 89 89;
+    --jf-palette-text-disabled: rgba(33, 33, 33, 0.5);
+    --jf-palette-common-whiteChannel: 0 0 0;
+    --jf-palette-primary-mainChannel: 78 61 230;
+    --jf-palette-secondary-mainChannel: 78 61 230;
+    --jf-palette-error-mainChannel: 185 49 45;
+    --jf-palette-dividerChannel: 0 0 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 3. Typography
+ * The font on MUI components, which declare their own rather than
+ * inheriting.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+[class*="Mui"]:not(.MuiIcon-root) {
+    font-family: inherit;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 4. Modern layout fixes
+ * Item and library page geometry: the page's top offset, the clear logo's
+ * band, Next Up and the season list, and the space between an item page's
+ * sections.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+body:has(.MuiAppBar-root) .libraryPage:not(.noSecondaryNavPage, .itemDetailPage) {
+    padding-top: 0 !important;
+}
+
+:root:is(.layout-desktop, .layout-mobile) body:has(.MuiAppBar-root) #itemDetailPage:has(.subtitle)::before,
+:root:is(.layout-desktop, .layout-mobile) body:has(.MuiAppBar-root) #itemDetailPage:has(.musicParentName)::before {
+    --ef12-detailsPageTopOffset: calc(var(--ef12-appBarHeight) + max(env(safe-area-inset-top), var(--safe-area-inset-top, 0px)));
+    content: "";
+    position: absolute;
+    inset: calc(-1 * var(--ef12-detailsPageTopOffset)) 0 auto 0;
+    height: var(--ef12-detailsPageTopOffset);
+    background: var(--darkerGradientPointAlpha);
+    pointer-events: none;
+}
+
+:root.layout-desktop body:has(.MuiAppBar-root) #itemDetailPage:has(.subtitle):has(.detailImageContainer .portraitCard):has(.detailLogo:not(.hide)) {
+    --ef12-detailsTitleSpace: calc(22.5vh + 9em);
+}
+
+:root.layout-desktop body:has(.MuiAppBar-root) #itemDetailPage:has(.subtitle):has(.detailImageContainer .portraitCard):has(.detailLogo:not(.hide)) .detailRibbon {
+    min-height: 0;
+    padding-top: var(--ef12-detailsTitleSpace);
+}
+
+:root.layout-desktop body:has(.MuiAppBar-root) #itemDetailPage:has(.subtitle):has(.detailImageContainer .portraitCard):has(.detailLogo:not(.hide)) .detailLogo {
+    top: calc(73vh - var(--secondaryItemPageNegativeSpace) + var(--ef12-detailsTitleSpace) - 0.5em);
+    height: min(25vh, calc(var(--ef12-detailsTitleSpace) - 0.5em));
+}
+
+:root.layout-desktop body:has(.MuiAppBar-root) #itemDetailPage .detailSection > .nextUpSection,
+:root.layout-desktop body:has(.MuiAppBar-root) #itemDetailPage .detailSection > #listChildrenCollapsible {
+    grid-column: 1 / -1;
+}
+
+body:has(.MuiAppBar-root) #itemDetailPage .detailPagePrimaryContent > .detailSection > .itemDetailsGroup:not(:has(> :not(:empty))) {
+    display: none;
+}
+
+body:has(.MuiAppBar-root) #itemDetailPage .detailPagePrimaryContent > .detailSection {
+    margin-bottom: 0;
+    row-gap: var(--ef12-detailsSectionGap);
+}
+
+body:has(.MuiAppBar-root) #itemDetailPage .detailPagePrimaryContent > .detailSection > * {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+body:has(.MuiAppBar-root) #itemDetailPage .detailPageSecondaryContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ef12-detailsSectionGap);
+    margin-top: var(--ef12-detailsSectionGap);
+}
+
+body:has(.MuiAppBar-root) #itemDetailPage .detailPageSecondaryContainer > * {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+body:has(.MuiAppBar-root) #itemDetailPage .tmdb-reviews-section {
+    margin-bottom: 0;
+    margin-top: var(--ef12-detailsSectionGap);
+}
+
+:root.layout-mobile:has(.MuiAppBar-root) #myPreferencesMenuPage {
+    padding-top: 0 !important;
+}
+
+:root.layout-mobile body:has(.MuiAppBar-root) #itemDetailPage .itemBackdrop {
+    --ef12-detailsBackdropRise: calc(var(--ef12-appBarHeight) + max(env(safe-area-inset-top), var(--safe-area-inset-top, 0px)));
+    box-sizing: content-box;
+    margin-top: calc(-1 * var(--ef12-detailsBackdropRise)) !important;
+    padding-top: var(--ef12-detailsBackdropRise);
+    top: var(--ef12-detailsBackdropPin, -30%);
+}
+
+:root.layout-mobile body:has(.MuiAppBar-root) #itemDetailPage .itemBackdrop::before {
+    position: absolute;
+    inset: 0;
+    height: auto;
+}
+
+:root:is(.layout-desktop, .layout-mobile) body:has(.MuiAppBar-root):not(.hide-scroll) > .videoPlayerContainer {
+    position: fixed !important;
+    height: auto;
+}
+
+:root.layout-desktop body:has(.MuiAppBar-root):not(.hide-scroll) > .videoPlayerContainer ~ #reactRoot > .backgroundContainer.withBackdrop {
+    opacity: 1;
+}
+
+:root.layout-mobile body:has(.MuiAppBar-root):not(.hide-scroll) > .videoPlayerContainer {
+    --ef12-themeVideoRise: calc(var(--ef12-appBarHeight) + max(env(safe-area-inset-top), var(--safe-area-inset-top, 0px)));
+    position: absolute !important;
+    top: 0;
+    bottom: auto;
+    height: calc(var(--ef12-detailsBackdropHeight) + var(--ef12-themeVideoRise));
+    -webkit-mask: var(--itemBackdropMask);
+    mask: var(--itemBackdropMask);
+}
+
+:root.layout-mobile body:has(.MuiAppBar-root) {
+    --ef12-detailsBackdropHeight: 45vh;
+}
+
+:root.layout-mobile body:has(.MuiAppBar-root):is(
+        :has(#itemDetailPage:not(.hide) .subtitle),
+        :has(#itemDetailPage:not(.hide) .musicParentName),
+        :has(#itemDetailPage:not(.hide) .detailImageContainer :is(.backdropCard, .squareCard, .person, .queue, .book, .live_tv))) {
+    --ef12-detailsBackdropHeight: calc(100vh - 27vh - var(--secondaryItemPageNegativeSpace));
+}
+
+:root.layout-mobile body:has(.MuiAppBar-root):has(#itemDetailPage:not(.hide) .detailImageContainer .cardPadder-square > .person) {
+    --ef12-detailsBackdropHeight: calc(100vh - 4vh - var(--secondaryItemPageNegativeSpace));
+}
+
+:root.layout-mobile body:has(.MuiAppBar-root):not(.hide-scroll):has(> .videoPlayerContainer) #itemDetailPage .itemBackdrop {
+    background-image: none !important;
+}
+
+:root:is(.layout-desktop, .layout-mobile) body:has(.MuiAppBar-root) #loginPage {
+    --ef12-loginPageRise: calc(var(--ef12-appBarHeight) + max(env(safe-area-inset-top), var(--safe-area-inset-top, 0px)));
+    margin-top: calc(-1 * var(--ef12-loginPageRise));
+}
+
+body:has(.MuiAppBar-root) :is([role="button"], [role="tab"], [role="link"],
+        [role="menuitem"], [role="menuitemcheckbox"], [role="menuitemradio"],
+        [role="option"], [role="switch"], [role="checkbox"], [role="radio"],
+        .MuiButtonBase-root, .MuiChip-clickable, .MuiChip-deleteIcon,
+        .MuiSelect-select) {
+    cursor: pointer;
+}
+
+body:has(.MuiAppBar-root) :is([role="button"], .MuiButtonBase-root, .MuiSelect-select):is(:disabled, .Mui-disabled, [aria-disabled="true"]) {
+    cursor: default;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 5. App bar
+ * The MUI header: its colour on scroll, its height, the two-row bars and the
+ * masthead.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.MuiAppBar-root.MuiAppBar-colorTransparent,
+.MuiAppBar-root.MuiAppBar-colorDefault {
+    background: var(--appBarColor, var(--headerBackground));
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: var(--appBarBorder, none);
+    border-width: 0 0 var(--borderWidth) 0;
+    box-shadow: none;
+    color: var(--textColor);
+}
+
+.MuiAppBar-root.MuiAppBar-colorTransparent::after,
+.MuiAppBar-root.MuiAppBar-colorDefault::after {
+    content: var(--appBarSeamlessBlur, "");
+    position: absolute;
+    inset: 0;
+    -webkit-backdrop-filter: var(--appBarBlurStrength, var(--blurLargest));
+    backdrop-filter: var(--appBarBlurStrength, var(--blurLargest));
+    -webkit-mask: var(--headerBlurMask);
+    mask: var(--headerBlurMask);
+    z-index: -1;
+}
+
+.MuiAppBar-root.MuiAppBar-colorDefault:has(> .MuiToolbar-root:nth-child(2)) {
+    background: var(--appBarColor, var(--headerColor));
+}
+
+.MuiAppBar-root.MuiAppBar-colorDefault:has(> .MuiToolbar-root:nth-child(2))::after {
+    -webkit-mask: none;
+    mask: none;
+}
+
+.MuiAppBar-root.MuiAppBar-colorDefault:has(> .MuiToolbar-root:nth-child(2))::before {
+    content: "";
+    position: absolute;
+    inset: 100% 0 auto 0;
+    height: var(--ef12-appBarFade);
+    background: linear-gradient(180deg, var(--appBarColor, var(--headerColor)), transparent);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body:has(:is(.selfBackdropPage, #loginPage):not(.hide)) .MuiAppBar-root.MuiAppBar-colorTransparent,
+body:has(:is(.selfBackdropPage, #loginPage):not(.hide)) .MuiAppBar-root.MuiAppBar-colorDefault {
+    background: none;
+    border: 0;
+}
+
+body:has(#loginPage:not(.hide)) .MuiAppBar-root::after,
+body:has(#loginPage:not(.hide)) .MuiAppBar-root::before {
+    content: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root::before,
+body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root::after {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root::before {
+    content: "";
+    background: var(--appBarColor, var(--headerBackground));
+}
+
+body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root::after {
+    content: var(--appBarSeamlessBlur, "");
+    -webkit-backdrop-filter: var(--appBarBlurStrength, var(--blurLargest));
+    backdrop-filter: var(--appBarBlurStrength, var(--blurLargest));
+    -webkit-mask: var(--headerBlurMask);
+    mask: var(--headerBlurMask);
+}
+
+body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root.MuiAppBar-colorDefault::before,
+body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root.MuiAppBar-colorDefault::after {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root::before,
+    body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root::after {
+        transition: opacity var(--ef12-itemBarEnter) ease;
+    }
+}
+
+body:has(:is(.selfBackdropPage, #loginPage):not(.hide)) .MuiAppBar-root .MuiIconButton-root:not(:hover),
+body:has(:is(.selfBackdropPage, #loginPage):not(.hide)) .MuiAppBar-root .MuiToolbar-root .headerButton.paper-icon-button-light:not(:hover) {
+    color: var(--fullContrastColor);
+    text-shadow: var(--iconShadow);
+}
+
+body:has(:is(.selfBackdropPage, #loginPage):not(.hide)) .MuiAppBar-root .MuiIconButton-root:not(:hover) .MuiSvgIcon-root {
+    filter: drop-shadow(0 0 2px hsla(0, 0%, 0%, 0.8)) drop-shadow(1px 1px 0 hsla(0, 0%, 0%, 0.5));
+}
+
+.MuiAppBar-root.MuiAppBar-positionFixed {
+    padding-top: max(env(safe-area-inset-top), var(--safe-area-inset-top, 0px));
+}
+
+.MuiAppBar-root.MuiAppBar-positionFixed + div[aria-hidden="true"] {
+    min-height: calc(var(--ef12-appBarHeight)
+        + max(env(safe-area-inset-top), var(--safe-area-inset-top, 0px)));
+}
+
+.MuiAppBar-root > .MuiToolbar-root:first-child {
+    min-height: var(--ef12-appBarHeight);
+    gap: 0;
+}
+
+.MuiAppBar-root > .MuiToolbar-root:nth-child(2) {
+    min-height: var(--ef12-libraryToolbarHeight);
+}
+
+:root.layout-desktop {
+    --ef12-appBarHeight: var(--ef12-appBarHeightDesktop);
+}
+
+:root.layout-desktop {
+    --ef12-detailsSectionGap: var(--ef12-detailsSectionGapDesktop);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 6. Library navigation buttons
+ * The per-library buttons in the app bar, as PHOENICX pills.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped) {
+    background-color: var(--ef12-navPillBackground);
+    border-radius: var(--ef12-navRadius);
+    color: var(--textColor);
+    font-size: 1rem;
+    font-weight: 400;
+    padding-block: 0.35rem;
+    padding-inline: var(--ef12-navPaddingInline);
+    margin-inline: calc(var(--ef12-navGap) / 2);
+}
+
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped) .MuiButton-startIcon {
+    margin-left: 0;
+    margin-right: 0.6rem;
+}
+
+.MuiAppBar-root .MuiButton-textPrimary:not(.MuiButtonGroup-grouped) {
+    background: var(--btnPlayColor) !important;
+    border: 0 !important;
+    color: var(--zeroContrastColor) !important;
+}
+
+.layout-desktop .MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped, .MuiButton-textPrimary, :has(.MuiButton-startIcon > img)):hover {
+    background-color: var(--hoverTabBackgroundColor);
+    color: var(--zeroContrastColor);
+}
+
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon > img) {
+    background-color: transparent;
+    color: var(--fullContrastColor);
+    font-size: var(--ef12-brandNameSize);
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    margin-inline: 0 var(--ef12-brandGap);
+    padding-block: 0;
+    padding-inline: 0;
+    position: relative;
+}
+
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon > img):has(+ .MuiButton-text)::after {
+    background: var(--ef12-brandRuleColor);
+    content: "";
+    height: 1.75rem;
+    pointer-events: none;
+    position: absolute;
+    right: calc((var(--ef12-brandGap) + var(--ef12-navGap) / 2) / -2);
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--borderWidth);
+}
+
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon > img):not(:has(+ .MuiButton-text)) {
+    margin-inline: 0;
+}
+
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon > img) .MuiButton-startIcon {
+    margin-right: 0.75rem;
+}
+
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon > img) .MuiTouchRipple-root {
+    display: none;
+}
+
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon > img) .MuiButton-startIcon > img {
+    max-height: var(--ef12-brandLogoSize) !important;
+    max-width: var(--ef12-brandLogoSize) !important;
+}
+
+body:has(:is(.selfBackdropPage, #loginPage):not(.hide)) .MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon > img) {
+    text-shadow: var(--iconShadow);
+}
+
+body:has(:is(.selfBackdropPage, #loginPage):not(.hide)) .MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon > img) .MuiButton-startIcon > img {
+    filter: drop-shadow(0 0 2px hsla(0, 0%, 0%, 0.8)) drop-shadow(1px 1px 0 hsla(0, 0%, 0%, 0.5));
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 7. Library toolbar
+ * The sort, filter and view button groups in a library page's second row.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.MuiAppBar-root .MuiButtonGroup-contained {
+    background: var(--btnPlayColor);
+    border: 0;
+    border-radius: var(--ef12-navRadius);
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.MuiAppBar-root .MuiButtonGroup-contained .MuiButton-contained {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--zeroContrastColor) !important;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-inline: var(--ef12-navPaddingInline);
+}
+
+.MuiAppBar-root .MuiButtonGroup-contained .MuiButton-contained + .MuiButton-contained {
+    box-shadow: inset var(--borderWidth) 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.layout-desktop .MuiAppBar-root .MuiButtonGroup-contained .MuiButton-contained:hover {
+    background: rgba(0, 0, 0, 0.12) !important;
+    color: var(--zeroContrastColor) !important;
+}
+
+.MuiAppBar-root .MuiButton-contained:not(.MuiButtonGroup-grouped) {
+    background: var(--btnPlayColor) !important;
+    border: 0 !important;
+    border-radius: var(--ef12-navRadius);
+    box-shadow: none;
+    color: var(--zeroContrastColor) !important;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-inline: var(--ef12-navPaddingInline);
+}
+
+.layout-desktop .MuiAppBar-root .MuiButton-contained:not(.MuiButtonGroup-grouped):hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)), var(--btnPlayColor) !important;
+}
+
+.MuiAppBar-root .MuiButtonGroup-text {
+    background: var(--ef12-navPillBackground);
+    border-radius: var(--ef12-navRadius);
+    overflow: hidden;
+}
+
+.MuiAppBar-root .MuiButtonGroup-text .MuiButton-root {
+    border-radius: 0;
+    color: var(--textColor);
+}
+
+.MuiAppBar-root .MuiButtonGroup-text .MuiButtonGroup-grouped:not(:last-of-type) {
+    border: var(--defaultBorder);
+    border-width: 0 var(--borderWidth) 0 0;
+}
+
+.layout-desktop .MuiAppBar-root .MuiButtonGroup-text .MuiButton-root:not(.Mui-disabled):hover {
+    background: var(--hoverTabBackgroundColor);
+    color: var(--zeroContrastColor);
+}
+
+.MuiAppBar-root .MuiButtonGroup-text .MuiButton-root.Mui-disabled {
+    color: var(--dimTextColor);
+    opacity: 0.5;
+}
+
+.MuiAppBar-root > .MuiToolbar-root:nth-child(2) .MuiButton-text .MuiTypography-root {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.MuiAppBar-root > .MuiToolbar-root:nth-child(2) .MuiButton-text:not(.MuiButtonGroup-grouped) {
+    min-height: calc(1.75rem + 12px);
+}
+
+.MuiAppBar-root > .MuiToolbar-root:nth-child(2) > .MuiButton-text:first-child {
+    margin-inline-start: 0;
+}
+
+:root.layout-mobile .MuiAppBar-root > .MuiToolbar-root:nth-child(2) {
+    padding-bottom: var(--ef12-libraryToolbarGap);
+}
+
+.MuiAppBar-root .MuiChip-root {
+    background-color: transparent;
+    border: var(--defaultBorder);
+    border-radius: var(--ef12-navRadius);
+    color: var(--dimTextColor);
+    font-size: 0.9rem;
+    height: auto;
+}
+
+.MuiAppBar-root .MuiChip-root .MuiChip-label {
+    padding-block: 0.25rem;
+    padding-inline: 0.7rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 8. Drawer
+ * The navigation drawer, rendered only below the md breakpoint.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.MuiDrawer-root .MuiDrawer-paper {
+    background-color: var(--drawerColor);
+    background-image: none;
+    -webkit-backdrop-filter: var(--blurLarge);
+    backdrop-filter: var(--blurLarge);
+    border-right: var(--defaultBorder);
+    color: var(--textColor);
+}
+
+.MuiDrawer-root .MuiListItemButton-root {
+    border-radius: var(--smallRadius);
+    margin-inline: 0.4em;
+}
+
+.MuiDrawer-root .MuiListItemButton-root.Mui-selected {
+    background-color: var(--activeBackgroundColor);
+    color: var(--activeTextColor);
+}
+
+.MuiDrawer-root .MuiListItemIcon-root,
+.MuiDrawer-root .MuiListSubheader-root,
+.MuiDrawer-root .MuiDrawer-paper .sidebarHeader {
+    color: var(--dimTextColor);
+}
+
+.MuiDrawer-root .MuiDrawer-paper .navMenuOption {
+    border: var(--borderWidth) solid transparent;
+    margin-inline: 0.4em !important;
+    padding-block: 8px !important;
+    padding-inline: 16px !important;
+    gap: 0;
+    text-align: start;
+}
+
+.MuiDrawer-root .MuiDrawer-paper .navMenuOption > .navMenuOptionIcon {
+    min-width: 36px;
+    margin-inline-end: 0;
+    font-size: 1.5rem;
+}
+
+.MuiDrawer-root .MuiDrawer-paper .navMenuOption > .navMenuOptionText {
+    margin-block: 4px;
+    line-height: 1.5;
+}
+
+.MuiDrawer-root .MuiDrawer-paper .sidebarHeader {
+    margin-block: 0;
+    padding-inline: 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 9. Menus, popovers, dialogs, tooltips
+ * Every floating surface (menus, popovers, dialogs and tooltips), plus the
+ * avatar menu on a narrow viewport.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.MuiMenu-paper,
+.MuiPopover-paper,
+.MuiDialog-paper,
+.MuiAutocomplete-paper {
+    background-color: var(--drawerColor);
+    background-image: none;
+    -webkit-backdrop-filter: var(--ef12-surfaceBlur);
+    backdrop-filter: var(--ef12-surfaceBlur);
+    border: var(--defaultBorder);
+    border-radius: var(--ef12-surfaceRadius);
+    box-shadow: var(--cardShadow);
+    color: var(--textColor);
+}
+
+.MuiPopover-paper[style*="transform-origin"][style*=" 0px;"] {
+    margin-top: var(--ef12-menuGap);
+}
+
+#app-user-menu .MuiPopover-paper {
+    margin-top: calc(var(--ef12-menuGap) + 0.5rem);
+}
+
+.MuiMenuItem-root,
+.MuiAutocomplete-option {
+    border-radius: var(--smallRadius);
+    margin-inline: 0.3em;
+}
+
+@media not all and (min-width: 600px) {
+    #app-user-menu .MuiMenuItem-root {
+        font-size: var(--ef12-userMenuFontSize);
+    }
+
+    #app-user-menu .MuiMenuItem-root .MuiTypography-root {
+        font-size: inherit;
+    }
+
+    #app-user-menu .MuiMenuItem-root .MuiSvgIcon-root {
+        font-size: 1.45em;
+    }
+
+    #app-user-menu .MuiMenuItem-root .MuiListItemIcon-root {
+        min-width: 2.25em;
+    }
+
+    #app-user-menu .MuiPopover-paper {
+        left: auto !important;
+        right: calc(max(3.3%, env(safe-area-inset-right)) + 1rem);
+    }
+}
+
+.MuiMenuItem-root.Mui-selected,
+.MuiAutocomplete-option[aria-selected="true"] {
+    background-color: var(--activeBackgroundColor);
+    color: var(--activeTextColor);
+}
+
+.MuiDivider-root {
+    border-color: var(--dividerColor);
+}
+
+#app-user-menu .MuiDivider-root[data-plugin-pages="true"] {
+    margin-block: calc(1 * var(--jf-spacing));
+}
+
+#app-user-menu .MuiListItemIcon-root > .material-icons {
+    font-size: 1.5rem;
+}
+
+#app-user-menu [data-plugin-pages="true"] .MuiButton-startIcon {
+    margin-inline: 0;
+}
+
+.MuiTooltip-tooltip {
+    background-color: var(--drawerColor);
+    -webkit-backdrop-filter: var(--blurDefault);
+    backdrop-filter: var(--blurDefault);
+    border: var(--defaultBorder);
+    border-radius: var(--smallerRadius);
+    color: var(--textColor);
+}
+
+.MuiBackdrop-root:not(.MuiBackdrop-invisible) {
+    background-color: var(--multiSelectOverlayColor);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 10. Form controls
+ * Filled inputs, switches and the focus ring.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.MuiFilledInput-root {
+    background-color: var(--textareaBackgroundColor);
+    border: var(--defaultBorder);
+    border-radius: var(--smallRadius);
+}
+
+.MuiFilledInput-root::before,
+.MuiFilledInput-root::after {
+    border-bottom: 0;
+}
+
+.MuiCheckbox-root.Mui-checked,
+.MuiRadio-root.Mui-checked,
+.MuiSwitch-switchBase.Mui-checked {
+    color: var(--checkboxCheckedBgColor);
+}
+
+.Mui-focusVisible {
+    outline: var(--borderWidthDouble) solid var(--highlightOutlineColor);
+    outline-offset: 2px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 11. Video player
+ * The video player's chrome and its OSD.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+body:has(.videoPlayerContainer-onTop) .MuiAppBar-root,
+body:has(.videoPlayerContainer-onTop) .MuiAppBar-root + div[aria-hidden="true"],
+body:has(.videoOsd-appBar) .MuiAppBar-root,
+body:has(.videoOsd-appBar) .MuiAppBar-root + div[aria-hidden="true"] {
+    display: none;
+}
+
+.osdHeader .MuiToolbar-root {
+    min-height: var(--ef12-osdToolbarHeight);
+    align-items: center;
+}
+
+.osdHeader.skinHeader {
+    pointer-events: none !important;
+}
+
+.osdHeader.skinHeader .MuiToolbar-root {
+    pointer-events: auto;
+}
+
+.videoOsdBottom.videoOsdBottom-maincontrols .buttons {
+    justify-content: center;
+}
+
+.videoOsdBottom.videoOsdBottom-maincontrols .osdControls {
+    container-type: inline-size;
+}
+
+@container (max-width: 62em) {
+    .videoOsdBottom.videoOsdBottom-maincontrols .buttons .paper-icon-button-light {
+        margin-inline: 0;
+    }
+}
+
+.osdHeader .videoOsd-appBar {
+    container-type: inline-size;
+    margin-inline: 0;
+    padding-inline: 0.8em;
+}
+
+@container (max-width: 62em) {
+    .osdHeader .videoOsd-appBar .MuiIconButton-root {
+        margin-inline: 0;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 12. Media Bar plugin
+ * The Media Bar plugin's slideshow and the home page beneath it. Inert
+ * without the plugin.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+@container ef12mediabar (width < 96.7vw) {
+    .backdrop-container.full-width-video,
+    .gradient-overlay.full-width-video {
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+}
+
+:root {
+    --ef12-mediaBarHeight: 62vh;
+    --ef12-mediaBarGap: 1.25rem;
+}
+
+@media only screen and (max-height: 767px) and (orientation: landscape) {
+    :root {
+        --ef12-mediaBarHeight: 57vh;
+    }
+}
+
+:root:has(#slides-container) {
+    --ef12-mediaBarV2Height: 90vh;
+    --ef12-mediaBarV2StockDrop: max(0px, calc(var(--ef12-mediaBarV2Height)
+        - var(--ef12-mediaBarHeight) - var(--ef12-mediaBarGap) - 5rem));
+    --ef12-mediaBarV2StockRail: calc(var(--ef12-appBarHeight)
+        + max(env(safe-area-inset-top), var(--safe-area-inset-top, 0px))
+        + 2.5rem + 1rem);
+}
+
+@container ef12mediabar (width < 96.7vw) {
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container:not(:has(.slide-content)) .mute-button {
+        top: 1em !important;
+    }
+}
+
+@container ef12mediabar (width >= 96.7vw) {
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container:not(:has(.slide-content)) :is(.pause-button, .mute-button) {
+        top: var(--ef12-mediaBarV2StockRail) !important;
+    }
+
+    @media only screen and (max-width: 767px) and (orientation: portrait) {
+        body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container:not(:has(.slide-content)) .slide {
+            padding-bottom: calc(var(--ef12-mediaBarV2StockDrop) + 1.5em);
+        }
+        body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container:not(:has(.slide-content)) .dots-container {
+            top: calc(var(--ef12-mediaBarV2StockRail) + 1rem);
+            padding-bottom: 1rem !important;
+        }
+    }
+}
+
+@media (min-width: 75em) {
+    body:has(.MuiAppBar-root):has(#slides-container):not(:has(#slides-container .slide-content)):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) .homeSectionsContainer {
+        top: calc(var(--appBarHeight) + 1.25em + var(--ef12-mediaBarHeight)
+            + 0.5rem - var(--ef12-appBarHeight)) !important;
+    }
+}
+
+@media not all and (min-width: 75em) {
+    body:has(.MuiAppBar-root):has(#slides-container):not(:has(#slides-container .slide-content)):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) .homeSectionsContainer {
+        top: calc(var(--ef12-mediaBarHeight) + 1.25em + 0.5rem) !important;
+    }
+}
+
+@media not all and (min-width: 75em) {
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container {
+        --appBarHeight: calc((var(--ef12-appBarHeight)
+            + max(env(safe-area-inset-top), var(--safe-area-inset-top, 0px))) / 2);
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.4em;
+        padding: 1.5em 1.25em;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .button-container {
+        margin-top: 0.85em;
+        gap: 0.75rem;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .play-button {
+        order: 1;
+        padding-inline: 1em !important;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .detail-button {
+        order: 2;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .favorite-button {
+        order: 3;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .trailer-button {
+        order: 4;
+        padding-inline: 0 !important;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container :is(.logo-container, .info-container, .genre, .button-container) {
+        position: static;
+        inset: auto;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .logo-container {
+        height: auto;
+        max-height: 30%;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .logo {
+        position: static;
+        transform: none;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .logo-title-fallback {
+        font-size: clamp(1.5rem, 7vw, 2.75rem) !important;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .dots-container {
+        top: calc(1em + 1.1rem);
+        bottom: auto;
+        left: 15px;
+        transform: translateY(-50%);
+        padding: 0.7rem 0 0 !important;
+        max-width: calc(100% - 8rem);
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .progress-bar-dots {
+        top: 0;
+        bottom: auto;
+    }
+
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container :is(.pause-button, .mute-button) {
+        top: 1em !important;
+    }
+}
+
+body:has(.MuiAppBar-root) #slides-container :is(.detail-button, .favorite-button) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body:has(.MuiAppBar-root) #slides-container :is(.play-button, .trailer-button) {
+    margin: 0 !important;
+}
+
+body:has(.MuiAppBar-root) #slides-container .trailer-button {
+    border-radius: 0.5rem;
+}
+
+@media only screen and (orientation: landscape) {
+    body:has(.MuiAppBar-root):not(.media-bar-mobile-16-9, .media-bar-mobile-4-3) #slides-container .dots-container {
+        bottom: 3em;
+        height: 3em;
+        padding-bottom: 0 !important;
+    }
+}
+
+body:has(.MuiAppBar-root) #slides-container {
+    container-type: size;
+    container-name: ef12mediabar;
+}
+
+:root:has(#slides-container .slide-content) {
+    --ef12-mediaBarV3Height: var(--ef12-mediaBarHeight, 62vh);
+    --ef12-mediaBarV3Inset: 3.75rem;
+    --ef12-mediaBarV3Rail: 1em;
+    --ef12-mediaBarV3Edge: 0.8em;
+    --ef12-mediaBarV3ChromePitch: 2.7em;
+    --ef12-mediaBarV3ArrowSize: 2.25rem;
+    --ef12-mediaBarV3SectionsTop: calc(var(--ef12-mediaBarV3Height)
+        + var(--ef12-mediaBarGap, 1.25rem) * 2 + 0.75rem);
+    --ef12-mediaBarV3BarHeight: var(--slideshow-height, 100vh);
+    --ef12-mediaBarV3BarUsed: max(var(--ef12-mediaBarV3BarHeight),
+        calc(var(--ef12-mediaBarV3SectionsTop) + 5rem + 20vh));
+    --ef12-mediaBarV3StockDrop: calc(var(--ef12-mediaBarV3BarUsed)
+        - var(--ef12-mediaBarV3SectionsTop) - 1.5rem);
+    --ef12-mediaBarV3StockRow: calc(var(--ef12-mediaBarV3StockDrop) - 2.7rem);
+}
+
+body:has(.MuiAppBar-root) #slides-container:has(.slide-content) {
+    --slideshow-height: var(--ef12-mediaBarV3BarUsed);
+}
+
+:root.layout-mobile #slides-container:has(.slide-content) {
+    --ef12-mediaBarV3ChromeSize: 2rem;
+    --ef12-mediaBarV3Inset: 1.25rem;
+}
+
+:root.layout-desktop #slides-container.layout-plate:has(.slide-content) {
+    --ef12-mediaBarV3Inset: 1rem;
+}
+
+@container ef12mediabar (width < 96.7vw) {
+    #slides-container:has(.slide-content) .slide-content {
+        bottom: var(--ef12-mediaBarV3Inset);
+        max-height: calc(100% - var(--ef12-mediaBarV3Inset));
+    }
+
+    #slides-container:has(.slide-content) .plot-container {
+        flex: 0 0 auto !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    #slides-container.layout-plate:has(.slide-content) .plate-specs {
+        flex: 0 0 auto !important;
+        overflow: visible !important;
+    }
+
+    #slides-container:has(.slide-content) .ss-settings-toggle {
+        top: var(--ef12-mediaBarV3Rail) !important;
+    }
+
+    #slides-container:has(.slide-content) .arrow {
+        top: auto !important;
+        left: auto !important;
+        bottom: var(--ef12-mediaBarV3Rail) !important;
+        transform: none !important;
+    }
+
+    #slides-container:has(.slide-content) .right-arrow {
+        right: var(--ef12-mediaBarV3Edge) !important;
+    }
+
+    #slides-container:has(.slide-content) .left-arrow {
+        right: calc(var(--ef12-mediaBarV3Edge) + var(--ef12-mediaBarV3ChromePitch)) !important;
+    }
+
+    #slides-container:has(.slide-content) .dots-container {
+        top: auto !important;
+        bottom: calc(var(--ef12-mediaBarV3Rail) + 0.55rem) !important;
+        left: var(--slideshow-gutter) !important;
+        right: auto !important;
+        transform: none !important;
+        height: auto !important;
+        padding: 0 !important;
+    }
+
+    #slides-container.layout-plate:has(.slide-content) .dots-container {
+        display: none !important;
+    }
+
+    #slides-container:has(.slide-content) :is(.backdrop-overlay, .gradient-overlay) {
+        background: none !important;
+    }
+
+    #slides-container:has(.slide-content) .slide {
+        --slideshow-bottom-fade: linear-gradient(to top, #000 0%, #000 100%);
+        --slideshow-height: var(--ef12-mediaBarV3BarHeight);
+    }
+
+    :root.layout-desktop #slides-container.layout-plate:has(.slide-content) .slide-content {
+        max-height: calc(100% - var(--ef12-mediaBarV3Inset) * 2);
+    }
+
+    :root.layout-mobile #slides-container:has(.slide-content) :is(.pause-button, .volume-toggle, .ss-settings-toggle) {
+        width: var(--ef12-mediaBarV3ChromeSize) !important;
+        height: var(--ef12-mediaBarV3ChromeSize) !important;
+    }
+
+    :root.layout-mobile #slides-container:has(.slide-content) :is(.pause-button, .volume-toggle, .ss-settings-toggle) i {
+        font-size: var(--ef12-mediaBarV3ChromeSize) !important;
+    }
+
+    :root.layout-mobile #slides-container:has(.slide-content) .dots-container {
+        top: var(--ef12-mediaBarV3Rail) !important;
+        height: var(--ef12-mediaBarV3ChromeSize) !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        align-items: center !important;
+        bottom: auto !important;
+        left: var(--slideshow-gutter) !important;
+        right: auto !important;
+        transform: none !important;
+    }
+
+    :root.layout-mobile #slides-container.layout-plate:has(.slide-content) .plate {
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+    }
+}
+
+body:has(#slides-container .slide-content) .homeSectionsContainer {
+    margin-top: 0 !important;
+    top: var(--ef12-mediaBarV3SectionsTop) !important;
+}
+
+@container ef12mediabar (width >= 96.7vw) {
+    :root:is(.layout-desktop, .layout-mobile) #slides-container:has(.slide-content) .slide {
+        --ef12-mediaBarV3FadeSpan: calc(100% - var(--ef12-mediaBarV3SectionsTop) - 5rem);
+        --slideshow-bottom-fade: linear-gradient(to top,
+            transparent 0,
+            rgb(0 0 0 / 0.55) calc(var(--ef12-mediaBarV3FadeSpan) * 0.45),
+            #000 var(--ef12-mediaBarV3FadeSpan));
+    }
+
+    :root:is(.layout-desktop, .layout-mobile) #slides-container.layout-plate:has(.slide-content) .plate {
+        -webkit-mask-image: var(--slideshow-bottom-fade) !important;
+        mask-image: var(--slideshow-bottom-fade) !important;
+    }
+}
+
+@container ef12mediabar (width >= 96.7vw) {
+    :root:is(.layout-desktop, .layout-mobile) #slides-container:has(.slide-content) .slide-content {
+        bottom: var(--ef12-mediaBarV3StockDrop);
+        max-height: calc(100% - var(--ef12-mediaBarV3StockDrop) - 2rem);
+    }
+
+    :root:is(.layout-desktop, .layout-mobile) #slides-container:has(.slide-content) .dots-container {
+        top: auto !important;
+        bottom: var(--ef12-mediaBarV3StockRow) !important;
+        left: var(--slideshow-gutter) !important;
+        right: auto !important;
+        transform: none !important;
+    }
+
+    :root:is(.layout-desktop, .layout-mobile) #slides-container:has(.slide-content) .arrow {
+        top: auto !important;
+        bottom: var(--ef12-mediaBarV3StockRow) !important;
+        transform: none !important;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 13. Icon buttons
+ * Icon buttons in the app bar, the OSD and a card's overlay: hover circle,
+ * box size, spacing and two glyph substitutions.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+@media (hover: hover) and (pointer: fine) {
+    .MuiAppBar-root .MuiButtonBase-root.MuiIconButton-root:hover:not(:disabled),
+    .osdHeader .MuiButtonBase-root.MuiIconButton-root:hover:not(:disabled),
+    .cardOverlayButton-br .MuiButtonBase-root.MuiIconButton-root:hover:not(:disabled) {
+        background-color: var(--hoverBackgroundColor);
+        color: var(--zeroContrastColor);
+        text-shadow: none;
+    }
+}
+
+.MuiAppBar-root .MuiIconButton-root:not(:has(.MuiAvatar-root)),
+.osdHeader .MuiIconButton-root:not(:has(.MuiAvatar-root)) {
+    padding: 0.5545rem;
+    align-self: center;
+}
+
+.MuiAppBar-root .MuiIconButton-root,
+.osdHeader .MuiIconButton-root {
+    margin-inline: calc(var(--ef12-iconButtonGap) / 2);
+}
+
+.MuiAppBar-root .MuiIconButton-root:has(.MuiAvatar-root) {
+    margin-inline-end: 1rem;
+}
+
+.MuiAppBar-root .MuiIconButton-root:not(:has(.MuiAvatar-root)) .MuiSvgIcon-root,
+.MuiAppBar-root .MuiIconButton-root:not(:has(.MuiAvatar-root)) .MuiIcon-root,
+.osdHeader .MuiIconButton-root:not(:has(.MuiAvatar-root)) .MuiSvgIcon-root,
+.osdHeader .MuiIconButton-root:not(:has(.MuiAvatar-root)) .MuiIcon-root {
+    font-size: var(--ef12-appBarIconSize);
+}
+
+.MuiAppBar-root .MuiToolbar-root .headerButton.paper-icon-button-light {
+    width: 2.36rem !important;
+    height: 2.36rem !important;
+    padding: 0 !important;
+    margin-inline: calc(var(--ef12-iconButtonGap) / 2) !important;
+}
+
+.MuiAppBar-root .MuiToolbar-root .headerButton.paper-icon-button-light > .material-icons {
+    font-size: 1.25rem !important;
+}
+
+:is([aria-controls="app-remote-play-menu"], #popupPreviewButton) > svg,
+[aria-controls="app-remote-play-active-menu"] .MuiButton-startIcon > svg {
+    display: none;
+}
+
+:is([aria-controls="app-remote-play-menu"], #popupPreviewButton)::before,
+[aria-controls="app-remote-play-active-menu"] .MuiButton-startIcon::before {
+    display: inline-block;
+    font-family: var(--iconPack), "Material Icons";
+    font-feature-settings: "liga";
+    font-style: normal;
+    font-variation-settings: "FILL" var(--fill), "wght" var(--wght), "GRAD" var(--grad), "opsz" var(--opsz);
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1;
+    text-rendering: geometricPrecision;
+    text-transform: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+}
+
+[aria-controls="app-remote-play-menu"]::before {
+    content: "cast";
+    font-size: var(--ef12-appBarIconSize);
+}
+
+[aria-controls="app-remote-play-active-menu"] .MuiButton-startIcon::before {
+    content: "cast_connected";
+    font-size: var(--ef12-appBarIconSize);
+}
+
+#popupPreviewButton::before {
+    content: var(--ef12-episodePreviewIcon);
+    font-size: 1.25em;
+}
+
+.cardOverlayButton-br > button.cardOverlayButton {
+    box-sizing: border-box;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    position: relative;
+}
+
+.cardOverlayButton-br > button.cardOverlayButton > .cardOverlayButtonIcon,
+.cardOverlayButton-br > button.cardOverlayButton > .MuiSvgIcon-root {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 14. Jellyfin Enhanced
+ * The Jellyfin Enhanced plugin: its Seerr link, streaming bar and reviews on
+ * an item page, and its active-streams panel.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.itemExternalLinks > .seerr-link,
+.itemExternalLinks > .arr-link {
+    display: inline-block;
+    margin-inline-start: 0.29em;
+}
+
+.itemExternalLinks > .seerr-link > .seerr-link-img,
+.itemExternalLinks > .arr-link > .arr-link-img {
+    display: inline;
+    width: auto !important;
+    height: var(--ef12-linkMarkHeight) !important;
+    vertical-align: calc((1cap - var(--ef12-linkMarkHeight)) / 2);
+}
+
+.streaming-lookup-container {
+    margin-block: 0.75em !important;
+}
+
+.streaming-lookup-container > div {
+    align-items: center !important;
+    background: var(--lighterGradientPointAlpha) !important;
+    border: var(--borderWidth) solid var(--borderColor) !important;
+    border-radius: var(--smallRadius) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5em !important;
+    margin: 0 !important;
+    padding: 0.5em 0.75em !important;
+}
+
+.streaming-lookup-container > div > div:first-child {
+    display: contents !important;
+}
+
+.streaming-lookup-container > div > div:first-child > div {
+    gap: 0.4em !important;
+    margin-left: auto !important;
+    order: 1 !important;
+}
+
+.streaming-lookup-container > div > div:first-child > .elsewhere-link-reset {
+    color: var(--textColor) !important;
+    flex: 0 0 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.streaming-lookup-container > div:has(.elsewhere-custom-branding)::before {
+    color: var(--textColor);
+    content: var(--ef12-elsewhereLabel, none);
+    flex: 0 0 100%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.streaming-lookup-container .elsewhere-custom-branding {
+    align-items: center !important;
+    background: var(--selectorBackgroundColor) !important;
+    border-radius: var(--smallerRadius) !important;
+    color: var(--textColor) !important;
+    flex: 0 0 auto !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    gap: 0.6em !important;
+    margin: 0 !important;
+    padding: 6px 10px !important;
+}
+
+.streaming-lookup-container .elsewhere-custom-branding-icon {
+    height: 20px !important;
+    margin: 0 !important;
+    order: -1 !important;
+    width: 20px !important;
+}
+
+.streaming-lookup-container > div > div:not(:first-child, #streaming-result-container) {
+    gap: 0.4em !important;
+    margin: 0 !important;
+}
+
+.streaming-lookup-container > div > div:not(:first-child, #streaming-result-container) > div {
+    background: var(--selectorBackgroundColor) !important;
+    border: 0 !important;
+    border-radius: var(--smallerRadius) !important;
+    color: var(--textColor) !important;
+    margin: 0 !important;
+}
+
+.streaming-lookup-container :is(.elsewhere-search-button, .elsewhere-settings-button) {
+    background: var(--selectorBackgroundColor) !important;
+    border: 0 !important;
+    border-radius: var(--smallerRadius) !important;
+    color: var(--textColor) !important;
+}
+
+#streaming-result-container {
+    flex: 0 0 100% !important;
+    margin: 0 !important;
+    order: 2 !important;
+}
+
+#streaming-result-container > div {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: var(--darkerGradientPointAlpha) !important;
+    border: var(--borderWidth) solid var(--borderColor) !important;
+    border-radius: var(--smallRadius) !important;
+    margin: 0.4em 0 0 !important;
+    padding: 0.5em 0.75em !important;
+}
+
+#streaming-result-container .elsewhere-link-reset {
+    color: var(--textColor) !important;
+    flex: 1 1 auto !important;
+}
+
+#streaming-result-container > div > div:first-child {
+    margin-bottom: 0.4em !important;
+}
+
+#streaming-result-container > div > div:not(:first-child) {
+    gap: 0.4em !important;
+    margin: 0 !important;
+}
+
+#streaming-result-container > div > div:not(:first-child) > div {
+    background: var(--selectorBackgroundColor) !important;
+    border: 0 !important;
+    border-radius: var(--smallerRadius) !important;
+    color: var(--textColor) !important;
+    margin: 0 !important;
+}
+
+#streaming-result-container button {
+    background: var(--selectorBackgroundColor) !important;
+    border: 0 !important;
+    border-radius: var(--smallerRadius) !important;
+    color: var(--textColor) !important;
+}
+
+#streaming-result-container > div[style*="139, 19, 19"] {
+    background: color-mix(in srgb, var(--btnDeleteColor) 35%, transparent) !important;
+    border-color: var(--btnDeleteBorderColor) !important;
+}
+
+#streaming-result-container [style*="255, 20, 20"] {
+    color: var(--btnDeleteBorderColor) !important;
+}
+
+.tmdb-reviews-section > summary.sectionTitle {
+    font-weight: 600;
+}
+
+.tmdb-reviews-section .tmdb-review-card {
+    background: var(--lighterGradientPointAlpha);
+    border-left: 0;
+    border-radius: var(--smallRadius);
+    box-shadow: inset 0 0 0 var(--borderWidth) var(--borderColor);
+}
+
+.tmdb-reviews-section .tmdb-review-author {
+    color: var(--fullContrastColor);
+}
+
+.tmdb-reviews-section .tmdb-review-date {
+    color: var(--dimTextColor);
+}
+
+.tmdb-reviews-section .tmdb-review-text {
+    color: var(--textColor);
+}
+
+.tmdb-reviews-section .tmdb-review-toggle {
+    color: var(--dimTextColor);
+}
+
+.tmdb-reviews-section .tmdb-review-toggle:hover {
+    color: var(--textColor);
+}
+
+.tmdb-reviews-section .tmdb-review-rating {
+    border-radius: var(--smallerRadius);
+}
+
+.tmdb-reviews-section .je-review-btn {
+    background: var(--btnSubmitColor);
+    border: var(--borderWidth) solid var(--btnSubmitBorderColor);
+    border-radius: var(--smallRadius);
+    color: var(--fullContrastColor);
+}
+
+.tmdb-reviews-section .je-review-form {
+    background: var(--lighterGradientPointAlpha);
+    border: var(--borderWidth) solid var(--borderColor);
+    border-radius: var(--smallRadius);
+}
+
+.tmdb-reviews-section .je-review-textarea {
+    background: var(--selectorBackgroundColor);
+    border: var(--borderWidth) solid var(--lighterBorderColor);
+    border-radius: var(--smallRadius);
+    color: var(--textColor);
+}
+
+@supports (anchor-name: --a) and (left: anchor(center)) {
+    body:has(.MuiAppBar-root) #je-active-streams {
+        anchor-name: --ef12-activeStreamsButton;
+    }
+
+    body:has(.MuiAppBar-root) #je-active-streams-panel {
+        --ef12-activeStreamsPanelHalf: min(180px, (100vw - 16px) / 2);
+        left: clamp(
+            calc(12px + var(--ef12-activeStreamsPanelHalf)),
+            anchor(center),
+            calc(100vw - 12px - var(--ef12-activeStreamsPanelHalf)));
+        position-anchor: --ef12-activeStreamsButton;
+        right: auto;
+        translate: -50%;
+    }
+}
+
+body #je-active-streams-panel {
+    background: var(--drawerColor);
+    -webkit-backdrop-filter: var(--ef12-surfaceBlur);
+    backdrop-filter: var(--ef12-surfaceBlur);
+    border: var(--defaultBorder);
+    border-radius: var(--ef12-surfaceRadius);
+    box-shadow: var(--cardShadow);
+    color: var(--textColor);
+}
+
+body #je-active-streams,
+body #je-active-streams-panel {
+    --je-as-accent: var(--accentColor);
+}
+
+#je-active-streams-panel .je-as-panel-header,
+#je-active-streams-panel .je-as-broadcast-form {
+    border-bottom-color: var(--borderColor);
+}
+
+#je-active-streams-panel .je-as-panel-header {
+    gap: var(--ef12-iconButtonGap);
+    justify-content: flex-start;
+}
+
+#je-active-streams-panel .je-as-panel-title {
+    margin-right: auto;
+}
+
+#je-active-streams-panel .je-as-refresh-btn,
+#je-active-streams-panel .je-as-broadcast-btn {
+    margin-right: 0;
+}
+
+#je-active-streams-panel .je-as-panel-footer {
+    border-top-color: var(--borderColor);
+}
+
+#je-active-streams-panel .je-as-panel-title,
+#je-active-streams-panel .je-as-card-title {
+    color: var(--fullContrastColor);
+}
+
+#je-active-streams-panel .je-as-card-subtitle,
+#je-active-streams-panel .je-as-panel-empty,
+#je-active-streams-panel .je-as-panel-footer,
+#je-active-streams-panel .je-as-progress-time,
+#je-active-streams-panel .je-as-user {
+    color: var(--dimTextColor);
+}
+
+#je-active-streams-panel .je-as-panel-close,
+#je-active-streams-panel .je-as-refresh-btn,
+#je-active-streams-panel .je-as-broadcast-btn {
+    color: var(--dimTextColor);
+}
+
+#je-active-streams-panel .je-as-panel-close:hover,
+#je-active-streams-panel .je-as-refresh-btn:hover {
+    color: var(--textColor);
+}
+
+#je-active-streams-panel .je-as-card {
+    background: var(--lighterGradientPointAlpha);
+    border: var(--defaultBorder);
+    border-radius: var(--smallRadius);
+}
+
+#je-active-streams-panel .je-as-poster,
+#je-active-streams-panel .je-as-poster-placeholder {
+    background: var(--selectorBackgroundColor);
+}
+
+#je-active-streams-panel .je-as-progress-bar {
+    background: var(--selectorBackgroundColor);
+}
+
+#je-active-streams-panel .je-as-state-paused,
+#je-active-streams-panel .je-as-badge-neutral {
+    background: var(--selectorBackgroundColor);
+    color: var(--dimTextColor);
+}
+
+#je-active-streams-panel .je-as-broadcast-input,
+#je-active-streams-panel .je-as-broadcast-textarea,
+#je-active-streams-panel .je-as-broadcast-timeout-input,
+#je-active-streams-panel .je-as-broadcast-cancel {
+    background: var(--selectorBackgroundColor);
+    border: var(--borderWidth) solid var(--lighterBorderColor);
+    border-radius: var(--smallRadius);
+    color: var(--textColor);
+}
+
+#je-active-streams-panel .je-as-broadcast-input::placeholder,
+#je-active-streams-panel .je-as-broadcast-textarea::placeholder {
+    color: var(--dimTextColor);
+}
+
+#je-active-streams-panel .je-as-broadcast-send {
+    background: var(--btnSubmitColor);
+    border: var(--borderWidth) solid var(--btnSubmitBorderColor);
+    border-radius: var(--smallRadius);
+    color: #fff;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 15. Home section titles
+ * The space under the home page's two kinds of section heading.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+body:has(.MuiAppBar-root) .homeSectionsContainer div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
+    padding-bottom: calc(0.3em + 0.2rem);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 16. Legacy TV layout
+ * The TV display mode, which never gets the MUI chrome. The one section not
+ * about the Modern layout.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+:root.layout-tv .mainAnimatedPage {
+    overflow-x: clip;
+}
+
+:root.layout-tv #slides-container .backdrop-container {
+    bottom: 0;
+    height: auto;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 17. In-player episode picker
+ * The InPlayerEpisodePreview plugin's episode picker inside the player.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.cardScalable > .innerCardFooter.itemProgressBar {
+    position: absolute;
+    inset: auto 1em 1em;
+    width: auto;
+    padding: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 18. Episodes Ratings Grid
+ * The Episodes Ratings Grid userscript's card on a series page.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+body [data-jf-ieg-root="1"] {
+    --axis: var(--selectorBackgroundColor);
+    --axis2: var(--lighterGradientPoint);
+    max-width: calc(100% - 3.3%);
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-box {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-panel {
+    background: var(--lighterGradientPointAlpha);
+    border-radius: var(--smallRadius);
+    border-top: 0;
+    box-shadow: inset 0 0 0 var(--borderWidth) var(--borderColor);
+    display: grid;
+    grid-template-rows: 1fr;
+    overflow: visible;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-body {
+    background: none;
+    min-height: 0;
+    overflow: hidden;
+    padding: 1rem 0.45rem 1rem 1rem !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    [data-jf-ieg-root="1"] .jf-ieg-panel {
+        transition:
+            grid-template-rows var(--ef12-ratingsGridOpen) ease,
+            opacity calc(var(--ef12-ratingsGridOpen) * 0.7) ease,
+            visibility var(--ef12-ratingsGridOpen);
+    }
+
+    [data-jf-ieg-root="1"] .jf-ieg-panel[hidden] {
+        display: grid !important;
+        grid-template-rows: 0fr;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    [data-jf-ieg-root="1"] .jf-ieg-body {
+        transition:
+            padding-top var(--ef12-ratingsGridOpen) ease,
+            padding-bottom var(--ef12-ratingsGridOpen) ease;
+    }
+
+    [data-jf-ieg-root="1"] .jf-ieg-panel[hidden] .jf-ieg-body {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    [data-jf-ieg-root="1"] .jf-ieg-toggle-icon {
+        transition: transform var(--ef12-ratingsGridOpen) ease;
+    }
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-toggle {
+    background: none;
+    margin-bottom: 0.35em;
+    padding: 0;
+    width: fit-content;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-toggle:hover {
+    background: none;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-toggle-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.layout-mobile [data-jf-ieg-root="1"] .jf-ieg-toggle-label {
+    font-size: 1.35rem;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-toggle-icon {
+    color: var(--dimTextColor);
+    opacity: 1;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-toggle:hover .jf-ieg-toggle-icon {
+    color: var(--textColor);
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-cell {
+    border-color: var(--borderColor);
+    border-radius: 0.5rem;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-corner,
+[data-jf-ieg-root="1"] .jf-ieg-season,
+[data-jf-ieg-root="1"] .jf-ieg-episode,
+[data-jf-ieg-root="1"] .jf-ieg-sticky-left {
+    border-color: var(--borderColor) !important;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-empty {
+    background: var(--lighterGradientPointAlpha) !important;
+    border-color: var(--borderColor) !important;
+    color: var(--dimTextColor) !important;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-link {
+    color: var(--dimTextColor) !important;
+}
+
+[data-jf-ieg-root="1"] .jf-ieg-link:hover {
+    color: var(--textColor) !important;
+}
+
+body #jf-hover-tooltip {
+    background: var(--drawerColor);
+    -webkit-backdrop-filter: var(--ef12-surfaceBlur);
+    backdrop-filter: var(--ef12-surfaceBlur);
+    border: var(--defaultBorder);
+    border-radius: var(--ef12-surfaceRadius);
+    box-shadow: var(--cardShadow);
+    color: var(--textColor);
+    font-family: inherit;
+}
+
+#jf-hover-tooltip .jf-tooltip-title {
+    color: var(--fullContrastColor);
+}
+
+#jf-hover-tooltip .jf-tooltip-meta {
+    color: var(--dimTextColor);
+}
+
+#jf-hover-tooltip .jf-tooltip-meta > span {
+    color: var(--borderColor) !important;
+    margin-inline: 0.5em;
+}
+
+#jf-hover-tooltip .jf-tooltip-overview {
+    color: var(--textColor);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ * 19. Card progress bars
+ * The resume bar on a partly-watched card in the Modern layout's library
+ * views.
+ * ══════════════════════════════════════════════════════════════════════════ */
+
+.itemLinearProgress.MuiLinearProgress-root {
+    -webkit-backdrop-filter: var(--blurLarge);
+    backdrop-filter: var(--blurLarge);
+    background-color: var(--osdSeekBarBufferedColorAlpha);
+    border-radius: var(--largeRadius);
+    height: 0.35em;
+    inset: auto 2em 2em;
+    overflow: hidden;
+    width: auto;
+}
+
+.itemLinearProgress .MuiLinearProgress-bar {
+    background-color: var(--cardResumeProgressColor);
+    border-radius: 0 var(--largeRadius) var(--largeRadius) 0;
+    opacity: 0.75;
+}
+
+/* ===== PHOENICX CINEMA OVERRIDES ===== */
+/* 02 — DESIGN VARIABLES */
+:root {
+    --px-background: #090b12;
+    --px-surface: #151925;
+    --px-glass: rgba(17, 21, 34, .82);
+    --px-glass-border: rgba(255,255,255,.11);
+    --px-accent: #a69cff;
+    --px-accent-light: #cbc4ff;
+    --px-text: #f7f7fc;
+    --px-muted: #aab0c1;
+    --px-card-radius: 15px;
+    --px-button-radius: 14px;
+    --px-panel-radius: 20px;
+    --px-card-shadow: 0 14px 35px rgba(0,0,0,.42);
+    --px-glow: 0 0 0 1px rgba(166,156,255,.55), 0 20px 45px rgba(0,0,0,.65);
+    --accentColor: var(--px-accent);
+    --accentHoverColor: var(--px-accent-light);
+    --textColor: var(--px-text);
+    --dimTextColor: var(--px-muted);
+    --ef12-navRadius: 14px;
+    --ef12-surfaceRadius: 18px;
+}
+
+/* 03 — MODERN TYPOGRAPHY */
+html, body, button, input, select, textarea, .cardText, .sectionTitle,
+.listItem, .paperList, .dialog, [class*="Mui"]:not(.MuiIcon-root) {
+    font-family: "Nunito", "Segoe UI", sans-serif !important;
+}
+body { letter-spacing: .12px; }
+.sectionTitle { font-size: clamp(1.25rem, 1.5vw, 1.65rem); font-weight: 800; letter-spacing: -.025em; }
+.cardText { font-weight: 650; letter-spacing: -.01em; }
+.cardText-secondary { color: var(--px-muted); font-weight: 500; }
+
+/* 04 — BACKGROUND */
+.backgroundContainer { background-color: var(--px-background); }
+.skinHeader { box-shadow: none; }
+
+/* 05 — FROSTED GLASS HEADER */
+.MuiAppBar-root.MuiAppBar-colorDefault {
+    background: rgba(10,13,22,.84);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--px-glass-border);
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+}
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped) {
+    border-radius: 14px;
+    transition: background-color .22s ease, color .22s ease;
+}
+
+/* 06 — MOVIE AND ACTOR CARDS */
+.card { position: relative; transition: transform .26s cubic-bezier(.2,.8,.2,1); transform-origin: center center; }
+.cardBox { transition: box-shadow .26s ease; }
+.cardScalable, .cardImageContainer, .cardContent { border-radius: var(--px-card-radius) !important; }
+.cardScalable, .cardImageContainer { overflow: hidden; }
+.cardScalable { box-shadow: var(--px-card-shadow); }
+@media (hover:hover) and (pointer:fine) {
+    .card:hover { transform: scale(1.13); z-index: 50; }
+    .card:hover .cardScalable { box-shadow: var(--px-glow); }
+    .card:focus-within { z-index: 51; }
+}
+.card:focus-within .cardScalable { outline: 2px solid var(--px-accent); outline-offset: 2px; }
+
+/* 07 — CINEMATIC MEDIA BAR */
+#slides-container { border-radius: 22px; }
+#slides-container .slide { border-radius: 22px; border: 1px solid rgba(255,255,255,.09); }
+#slides-container .backdrop-overlay {
+    background: linear-gradient(90deg,rgba(5,7,15,.86) 0%,rgba(5,7,15,.50) 42%,rgba(5,7,15,.04) 100%);
+}
+#slides-container .gradient-overlay {
+    background: linear-gradient(0deg,rgba(9,11,18,.95) 0%,rgba(9,11,18,.15) 60%,transparent 100%);
+}
+
+/* 08 — MEDIA BAR LOGO AND INFORMATION */
+#slides-container .logo-container { filter: drop-shadow(0 4px 14px rgba(0,0,0,.45)); }
+#slides-container .info-container { color: #f5f5fa; font-weight: 650; }
+#slides-container .plot-container { color: rgba(255,255,255,.86); line-height: 1.55; }
+
+/* 09 — MEDIA BAR PLAY BUTTON */
+#slides-container .play-button {
+    background: #f7f7fc !important; color: #11131c !important;
+    border: 0 !important; border-radius: 13px !important;
+    font-family: "Nunito",sans-serif; font-size: 1rem; font-weight: 800;
+    padding: 12px 25px !important;
+    box-shadow: 0 9px 24px rgba(0,0,0,.28);
+    transition: transform .2s ease, background-color .2s ease;
+}
+@media (hover:hover) and (pointer:fine) {
+    #slides-container .play-button:hover { background: var(--px-accent-light) !important; transform: translateY(-2px); }
+}
+
+/* 10 — MEDIA BAR SECONDARY BUTTONS */
+#slides-container .detail-button, #slides-container .favorite-button, #slides-container .trailer-button {
+    background: rgba(255,255,255,.12) !important; border: 1px solid rgba(255,255,255,.22);
+    border-radius: 13px !important; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    color: white !important;
+}
+
+/* 11 — SLIDESHOW DOTS */
+#slides-container .dot {
+    width: 7px; height: 7px; border-radius: 999px;
+    background: rgba(255,255,255,.65) !important; opacity: .65;
+    transition: width .3s ease, opacity .3s ease;
+}
+#slides-container .dot.active { width: 29px; background: var(--px-accent-light) !important; opacity: 1; }
+
+/* 12 — PLAY AND ACTION BUTTONS */
+.btnPlay, .button-submit, .raised {
+    border-radius: 999px !important; padding-left: 22px !important; padding-right: 22px !important;
+    transition: transform .2s ease, box-shadow .2s ease !important;
+}
+@media (hover:hover) and (pointer:fine) {
+    .btnPlay:hover, .button-submit:hover, .raised:hover {
+        transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.4);
+    }
+}
+
+/* 13 — ICON BUTTONS */
+.paper-icon-button-light {
+    border-radius: 50% !important;
+    transition: transform .2s ease, background-color .2s ease !important;
+}
+@media (hover:hover) and (pointer:fine) {
+    .paper-icon-button-light:hover { transform: scale(1.08); background: rgba(255,255,255,.13) !important; }
+}
+
+/* 14 — INPUT FIELDS */
+.emby-input, .emby-textarea, .emby-select, .MuiFilledInput-root {
+    border-radius: 12px !important; background-color: rgba(255,255,255,.055);
+    border: 1px solid rgba(255,255,255,.1);
+}
+.emby-input:focus, .emby-textarea:focus, .emby-select:focus { border-color: var(--px-accent); }
+
+/* 15 — DIALOGS AND FLOATING MENUS */
+.dialog, .formDialog, .promptDialog, .MuiDialog-paper, .MuiMenu-paper, .MuiPopover-paper {
+    border-radius: var(--px-panel-radius) !important;
+    background-color: rgba(18,22,34,.95); border: 1px solid var(--px-glass-border);
+    -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px);
+    box-shadow: 0 20px 55px rgba(0,0,0,.45);
+}
+
+/* 16 — LIST ITEMS */
+.listItem, .MuiListItemButton-root {
+    border-radius: 13px !important;
+    transition: background-color .2s ease, color .2s ease;
+}
+@media (hover:hover) and (pointer:fine) {
+    .listItem:hover, .MuiListItemButton-root:hover { background: rgba(166,156,255,.1); }
+}
+
+/* 17 — TABS */
+.emby-tab-button { border-radius: 999px !important; padding-left: 17px !important; padding-right: 17px !important; }
+
+/* 18 — PROGRESS BARS */
+.itemProgressBar, .itemProgressBarForeground, .mdl-slider-background-lower, .mdl-slider-background-upper {
+    border-radius: 999px !important;
+}
+.itemProgressBarForeground { background: linear-gradient(90deg,#8477ed,#c1b9ff); }
+
+/* 19 — SCROLLBAR */
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.36); }
+
+/* 20 — RESPONSIVE MOBILE LAYOUT */
+@media (max-width:767px) {
+    #slides-container, #slides-container .slide { border-radius: 15px; }
+    #slides-container .backdrop-overlay {
+        background: linear-gradient(0deg,rgba(6,8,16,.96),rgba(6,8,16,.2) 80%);
+    }
+    .cardScalable, .cardImageContainer { border-radius: 11px !important; }
+    .card { transition: none; }
+    .sectionTitle { font-size: 1.2rem; }
+}
+
+/* 21 — ACCESSIBILITY AND PERFORMANCE */
+@media (prefers-reduced-motion:reduce) {
+    .card, .cardBox, .cardScalable, button, .paper-icon-button-light {
+        transition: none !important; animation: none !important;
+    }
+}
+/* END — PHOENICX CINEMA SIGNATURE EDITION */
+

@@ -1,0 +1,10 @@
+PHOENICX CINEMA — THIRD-PARTY NOTICES
+
+This combined theme incorporates components derived from:
+- ElegantFin Theme v26.09.05 for Jellyfin, by lscambo13.
+- Media Bar Plugin Support v26.09.05 for ElegantFin, by lscambo13.
+- ElegantFin for Jellyfin 12 "Modern" layout v26.10.07, GPL-2.0.
+  Original source: https://github.com/mihaif7/elegantfin-jf12
+
+The original author attribution and applicable licenses remain in effect.
+Removing the source names from the CSS user interface does not change the underlying licensing obligations.
