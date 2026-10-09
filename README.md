@@ -52,7 +52,9 @@ The theme is distributed as **one combined CSS file**, so you do **not** need to
 
 ### Option A — Paste into Jellyfin (recommended)
 
-1. Download **[`PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css`](PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css)** from this repository.
+1. ```css
+@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
+```
 2. Open Jellyfin in your browser with an administrator account.
 3. Go to **Dashboard → General → Custom CSS** (the location may vary by Jellyfin version).
 4. **Back up your existing Custom CSS**, then replace it with the complete contents of the downloaded file.
@@ -67,10 +69,9 @@ The theme is distributed as **one combined CSS file**, so you do **not** need to
 You can host the CSS file yourself and import it from Jellyfin's Custom CSS field:
 
 ```css
-@import url("https://YOUR-DOMAIN.example/path/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
+@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
 ```
 
-Replace the example URL with a real URL that serves the CSS file. This option **does** depend on your own hosted file being accessible.
 
 ## 🎛️ Customize the look
 
