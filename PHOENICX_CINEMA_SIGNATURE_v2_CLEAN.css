@@ -1993,3 +1993,129 @@ body { letter-spacing: .12px; }
     height: 24px !important;
     flex-shrink: 0 !important;
 }
+
+/* ============================================================
+   PHOENICX CINEMA — FUTURISTIC EDITION v3.0
+   ADDITIVE ENHANCEMENTS — preserves existing Media Bar layout,
+   mobile play placement, and native cast icon fix.
+   ============================================================ */
+
+:root {
+  --px-future-violet: #a99aff;
+  --px-future-blue: #75baff;
+  --px-future-glow: rgba(147, 121, 255, .22);
+  --px-future-line: rgba(186, 177, 255, .19);
+  --px-future-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* 01 — Atmospheric lighting, without blocking interactions */
+.layout-desktop .backgroundContainer:not(.withBackdrop)::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 55% 38% at 85% 4%, rgba(93,85,231,.085), transparent 78%),
+              radial-gradient(ellipse 40% 45% at 0% 90%, rgba(46,117,207,.055), transparent 80%);
+}
+
+/* 02 — Premium card depth: mouse/trackpad only */
+@media (hover: hover) and (pointer: fine) {
+  .layout-desktop .card .cardScalable {
+    transition: transform .35s var(--px-future-ease),
+                box-shadow .35s ease, border-color .35s ease !important;
+  }
+  .layout-desktop .card:hover .cardScalable {
+    border-color: var(--px-future-line) !important;
+    box-shadow: 0 12px 35px rgba(0,0,0,.35), 0 0 19px var(--px-future-glow) !important;
+  }
+  .layout-desktop .card:hover .cardImageContainer {
+    filter: saturate(1.07) contrast(1.03);
+  }
+}
+
+/* 03 — Glass panels and restrained neon edge */
+.mainDrawer, .dialog:not(.dialog-fullscreen), .MuiDrawer-paper, .MuiDialog-paper {
+  border-color: var(--px-future-line) !important;
+  box-shadow: 0 18px 45px rgba(0,0,0,.26), inset 0 1px rgba(255,255,255,.055);
+}
+
+/* 04 — Navigation feedback */
+.navMenuOption-selected, .Mui-selected {
+  box-shadow: inset 3px 0 0 var(--px-future-violet), 0 0 16px rgba(147,121,255,.10);
+}
+@media (hover: hover) and (pointer: fine) {
+  .navMenuOption, .emby-tab-button {
+    transition: background-color .25s ease, color .25s ease, box-shadow .25s ease;
+  }
+  .navMenuOption:hover, .emby-tab-button:hover {
+    box-shadow: inset 0 0 0 1px rgba(170,157,255,.14);
+  }
+}
+
+/* 05 — Search and form focus: visible and accessible */
+.emby-input:focus-visible, .emby-textarea:focus-visible,
+.emby-select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid rgba(169,154,255,.75) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(147,121,255,.10) !important;
+}
+
+/* 06 — Futuristic buttons (do not alter their layout/position) */
+.button-submit, .btnPlay.detailButton {
+  box-shadow: 0 5px 18px rgba(93,85,231,.16);
+  transition: box-shadow .25s ease, filter .25s ease, transform .25s ease !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button-submit:hover, .btnPlay.detailButton:hover {
+    box-shadow: 0 8px 24px rgba(147,121,255,.27);
+    filter: brightness(1.07);
+  }
+}
+
+/* 07 — High-tech section headings */
+.sectionTitle {
+  letter-spacing: -.025em;
+  text-shadow: 0 2px 18px rgba(147,121,255,.09);
+}
+
+/* 08 — Refined progress glow */
+.itemProgressBarForeground {
+  box-shadow: 0 0 10px rgba(169,154,255,.32);
+}
+.mdl-slider-background-lower, .iconOsdProgressInner {
+  box-shadow: 0 0 9px rgba(169,154,255,.25);
+}
+
+/* 09 — Polished image and list transitions */
+@media (hover: hover) and (pointer: fine) {
+  .listItem:not(.actionSheetMenuItem):hover {
+    background: linear-gradient(90deg, rgba(147,121,255,.10), rgba(147,121,255,.025)) !important;
+  }
+}
+
+/* 10 — Keyboard / TV remote focus ring */
+.card:focus-visible .cardScalable,
+.card:focus-within .cardScalable,
+.emby-button:focus-visible,
+.paper-icon-button-light:focus-visible {
+  outline: 2px solid var(--px-future-violet) !important;
+  outline-offset: 3px;
+}
+
+/* 11 — Mobile touch feedback, no forced hover */
+@media (hover: none), (pointer: coarse) {
+  .card:active .cardScalable { filter: brightness(1.08); }
+  .emby-button:active { filter: brightness(1.08); }
+  .layout-mobile .card .cardScalable { box-shadow: 0 3px 14px rgba(0,0,0,.22); }
+}
+
+/* 12 — Low motion / lower power preference */
+@media (prefers-reduced-motion: reduce) {
+  .card .cardScalable, .cardImageContainer, .navMenuOption,
+  .emby-tab-button, .btnPlay.detailButton, .button-submit {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* END — PHOENICX CINEMA FUTURISTIC EDITION v3.0 */
