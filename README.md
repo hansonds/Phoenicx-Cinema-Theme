@@ -33,9 +33,10 @@ It is available as **one combined CSS file**. You don't need to import separate 
 
 ![PHOENICX CINEMA home screen](Screenshots/home.png)
 
-### Movie Details
+### 🎬 Live Theme Preview
 
-![PHOENICX CINEMA movie details](Screenshots/details.png)
+
+https://github.com/user-attachments/assets/d0ceab64-baa6-4925-b710-5c45a9956d99
 
 
 ## 🌟 Features
