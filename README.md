@@ -65,7 +65,7 @@ Back up your existing Jellyfin **Custom CSS** before making changes.
 3. Paste the following, **provided you have uploaded the current optimized file to your repository under this exact name**:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_v2_Optimized.css");
+@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
 ```
 
 4. Save and refresh Jellyfin. A hard refresh (`Ctrl + Shift + R`) may help.
@@ -103,7 +103,7 @@ The consolidated theme uses core design variables. For example:
 **CDN users:** Put custom overrides *after* the import:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_v2_Optimized.css");
+@import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_SIGNATURE_v2_CLEAN.css");
 
 :root {
     --accentColor: #a69cff;
