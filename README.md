@@ -105,10 +105,6 @@ The consolidated theme uses core design variables. For example:
 ```css
 @import url("https://cdn.jsdelivr.net/gh/hansonds/Phoenicx-Cinema-Theme@main/PHOENICX_CINEMA_v2_Optimized.css");
 
-:root {
-    --accentColor: #a69cff;
-    --accentHoverColor: #cbc4ff;
-}
 ```
 
 > [!NOTE]
