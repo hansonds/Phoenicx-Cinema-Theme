@@ -1,5 +1,5 @@
 /* ==========================================================
-   PHOENICX CINEMA — SIGNATURE EDITION v2.4.1 (touch-ready)
+   PHOENICX CINEMA — SIGNATURE EDITION v2.4.2 (touch-ready)
    Standalone Jellyfin CSS. Single-pass: every value is set once
    in its base rule or as a token; no trailing override blocks.
    Works on the classic layout (Jellyfin 10.8 – 10.10), the MUI
@@ -156,7 +156,7 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
 @keyframes animScaleUp{0%{opacity:0;transform:translateY(-2.5%)}to{opacity:1;transform:translateY(0)}}
 .backdropImageFadeIn{animation:animScaleUp .5s ease-out forwards;transform-origin:bottom center}
 /* atmospheric lighting on desktop + phones (never blocks input; off on TV) */
-:is(.layout-desktop,.layout-mobile) .backgroundContainer:not(.withBackdrop)::after{content:"";position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none;background:radial-gradient(ellipse 55% 38% at 85% 4%,rgba(93,85,231,.085),transparent 78%),radial-gradient(ellipse 40% 45% at 0% 90%,rgba(46,117,207,.055),transparent 80%)}
+.layout-desktop .backgroundContainer:not(.withBackdrop)::after,.layout-mobile .backgroundContainer:not(.withBackdrop)::after{content:"";position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none;background:radial-gradient(ellipse 55% 38% at 85% 4%,rgba(93,85,231,.085),transparent 78%),radial-gradient(ellipse 40% 45% at 0% 90%,rgba(46,117,207,.055),transparent 80%)}
 .layout-mobile .backgroundContainer:not(.withBackdrop)::after{background:radial-gradient(ellipse 80% 30% at 90% 0%,rgba(93,85,231,.11),transparent 75%),radial-gradient(ellipse 70% 40% at 0% 100%,rgba(46,117,207,.07),transparent 80%)}
 
 /* ══════════════════════════════════════════════════════════
@@ -202,11 +202,11 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
 #castCollapsible .cardScalable,#guestCastContent .cardScalable{aspect-ratio:1/1}
 #castCollapsible .cardPadder,#guestCastContent .cardPadder{padding-bottom:100%!important}
 #castCollapsible .cardContent.cardImageContainer,#guestCastContent .cardContent.cardImageContainer{background-position-y:33%}
-:is(#castCollapsible,#guestCastContent) :is(.cardScalable,.cardImageContainer,.cardContent,.cardPadder){border-radius:50%!important}
-:is(#castCollapsible,#guestCastContent) .cardScalable{border:2px solid var(--px-future-line)!important;box-shadow:var(--px-ring),var(--px-card-shadow)!important}
-:is(#castCollapsible,#guestCastContent) .cardText{text-align:center}
-:is(#castCollapsible,#guestCastContent) .cardText-first{font-weight:800}
-:is(#castCollapsible,#guestCastContent) .cardText-secondary{font-size:.85em;opacity:.85}
+#castCollapsible .cardScalable,#castCollapsible .cardImageContainer,#castCollapsible .cardContent,#castCollapsible .cardPadder,#guestCastContent .cardScalable,#guestCastContent .cardImageContainer,#guestCastContent .cardContent,#guestCastContent .cardPadder{border-radius:50%!important}
+#castCollapsible .cardScalable,#guestCastContent .cardScalable{border:2px solid var(--px-future-line)!important;box-shadow:var(--px-ring),var(--px-card-shadow)!important}
+#castCollapsible .cardText,#guestCastContent .cardText{text-align:center}
+#castCollapsible .cardText-first,#guestCastContent .cardText-first{font-weight:800}
+#castCollapsible .cardText-secondary,#guestCastContent .cardText-secondary{font-size:.85em;opacity:.85}
 .card.squareCard[data-type=TvChannel] .cardImageContainer.cardContent{background-color:rgba(var(--px-ink),.2)}
 .cardImageContainer>.cardDefaultText{color:transparent;font-size:2em;padding-top:1.5em;white-space:pre}
 .cardImageContainer>.cardDefaultText:before{color:var(--borderColor);content:"?\A"}
@@ -237,7 +237,7 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
  .layout-desktop .card .cardScalable{transition:transform .35s var(--px-future-ease),box-shadow .35s ease,border-color .35s ease!important}
  .layout-desktop .card:hover .cardScalable{border-color:var(--px-future-line)!important;box-shadow:var(--px-card-hover-shadow)!important}
  .layout-desktop .card:hover .cardImageContainer{filter:saturate(1.07) contrast(1.03)}
- :is(#castCollapsible,#guestCastContent) .card:hover .cardScalable{border-color:var(--px-future-violet)!important;box-shadow:0 0 0 4px rgba(147,121,255,.18),0 0 24px var(--px-future-glow)!important}
+ #castCollapsible .card:hover .cardScalable,#guestCastContent .card:hover .cardScalable{border-color:var(--px-future-violet)!important;box-shadow:0 0 0 4px rgba(147,121,255,.18),0 0 24px var(--px-future-glow)!important}
 }
 /* touch: press-and-hold = the hover look (scaled DOWN so rows don't clip) + light sweep */
 @media (hover:none),(pointer:coarse){
@@ -245,7 +245,7 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
  .cardImageContainer{transition:transform .4s var(--px-future-ease),filter .3s ease}
  .card:active .cardScalable{transform:scale(.955);border-color:var(--px-future-line)!important;box-shadow:var(--px-card-press-shadow)!important}
  .card:active .cardImageContainer{transform:scale(1.06);filter:saturate(1.1) contrast(1.04)}
- :is(#castCollapsible,#guestCastContent) .card:active .cardScalable{border-color:var(--px-future-violet)!important;box-shadow:0 0 0 4px rgba(147,121,255,.2)!important}
+ #castCollapsible .card:active .cardScalable,#guestCastContent .card:active .cardScalable{border-color:var(--px-future-violet)!important;box-shadow:0 0 0 4px rgba(147,121,255,.2)!important}
  .cardScalable::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:3;pointer-events:none;border-radius:inherit;opacity:0;background:var(--px-sweep);background-size:260% 100%;background-position:130% 0}
  .card:active .cardScalable::after{opacity:1;animation:pxSweep .55s ease-out forwards}
  .card:focus-visible .cardScalable{border-color:var(--px-future-violet)!important;box-shadow:0 0 0 2px var(--px-future-violet),0 0 18px var(--px-future-glow)!important}
@@ -1010,7 +1010,6 @@ body:has(.MuiAppBar-root) .homeSectionsContainer div:not(.sectionTitleContainer-
 .videoOsdBottom.videoOsdBottom-maincontrols{background:var(--bottomOSDGradient)}
 .videoOsdBottom.videoOsdBottom-maincontrols .btnPause{font-size:2em}
 .videoOsdBottom.videoOsdBottom-maincontrols .buttons{justify-content:center}
-.videoOsdBottom.videoOsdBottom-maincontrols .osdControls{container-type:inline-size}
 .osdControls{display:flex;flex-direction:column-reverse}
 @container (max-width:62em){.videoOsdBottom.videoOsdBottom-maincontrols .buttons .paper-icon-button-light,.osdHeader .videoOsd-appBar .MuiIconButton-root{margin-inline:0}}
 .osdHeader.skinHeader{pointer-events:none!important}
@@ -1025,7 +1024,7 @@ body:has(.videoPlayerContainer-onTop) .MuiAppBar-root,body:has(.videoPlayerConta
 .positionTime,.startTimeText{justify-content:left;text-align:start}
 .endTimeText,.runtime{justify-content:right;text-align:end}
 /* floating glass control deck */
-.videoOsdBottom.videoOsdBottom-maincontrols .osdControls{-webkit-backdrop-filter:var(--blurLarge);backdrop-filter:var(--blurLarge);background:var(--px-osd-panel);border:1px solid var(--px-osd-border);border-radius:22px;box-shadow:0 18px 45px rgba(0,0,0,.45),inset 0 1px rgba(255,255,255,.06);box-sizing:border-box;margin:0 auto 1.1em;max-width:min(72em,calc(100% - 2*var(--sidePadding)));padding:.35em 1em .55em}
+.videoOsdBottom.videoOsdBottom-maincontrols .osdControls{container-type:inline-size;-webkit-backdrop-filter:var(--blurLarge);backdrop-filter:var(--blurLarge);background:var(--px-osd-panel);border:1px solid var(--px-osd-border);border-radius:22px;box-shadow:0 18px 45px rgba(0,0,0,.45),inset 0 1px rgba(255,255,255,.06);box-sizing:border-box;margin:0 auto 1.1em;max-width:min(72em,calc(100% - 2*var(--sidePadding)));padding:.35em 1em .55em}
 .layout-mobile .videoOsdBottom.videoOsdBottom-maincontrols .osdControls{border-radius:18px;margin-bottom:.6em;max-width:calc(100% - 1.2em);padding:.25em .5em .45em}
 .osdTitle{font-weight:800;letter-spacing:-.015em;text-shadow:0 2px 12px rgba(0,0,0,.6)}
 .osdSecondaryMediaInfo{color:var(--dimTextColor)}
@@ -1121,7 +1120,7 @@ table:not(.MuiTable-root.MuiTable-stickyHeader){background:var(--tableBodyColor)
 #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)){width:40em}
 #loginPage .padded-left.padded-right.padded-bottom-page::after{background:linear-gradient(90deg,transparent,var(--px-future-violet),#67e8f9,transparent);border-radius:2px;content:"";height:2px;left:18%;pointer-events:none;position:absolute;right:18%;top:-1px}
 @media (max-width:30em){#loginPage .padded-left.padded-right.padded-bottom-page{width:100%}}
-#divUsers :is(.cardScalable,.cardImageContainer,.cardContent,.cardPadder){border-radius:50%!important}
+#divUsers .cardScalable,#divUsers .cardImageContainer,#divUsers .cardContent,#divUsers .cardPadder{border-radius:50%!important}
 #divUsers .cardScalable{border:2px solid var(--px-future-line)!important;box-shadow:var(--px-ring),var(--px-card-shadow)!important}
 #divUsers .cardText{font-weight:800;text-align:center}
 .manualLoginForm .sectionTitle,.visualLoginForm>h1{display:none}
