@@ -1,5 +1,5 @@
 /* ==========================================================
-   PHOENICX CINEMA — SIGNATURE EDITION v2.2 (touch-ready)
+   PHOENICX CINEMA — SIGNATURE EDITION v2.3 (touch-ready)
    Standalone Jellyfin CSS. Single-pass: every value is set once
    in its base rule or as a token; no trailing override blocks.
    Works on the classic layout (Jellyfin 10.8 – 10.10), the MUI
@@ -393,10 +393,10 @@ body:not(.hide-scroll)>.videoPlayerContainer{height:80vh;-webkit-mask:var(--head
 .layout-mobile body:not(.hide-scroll)>.videoPlayerContainer{height:40vh;z-index:1}
 .layout-desktop>body:not(.hide-scroll)>.videoPlayerContainer~#reactRoot>.backgroundContainer.withBackdrop{opacity:.25}
 
-/* clear logo */
+/* clear logo — Jellyfin 12 hides it on phone/TV layouts; the layout rules below switch it back on */
 .detailLogo{background-position:bottom;display:var(--clearLogoVisibility);filter:var(--clearLogoFilter);height:25vh;left:0;margin:auto 30%;top:calc(100vh - var(--clearLogoBottomSpace) - var(--primaryItemPageNegativeSpace));transform:translateY(-100%);width:40%}
-.layout-mobile .detailLogo{animation:animMoveUp 1s ease-out forwards;left:1em;margin:auto 0;max-height:17vh;position:absolute;top:45vh;width:calc(100vw - 2em);z-index:1}
-.layout-tv .detailLogo{height:20vh;left:30vw;margin:auto 5vw;top:39vh;width:60vw}
+.layout-mobile .detailLogo{display:var(--clearLogoVisibility);animation:animMoveUp 1s ease-out forwards;left:1em;margin:auto 0;max-height:17vh;position:absolute;top:45vh;width:calc(100vw - 2em);z-index:1}
+.layout-tv .detailLogo{display:var(--clearLogoVisibility);height:20vh;left:30vw;margin:auto 5vw;top:39vh;width:60vw}
 #itemDetailPage:has(.subtitle) .detailLogo{top:calc(100vh - 6em - var(--secondaryItemPageNegativeSpace))}
 .layout-desktop #itemDetailPage:has(.detailImageContainer .person) .detailLogo{top:calc(100vh - var(--secondaryItemPageNegativeSpace))}
 .layout-mobile #itemDetailPage:has(.subtitle) .detailLogo{top:calc(100vh - 11em - var(--secondaryItemPageNegativeSpace))}
