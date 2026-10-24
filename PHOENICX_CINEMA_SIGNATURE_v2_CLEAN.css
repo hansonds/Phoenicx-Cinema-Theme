@@ -46,7 +46,7 @@
 --cardHoverEffect:"";--backdropTrimFromTop:10%;--resumeCardScale:1;
 /* PHOENICX design tokens */
 --px-accent-light:#cbc4ff;--px-muted:#aab0c1;--px-card-radius:15px;--px-panel-radius:20px;--px-mediabar-radius:22px;
---px-card-shadow:0 14px 35px rgba(0,0,0,.42);--px-card-hover-shadow:0 12px 35px rgba(0,0,0,.35),0 0 19px var(--px-future-glow);--px-glow:0 0 0 1px rgba(166,156,255,.55),0 20px 45px rgba(0,0,0,.65);
+--px-card-shadow:0 14px 35px rgba(0,0,0,.42);--px-card-hover-shadow:0 12px 35px rgba(0,0,0,.35),0 0 19px var(--px-future-glow);--px-glow:0 20px 45px rgba(0,0,0,.65);
 --px-glass-border:rgba(255,255,255,.11);--px-future-violet:#a99aff;--px-future-glow:rgba(147,121,255,.22);--px-future-line:rgba(186,177,255,.19);--px-future-ease:cubic-bezier(.22,1,.36,1);
 --px-surface:rgba(18,22,34,.95);--px-surface-solid:#121622;--px-header-solid:#1e2836;--px-surface-blur:blur(22px);
 --px-panel-shadow:0 18px 45px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.055);
@@ -196,7 +196,7 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
 /* focus */
 .card:focus .cardBox.visualCardBox,.card:focus .cardBox:not(.visualCardBox) .cardScalable{border-color:var(--fullContrastColor)!important}
 .card:focus-within{z-index:51}
-.card:focus-within .cardScalable{outline:2px solid var(--px-future-violet)!important;outline-offset:3px}
+.card:focus-within .cardScalable{outline:none!important}
 
 /* hover (pointer devices only) */
 .card-hoverable:hover .cardScalable,.card-hoverable:hover .visualCardBox{border-color:var(--cardHoverBorderColor)!important}
