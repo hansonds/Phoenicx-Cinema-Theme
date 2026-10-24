@@ -1,10 +1,12 @@
 /* ==========================================================
-   PHOENICX CINEMA — SIGNATURE EDITION v2.1 (optimized)
+   PHOENICX CINEMA — SIGNATURE EDITION v2.2 (touch-ready)
    Standalone Jellyfin CSS. Single-pass: every value is set once
    in its base rule or as a token; no trailing override blocks.
-   Works on the classic layout (Jellyfin 10.8 – 10.10) and the
-   new MUI app-bar layout (10.11+), and degrades gracefully on
+   Works on the classic layout (Jellyfin 10.8 – 10.10), the MUI
+   app-bar layout (10.11+ / 12.x), and degrades gracefully on
    older TV / Jellyfin Media Player browser engines.
+   Pointer devices get hover effects; touch devices (Android app,
+   phones, tablets) get matching tap / press-and-hold effects.
    Third-party notices provided separately.
    ========================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
@@ -54,6 +56,10 @@
 --px-pill-padding:22px;--px-pill-shadow:0 5px 18px rgba(93,85,231,.16);--px-pill-hover-shadow:0 8px 24px rgba(147,121,255,.27);
 --px-progress-fill:linear-gradient(90deg,#22d3ee,#a5f3fc);--px-progress-glow:0 0 8px rgba(103,232,249,.65),0 0 16px rgba(103,232,249,.35);--px-progress-solid:#67e8f9;
 --px-list-radius:13px;--px-link-mark-height:1.1em;
+/* touch tokens (tap / press-and-hold equivalents of hover) */
+--px-press-ring:0 0 0 4px rgba(147,121,255,.16);--px-press-tint:rgba(166,156,255,.18);--px-touch-edge:rgba(186,177,255,.12);
+--px-card-press-shadow:inset 0 0 0 1px rgba(186,177,255,.35),0 0 0 1px rgba(147,121,255,.25),0 8px 22px rgba(0,0,0,.4);
+--px-sweep:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.28) 48%,rgba(203,196,255,.18) 54%,transparent 70%);
 /* modern (MUI) layout knobs */
 --ef12-appBarHeight:4rem;--ef12-appBarHeightDesktop:4.5rem;--ef12-libraryToolbarHeight:3.75rem;--ef12-libraryToolbarGap:0.75rem;--ef12-appBarFade:2.5rem;--ef12-navRadius:14px;
 --ef12-surfaceRadius:18px;--ef12-menuGap:0.5rem;--ef12-surfaceBlur:var(--blurDefault);--ef12-navPillBackground:var(--darkerGradientPointAlpha);--ef12-osdToolbarHeight:5rem;
@@ -61,7 +67,7 @@
 --ef12-brandNameSize:1.375rem;--ef12-brandGap:2.6rem;--ef12-brandRuleColor:var(--borderColor);--ef12-episodePreviewIcon:"video_library";--ef12-iconButtonGap:0.58rem;
 --ef12-elsewhereLabel:none;--ef12-detailsSectionGap:15px;--ef12-detailsSectionGapDesktop:23px;--ef12-ratingsGridOpen:0.24s;--ef12-itemBarEnter:0.35s;--ef12-userMenuFontSize:1.15rem;
 --ef12-mediaBarHeight:62vh;--ef12-mediaBarGap:1.25rem;
-/* Jellyfin 10.11+ MUI palette bridge (unused, harmless on older versions) */
+/* Jellyfin 10.11+ MUI palette bridge (harmless on older versions) */
 --jf-palette-background-default:var(--darkerGradientPoint);--jf-palette-background-defaultChannel:17 24 39;--jf-palette-background-paper:var(--selectorBackgroundColor);--jf-palette-background-paperChannel:56 66 82;
 --jf-palette-AppBar-defaultBg:var(--headerColor);--jf-palette-AppBar-transparentBg:transparent;
 --jf-palette-text-primary:var(--textColor);--jf-palette-text-primaryChannel:247 247 252;--jf-palette-text-secondary:var(--dimTextColor);--jf-palette-text-secondaryChannel:170 176 193;--jf-palette-text-disabled:rgba(247,247,252,.5);
@@ -84,7 +90,7 @@
 --backgroundGradient:var(--lighterGradientPoint);--headerColorGradient:linear-gradient(180deg,hsla(0,0%,100%,.95) 30%,55%,transparent 90%);--headerColorGradientAlt:linear-gradient(180deg,hsla(0,0%,100%,.95),70%,transparent);
 --cardFooterGradient:linear-gradient(0deg,hsla(0,0%,8%,.8),40%,transparent);--shadow:0.1em 0.1em 0.15em transparent;--cardShadow:0 1px 6px 0px #d9d9d9;
 --px-surface:hsla(0,0%,98%,.95);--px-surface-solid:#fafafa;--px-header-solid:#eee;--px-glass-border:rgba(0,0,0,.1);--px-future-line:rgba(78,61,230,.22);--px-panel-shadow:0 18px 45px rgba(0,0,0,.12);
---px-input-bg:rgba(0,0,0,.04);--px-input-border:rgba(0,0,0,.14);--px-card-shadow:0 10px 25px rgba(0,0,0,.12);
+--px-input-bg:rgba(0,0,0,.04);--px-input-border:rgba(0,0,0,.14);--px-card-shadow:0 10px 25px rgba(0,0,0,.12);--px-touch-edge:rgba(78,61,230,.14);--px-press-tint:rgba(78,61,230,.14);
 --jf-palette-background-defaultChannel:242 242 242;--jf-palette-background-paperChannel:255 255 255;--jf-palette-text-primaryChannel:33 33 33;--jf-palette-text-secondaryChannel:89 89 89;--jf-palette-text-disabled:rgba(33,33,33,.5);
 --jf-palette-common-whiteChannel:0 0 0;--jf-palette-primary-mainChannel:78 61 230;--jf-palette-secondary-mainChannel:78 61 230;--jf-palette-error-mainChannel:185 49 45;--jf-palette-dividerChannel:0 0 0}
 
@@ -136,8 +142,9 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
 .layout-mobile .withSectionTabs .backdropImage:after{display:none}
 @keyframes animScaleUp{0%{opacity:0;transform:translateY(-2.5%)}to{opacity:1;transform:translateY(0)}}
 .backdropImageFadeIn{animation:animScaleUp .5s ease-out forwards;transform-origin:bottom center}
-/* atmospheric lighting (never blocks input) */
-.layout-desktop .backgroundContainer:not(.withBackdrop)::after{content:"";position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none;background:radial-gradient(ellipse 55% 38% at 85% 4%,rgba(93,85,231,.085),transparent 78%),radial-gradient(ellipse 40% 45% at 0% 90%,rgba(46,117,207,.055),transparent 80%)}
+/* atmospheric lighting on desktop + phones (never blocks input; off on TV) */
+:is(.layout-desktop,.layout-mobile) .backgroundContainer:not(.withBackdrop)::after{content:"";position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none;background:radial-gradient(ellipse 55% 38% at 85% 4%,rgba(93,85,231,.085),transparent 78%),radial-gradient(ellipse 40% 45% at 0% 90%,rgba(46,117,207,.055),transparent 80%)}
+.layout-mobile .backgroundContainer:not(.withBackdrop)::after{background:radial-gradient(ellipse 80% 30% at 90% 0%,rgba(93,85,231,.11),transparent 75%),radial-gradient(ellipse 70% 40% at 0% 100%,rgba(46,117,207,.07),transparent 80%)}
 
 /* ══════════════════════════════════════════════════════════
    4. CARDS
@@ -160,7 +167,6 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
 @media (max-width:30em){.overflowPortraitCard,.overflowSquareCard,.portraitCard,.squareCard{--cardCount:3}.backdropCard,.overflowBackdropCard{--cardCount:2}.squareCard:has(.cardFooter){--cardCount:2}}
 
 .card{--padding:0.375em;--effectiveWidth:calc(100vw - var(--padding)*2 - var(--sidePadding)*2);--cardWidth:calc(var(--effectiveWidth)/var(--cardCount) - var(--itemColumnGap));box-sizing:border-box;padding:var(--padding);position:relative;transform-origin:center center;transition:width .5s,transform .26s cubic-bezier(.2,.8,.2,1);width:var(--cardWidth)!important}
-@media (max-width:767px){.card{transition:none}}
 .layout-mobile .card{--padding:1px;scroll-snap-align:center;scroll-snap-stop:always}
 @media (orientation:landscape) and (max-height:40em){.layout-mobile .card{--effectiveWidth:calc(65vw - var(--sidePadding)*2)}}
 #homeTab .overflowBackdropCard[data-positionticks],#resumableItems>.card,.nextUpItems>.card{width:calc(var(--cardWidth)*var(--resumeCardScale))!important}
@@ -175,7 +181,8 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
 .cardImageContainer,.cardContent{border-radius:var(--px-card-radius)!important}
 .cardImageContainer{overflow:hidden;transition:transform .375s}
 .layout-mobile .cardScalable,.paperList,.visualCardBox{border:var(--defaultBorder)!important}
-.layout-mobile .card .cardScalable{box-shadow:0 3px 14px rgba(0,0,0,.22)}
+/* phones: a faint lit glass edge so posters look polished without hover */
+.layout-mobile .card .cardScalable{border-color:var(--px-touch-edge)!important;box-shadow:0 6px 18px rgba(0,0,0,.32),inset 0 1px rgba(255,255,255,.06)}
 .paperList,.visualCardBox{background-color:var(--headerColor)!important;border-radius:var(--largeRadius)!important;box-shadow:unset!important;overflow:hidden}
 .layout-desktop .visualCardBox{border-width:var(--borderWidthDouble)!important}
 .visualCardBox .cardScalable{border-color:var(--darkerBorderColor)!important;border-radius:0!important;border-width:0 0 var(--borderWidth) 0!important}
@@ -213,7 +220,27 @@ h1,h2{font-weight:600}h2{font-size:1.25em}
  .layout-desktop .card:hover .cardScalable{border-color:var(--px-future-line)!important;box-shadow:var(--px-card-hover-shadow)!important}
  .layout-desktop .card:hover .cardImageContainer{filter:saturate(1.07) contrast(1.03)}
 }
-@media (hover:none),(pointer:coarse){.card:active .cardScalable{filter:brightness(1.08)}}
+/* touch: press-and-hold = the hover look (scaled DOWN so rows don't clip) + light sweep */
+@media (hover:none),(pointer:coarse){
+ .card .cardScalable{transition:transform .28s var(--px-future-ease),box-shadow .28s ease,border-color .28s ease!important}
+ .cardImageContainer{transition:transform .4s var(--px-future-ease),filter .3s ease}
+ .card:active .cardScalable{transform:scale(.955);border-color:var(--px-future-line)!important;box-shadow:var(--px-card-press-shadow)!important}
+ .card:active .cardImageContainer{transform:scale(1.06);filter:saturate(1.1) contrast(1.04)}
+ .cardScalable::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:3;pointer-events:none;border-radius:inherit;opacity:0;background:var(--px-sweep);background-size:260% 100%;background-position:130% 0}
+ .card:active .cardScalable::after{opacity:1;animation:pxSweep .55s ease-out forwards}
+ .card:focus-visible .cardScalable{border-color:var(--px-future-violet)!important;box-shadow:0 0 0 2px var(--px-future-violet),0 0 18px var(--px-future-glow)!important}
+}
+@keyframes pxSweep{to{background-position:-60% 0;opacity:0}}
+/* phones: rows fade and rise in as they load (GPU-only) */
+@keyframes pxRise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+ .layout-mobile .itemsContainer>.card{animation:pxRise .45s var(--px-future-ease) both}
+ .layout-mobile .itemsContainer>.card:nth-child(2){animation-delay:.04s}
+ .layout-mobile .itemsContainer>.card:nth-child(3){animation-delay:.08s}
+ .layout-mobile .itemsContainer>.card:nth-child(4){animation-delay:.12s}
+ .layout-mobile .itemsContainer>.card:nth-child(5){animation-delay:.16s}
+ .layout-mobile .itemsContainer>.card:nth-child(n+6){animation-delay:.2s}
+}
 
 /* overlay */
 .cardOverlayContainer{background:hsla(0,0%,100%,.05);transition:.5s}
@@ -295,13 +322,17 @@ div[data-type=PhotoAlbum] .play_arrow:before{content:"animated_images"}
 .emby-scrollbuttons-button.paper-icon-button-light>.material-icons{font-size:1.5em;place-content:center}
 .verticalSection:not(:empty){margin-bottom:1em;margin-top:.5em}
 .sectionTitleContainer-cards{padding-bottom:.2em;padding-top:0}
-.sectionTitleTextButton{padding:0 .5em}
+.sectionTitleTextButton{padding:0 .5em;transition:transform .15s ease,color .2s ease}
 .sectionTitleTextButton:hover{background:transparent!important;color:var(--fullContrastColor)!important}
 .sectionTitleTextButton:active{color:var(--fullContrastColor)!important}
 .sectionTitleTextButton>*{margin:0!important;max-width:88vw;overflow:hidden;padding:.3em 0!important;text-align:left;text-overflow:ellipsis;white-space:nowrap}
 .dashboardSection .sectionTitleTextButton>.material-icons,.sectionTitleTextButton>.material-icons{font-size:unset}
 .sectionTitleTextButton>.chevron_right{--fill:0;--opsz:48;font-size:1.5rem}
 .sectionTitleTextButton>.chevron_right:before{content:"arrow_circle_right"}
+@media (hover:none),(pointer:coarse){
+ .sectionTitleTextButton:active{transform:translateX(4px);color:var(--px-accent-light)!important}
+ .sectionTitleTextButton:active>.chevron_right{--fill:1}
+}
 .padded-right{padding-right:var(--sidePadding)!important}
 .content-primary,[dir=ltr] .detailPageContent{padding-left:var(--sidePadding)!important;padding-right:var(--sidePadding)!important}
 [dir=ltr] .detailPageContent>.detailPagePrimaryContent{padding-left:0!important;padding-right:0!important}
@@ -417,6 +448,7 @@ body:not(.hide-scroll)>.videoPlayerContainer{height:80vh;-webkit-mask:var(--head
 /* detail buttons */
 .mainDetailButtons{justify-content:center;margin:0}
 .layout-mobile [dir=ltr] .mainDetailButtons{flex-wrap:wrap;padding:0 1.25em}
+@media (prefers-reduced-motion:no-preference){.layout-mobile .detailPagePrimaryContainer .mainDetailButtons{animation:pxRise .5s var(--px-future-ease) .15s both}}
 .detailButton{border:var(--defaultLighterBorder);padding:.5em!important}
 .detailButton:not(.btnPlay){-webkit-backdrop-filter:none;backdrop-filter:none;background:transparent;border-color:transparent;border-radius:50%;color:var(--textColor);margin:.5em!important;padding:.6em!important}
 .layout-desktop .detailButton:not(.btnPlay):hover{background:var(--hoverBackgroundColor);color:var(--zeroContrastColor)}
@@ -444,10 +476,11 @@ body:not(.hide-scroll)>.videoPlayerContainer{height:80vh;-webkit-mask:var(--head
 .detailSectionContent:has(.itemExternalLinks.hide) .overview-controls{height:1em}
 .plot{color:var(--textColor);text-shadow:1px 1px var(--lighterGradientPointAlpha)}
 
-/* external links */
+/* external links (tap = the same brand colours hover shows) */
 .itemExternalLinks{color:transparent}
-.itemExternalLinks>.button-link{background-color:var(--selectorBackgroundColor);border-radius:var(--smallerRadius);color:var(--textColor);margin-bottom:.5em;padding:.125em .5em}
+.itemExternalLinks>.button-link{background-color:var(--selectorBackgroundColor);border-radius:var(--smallerRadius);color:var(--textColor);margin-bottom:.5em;padding:.125em .5em;transition:background-color .2s ease,transform .15s ease}
 .layout-mobile .itemExternalLinks>.button-link:hover:not(:active){color:var(--textColor)!important}
+.layout-mobile .itemExternalLinks>.button-link:active{transform:scale(.95)}
 .itemExternalLinks>a:active,.layout-desktop .itemExternalLinks>a:hover{background-color:var(--accentColor)!important;color:#fff!important}
 .itemExternalLinks>a[href*="themoviedb.org"]:active,.layout-desktop .itemExternalLinks>a[href*="themoviedb.org"]:hover{background-color:#1ab7d8!important;color:#000!important}
 .itemExternalLinks>a[href*="imdb.com"]:active,.layout-desktop .itemExternalLinks>a[href*="imdb.com"]:hover{background-color:#e2b616!important;color:#000!important}
@@ -511,11 +544,10 @@ body:not(.hide-scroll)>.videoPlayerContainer{height:80vh;-webkit-mask:var(--head
 .emby-tabs .emby-button.show-focus:focus{outline:none!important}
 .emby-button:focus-visible,.paper-icon-button-light:focus-visible{outline:2px solid var(--px-future-violet)!important;outline-offset:3px}
 .button-alt,.dashboardActionsContainer>.emby-button,.emby-button.block,.manageRecordingButton{background:var(--lighterGradientPoint);border:var(--defaultBorder);border-radius:var(--smallRadius);color:var(--fullContrastColor);transition:all .125s}
-/* pill buttons: one rule for shape + motion */
+/* pill buttons: one rule for shape, one for motion + shadow */
 .raised,.button-submit,.btnPlay.detailButton{border-radius:999px!important;padding-left:var(--px-pill-padding)!important;padding-right:var(--px-pill-padding)!important}
 .raised{transition:transform .2s ease,box-shadow .2s ease!important}
-.button-submit,.btnPlay.detailButton{transition:box-shadow .25s ease,filter .25s ease,transform .25s ease!important}
-.button-submit,.btnPlay.detailButton{box-shadow:var(--px-pill-shadow)}
+.button-submit,.btnPlay.detailButton{box-shadow:var(--px-pill-shadow);transition:box-shadow .25s ease,filter .25s ease,transform .25s ease!important}
 .raised,.raised:focus{background:var(--lighterGradientPoint);border:var(--defaultBorder);color:var(--fullContrastColor)}
 .MuiButton-colorPrimary,.button-submit,.upNextContainer .btnStartNow{background:var(--btnSubmitColor)!important;border:solid var(--btnSubmitBorderColor) var(--borderWidth)!important;color:#fff!important}
 #btnDeleteImage,#btnShutdown,.btnRevoke,.button-delete{background:var(--btnDeleteColor)!important;border:solid var(--btnDeleteBorderColor) var(--borderWidth);color:#fff!important}
@@ -536,7 +568,7 @@ div[data-role=controlgroup] a.ui-btn-active{background:var(--selectorBackgroundC
 .playstatebutton-icon-played{color:#22c55e}
 .button-container{align-items:center}
 /* round icon buttons (classic + MUI share one hover look) */
-.paper-icon-button-light{border-radius:50%!important;transition:transform .2s ease,background-color .2s ease!important}
+.paper-icon-button-light{border-radius:50%!important;transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease!important}
 .paper-icon-button-light>.material-icons{font-size:1.25em}
 .paper-icon-button-light:active:not(:disabled){background-color:var(--hoverBackgroundColor);color:var(--zeroContrastColor);text-shadow:none!important}
 @media (hover:hover) and (pointer:fine){
@@ -548,6 +580,16 @@ div[data-role=controlgroup] a.ui-btn-active{background:var(--selectorBackgroundC
  .btnPlay.detailButton:hover,.button-submit:hover{box-shadow:var(--px-pill-hover-shadow);filter:brightness(1.07)}
  .raised:hover,.btnPlay:not(.detailButton):hover{box-shadow:0 8px 24px rgba(0,0,0,.4)}
  .button-flat:hover{background-color:hsla(0,0%,100%,.2);color:var(--fullContrastColor)}
+}
+/* touch: tactile press instead of hover lift */
+@media (hover:none),(pointer:coarse){
+ .detailButton,.MuiIconButton-root{transition:transform .16s ease,box-shadow .2s ease,background-color .2s ease!important}
+ .btnPlay.detailButton:active,.button-submit:active{transform:scale(.95);box-shadow:var(--px-pill-hover-shadow),var(--px-press-ring)!important;filter:brightness(1.1)!important}
+ .raised:active,.emby-button.block:active,.button-alt:active{transform:scale(.96);box-shadow:var(--px-press-ring)!important}
+ .detailButton:not(.btnPlay):active{background:var(--semiTransparentAccentColor)!important;color:var(--fullContrastColor)!important;transform:scale(.9)}
+ .detailButton:not(.btnPlay):active .detailButton-icon{--fill:1}
+ .paper-icon-button-light:active:not(:disabled),.MuiIconButton-root:active{transform:scale(.88);background-color:var(--px-press-tint)!important;color:var(--fullContrastColor)!important;box-shadow:0 0 0 6px rgba(147,121,255,.12)}
+ .paper-icon-button-light:active>.material-icons{--fill:1}
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -704,7 +746,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child{gap:.5rem}
    11. LISTS, ACTION SHEETS & NAVIGATION
    ══════════════════════════════════════════════════════════ */
 .paperList{padding:.4em}
-.listItem,.MuiListItemButton-root{border-radius:var(--px-list-radius)!important;transition:background-color .2s ease,color .2s ease}
+.listItem,.MuiListItemButton-root,.MuiMenuItem-root,.actionSheetMenuItem{border-radius:var(--px-list-radius)!important;transition:background-color .2s ease,color .2s ease,transform .15s ease,box-shadow .2s ease}
 .listItem:hover,.navMenuOption:hover{background:unset}
 .listItem:focus{background:var(--highlightOutlineColor)}
 .listItem:active,.navMenuOption:active{background:var(--activeBackgroundColor);color:#fff}
@@ -753,6 +795,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child{gap:.5rem}
  #scenesContent .cardScalable:hover{border-color:var(--dimTextColor)!important}
  .sectionTabs .emby-tab-button:hover{background-color:var(--hoverTabBackgroundColor);color:var(--zeroContrastColor)}
 }
+@media (hover:none),(pointer:coarse){
+ .navMenuOption{transition:background-color .18s ease,transform .15s ease,box-shadow .18s ease}
+ .navMenuOption:active,.MuiListItemButton-root:active{transform:scale(.98);box-shadow:inset 3px 0 0 var(--px-future-violet)}
+ .listItem:active,.MuiMenuItem-root:active,.actionSheetMenuItem:active{background:var(--activeBackgroundColor)!important;transform:scale(.985)}
+}
 /* alpha picker */
 .alphaPicker{justify-content:center}
 .alphaPickerButton{color:var(--dimTextColor);font-family:monospace!important;margin:.15em}
@@ -763,7 +810,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child{gap:.5rem}
 .alphaPickerButton-tv:focus{background-color:var(--highlightOutlineColor);transform:scale(1.75)}
 
 /* ══════════════════════════════════════════════════════════
-   12. CLASSIC HEADER & TABS  (Jellyfin ≤ 10.10, and TV)
+   12. CLASSIC HEADER & TABS  (Jellyfin ≤ 10.10, Legacy layout, TV)
    ══════════════════════════════════════════════════════════ */
 .skinHeader{color:var(--textColor);padding-top:max(env(safe-area-inset-top),var(--safe-area-inset-top))!important;box-shadow:none}
 .skinHeader.osdHeader{padding-top:0!important;top:0!important}
@@ -771,7 +818,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child{gap:.5rem}
 .headroom{transition:transform .5s}
 .headroom--unpinned{-webkit-transform:translateY(calc(var(--appBarHeight)*-1 - var(--borderWidth)));transform:translateY(calc(var(--appBarHeight)*-1 - var(--borderWidth)))}
 .skinHeader-blurred:not(.osdHeader):not(.semiTransparent){-webkit-backdrop-filter:var(--appBarBlurStrength,none);backdrop-filter:var(--appBarBlurStrength,none)}
-/* shared by classic header and the 10.11+ MUI app bar */
+/* shared by classic header and the MUI app bar */
 .skinHeader-blurred:not(.osdHeader):not(.semiTransparent),.MuiAppBar-root.MuiAppBar-colorTransparent,.MuiAppBar-root.MuiAppBar-colorDefault{background:var(--appBarColor,var(--headerBackground));border:var(--appBarBorder,none);border-width:0 0 var(--borderWidth) 0}
 .skinHeader-blurred:not(.osdHeader):not(.semiTransparent):after,.MuiAppBar-root.MuiAppBar-colorTransparent::after,.MuiAppBar-root.MuiAppBar-colorDefault::after{-webkit-backdrop-filter:var(--appBarBlurStrength,var(--blurLargest));backdrop-filter:var(--appBarBlurStrength,var(--blurLargest));content:var(--appBarSeamlessBlur,"");position:absolute;top:0;right:0;bottom:0;left:0;-webkit-mask:var(--headerBlurMask);mask:var(--headerBlurMask);z-index:-1}
 .skinHeader-withBackground.semiTransparent{--headerBackground:none;-webkit-backdrop-filter:none;backdrop-filter:none;background-color:transparent;border:none}
@@ -813,7 +860,7 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child{gap:.5rem}
 .dashboardDocument .content-primary{padding-top:4.25rem}
 
 /* ══════════════════════════════════════════════════════════
-   13. MUI APP BAR  (Jellyfin 10.11+, inert on older builds)
+   13. MUI APP BAR  (Jellyfin 10.11+ / 12.x Modern layout)
    ══════════════════════════════════════════════════════════ */
 .MuiAppBar-root.MuiAppBar-colorTransparent,.MuiAppBar-root.MuiAppBar-colorDefault{-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none;color:var(--textColor)}
 .MuiAppBar-root.MuiAppBar-colorDefault:has(>.MuiToolbar-root:nth-child(2)){background:var(--appBarColor,var(--headerColor))}
@@ -834,10 +881,16 @@ body:has(.selfBackdropPage:not(.hide)) .MuiAppBar-root.MuiAppBar-colorDefault::b
 body:has(:is(.selfBackdropPage,#loginPage):not(.hide)) .MuiAppBar-root .MuiIconButton-root:not(:hover),body:has(:is(.selfBackdropPage,#loginPage):not(.hide)) .MuiAppBar-root .MuiToolbar-root .headerButton.paper-icon-button-light:not(:hover){color:var(--fullContrastColor);text-shadow:var(--iconShadow)}
 body:has(:is(.selfBackdropPage,#loginPage):not(.hide)) .MuiAppBar-root .MuiIconButton-root:not(:hover) .MuiSvgIcon-root{filter:drop-shadow(0 0 2px hsla(0,0%,0%,.8)) drop-shadow(1px 1px 0 hsla(0,0%,0%,.5))}
 /* library nav pills */
-.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped){background-color:var(--ef12-navPillBackground);border-radius:var(--ef12-navRadius);color:var(--textColor);font-size:1rem;font-weight:400;padding-block:.35rem;padding-inline:var(--ef12-navPaddingInline);margin-inline:calc(var(--ef12-navGap)/2);transition:background-color .22s ease,color .22s ease}
+.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped){background-color:var(--ef12-navPillBackground);border-radius:var(--ef12-navRadius);color:var(--textColor);font-size:1rem;font-weight:400;padding-block:.35rem;padding-inline:var(--ef12-navPaddingInline);margin-inline:calc(var(--ef12-navGap)/2);transition:background-color .22s ease,color .22s ease,transform .15s ease,box-shadow .2s ease}
 .MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped) .MuiButton-startIcon{margin-left:0;margin-right:.6rem}
 .MuiAppBar-root .MuiButton-textPrimary:not(.MuiButtonGroup-grouped){background:var(--btnPlayColor)!important;border:0!important;color:var(--zeroContrastColor)!important}
 .layout-desktop .MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped,.MuiButton-textPrimary,:has(.MuiButton-startIcon>img)):hover{background-color:var(--hoverTabBackgroundColor);color:var(--zeroContrastColor)}
+/* touch: pills and tabs press in; the active one glows */
+@media (hover:none),(pointer:coarse){
+ .sectionTabs .emby-tab-button{transition:transform .15s ease,background-color .2s ease,box-shadow .2s ease}
+ .sectionTabs .emby-tab-button:active,.MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):active{transform:scale(.94);box-shadow:inset 0 0 0 1px rgba(170,157,255,.35)}
+ .sectionTabs .emby-tab-button-active,.MuiAppBar-root .MuiButton-textPrimary:not(.MuiButtonGroup-grouped){box-shadow:0 4px 16px rgba(147,121,255,.22)}
+}
 /* brand */
 .MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon>img){background-color:transparent;color:var(--fullContrastColor);font-size:var(--ef12-brandNameSize);font-weight:600;letter-spacing:-.012em;margin-inline:0 var(--ef12-brandGap);padding-block:0;padding-inline:0;position:relative}
 .MuiAppBar-root .MuiButton-text:not(.MuiButtonGroup-grouped):has(.MuiButton-startIcon>img):has(+.MuiButton-text)::after{background:var(--ef12-brandRuleColor);content:"";height:1.75rem;pointer-events:none;position:absolute;right:calc((var(--ef12-brandGap) + var(--ef12-navGap)/2)/-2);top:50%;transform:translateY(-50%);width:var(--borderWidth)}
@@ -1039,6 +1092,7 @@ table:not(.MuiTable-root.MuiTable-stickyHeader){background:var(--tableBodyColor)
 #slides-container .play-button{background:#f7f7fc!important;color:#11131c!important;border:0!important;border-radius:13px!important;padding:12px 25px!important;box-shadow:0 9px 24px rgba(0,0,0,.28);transition:transform .2s ease,background-color .2s ease}
 #slides-container .detail-button,#slides-container .favorite-button,#slides-container .trailer-button{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.22);border-radius:13px!important;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:#fff!important}
 @media (hover:hover) and (pointer:fine){#slides-container .play-button:hover{background:var(--px-accent-light)!important;transform:translateY(-2px)}}
+@media (hover:none),(pointer:coarse){#slides-container .play-button:active{background:var(--px-accent-light)!important;transform:scale(.95)}}
 #slides-container .dot{width:7px;height:7px;border-radius:999px;background:rgba(255,255,255,.65)!important;opacity:.65;transition:width .3s ease,opacity .3s ease}
 #slides-container .dot.active{width:29px;background:var(--px-accent-light)!important;opacity:1;transform:none}
 @media only screen and (orientation:landscape){
@@ -1215,6 +1269,7 @@ body #jf-hover-tooltip{background:var(--drawerColor);-webkit-backdrop-filter:var
 .layout-tv .backdropImage,.layout-tv .focuscontainer{animation-duration:0s!important;-webkit-backdrop-filter:none;backdrop-filter:none}
 .card.show-animation .cardBox{transition:transform .05s ease-out}
 @media (prefers-reduced-motion:reduce){
- .card,.cardBox,.cardScalable,.cardImageContainer,button,.paper-icon-button-light,.navMenuOption,.emby-tab-button,.btnPlay.detailButton,.button-submit{transition:none!important;animation:none!important}
+ .card,.cardBox,.cardScalable,.cardImageContainer,button,.paper-icon-button-light,.navMenuOption,.emby-tab-button,.btnPlay.detailButton,.button-submit,.listItem,.MuiListItemButton-root,.MuiMenuItem-root{transition:none!important;animation:none!important}
+ .cardScalable::after,.mainDetailButtons{animation:none!important}
 }
 /* END — PHOENICX CINEMA */
